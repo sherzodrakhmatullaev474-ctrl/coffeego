@@ -6,24 +6,87 @@
 
 <title>COFFEEGO Samarqand — Kofe, Coffee Shop va Yetkazib Berish</title>
 
-<meta name="description" content="COFFEEGO — Samarqand va O'zbekistondagi zamonaviy coffee marketplace. Coffee shoplar, kofe, dessert va online buyurtmalar.">
+<meta name="description" content="COFFEEGO — Samarqand va O'zbekistondagi zamonaviy coffee marketplace. Coffee shoplar, kofe, dessert, nonushta va online buyurtmalarni bir joydan toping.">
 
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="keywords" content="
+COFFEEGO,
+COFFEEGO Samarqand,
+Samarqand coffee,
+Samarqand kofe,
+Samarqand coffee shop,
+Samarqand kafelar,
+Samarqand kofe shop,
+Samarqand coffee delivery,
+kofe yetkazib berish Samarqand,
+coffee shop Uzbekistan,
+kofe O'zbekiston,
+coffee marketplace Uzbekistan,
+coffee marketplace Samarqand,
+online kofe buyurtma,
+kofe buyurtma Samarqand
+">
 
-<link rel="canonical"
-href="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
+<meta name="author" content="COFFEEGO">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="yandex" content="index, follow">
 
-<meta name="google-site-verification"
-content="FUeToDqfKJxB8Sy8c8OXbkmj54KzZs4xhYBZNGu6BCA">
+<link rel="canonical" href="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
+
+<!-- GOOGLE SEARCH CONSOLE -->
+<meta name="google-site-verification" content="FUeToDqfKJxB8Sy8c8OXbkmj54KzZs4xhYBZNGu6BCA">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="COFFEEGO Samarqand">
-<meta property="og:description" content="Samarqand coffee shoplari va kofe marketplace">
-<meta property="og:url"
-content="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
+<meta property="og:title" content="COFFEEGO Samarqand — Kofe va Coffee Shoplar">
+<meta property="og:description" content="Samarqand coffee shoplari, kofe, dessert va online buyurtmalar — COFFEEGO marketplace.">
+<meta property="og:url" content="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
 <meta property="og:site_name" content="COFFEEGO">
+<meta property="og:locale" content="uz_UZ">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="COFFEEGO Samarqand — Coffee Marketplace">
+<meta name="twitter:description" content="Samarqand coffee shoplari, kofe va dessertlarni COFFEEGO orqali toping.">
+
+<meta name="geo.region" content="UZ-SA">
+<meta name="geo.placename" content="Samarqand, Uzbekistan">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"COFFEEGO",
+  "alternateName":"COFFEEGO Samarqand",
+  "url":"https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/",
+  "description":"Samarqand va O'zbekistondagi zamonaviy coffee marketplace.",
+  "inLanguage":"uz"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"COFFEEGO",
+  "url":"https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/",
+  "description":"O'zbekistondagi coffee marketplace va coffee shoplar platformasi."
+}
+</script>
 
 <style>
+:root{
+    --bg:#080808;
+    --bg2:#101010;
+    --card:#151515;
+    --card2:#1c1c1c;
+    --text:#f7f3ed;
+    --muted:#a9a29a;
+    --line:#2b2926;
+    --gold:#d6a75c;
+    --gold2:#f1ca82;
+    --danger:#e36b6b;
+    --success:#6fd69b;
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+}
 
 *{
     box-sizing:border-box;
@@ -31,38 +94,24 @@ content="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
     padding:0;
 }
 
-:root{
-    --bg:#080808;
-    --card:#111111;
-    --card2:#171717;
-    --text:#ffffff;
-    --muted:#a6a6a6;
-    --border:#292929;
-    --accent:#c8894b;
-    --accent2:#f0b477;
-    --danger:#e05252;
-    --success:#48bd75;
-    --shadow:0 15px 50px rgba(0,0,0,.35);
-}
-
-body.light{
-    --bg:#f5f3ef;
-    --card:#ffffff;
-    --card2:#eeeae3;
-    --text:#181818;
-    --muted:#666666;
-    --border:#ddd8cf;
-    --shadow:0 15px 40px rgba(0,0,0,.1);
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:var(--bg);
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 20% 0%,rgba(214,167,92,.08),transparent 30%),
+        radial-gradient(circle at 90% 20%,rgba(255,255,255,.04),transparent 25%),
+        var(--bg);
     color:var(--text);
-    font-family:Arial,Helvetica,sans-serif;
-    transition:.25s;
+    min-height:100vh;
 }
 
-button,input,select,textarea{
+button,
+input,
+textarea,
+select{
     font:inherit;
 }
 
@@ -80,23 +129,19 @@ a{
     margin:auto;
 }
 
-/* NAV */
+/* NAVBAR */
 
-nav{
+.nav{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(8,8,8,.88);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid var(--border);
-}
-
-body.light nav{
-    background:rgba(255,255,255,.9);
+    backdrop-filter:blur(18px);
+    background:rgba(8,8,8,.86);
+    border-bottom:1px solid var(--line);
 }
 
 .nav-inner{
-    min-height:72px;
+    min-height:74px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -104,110 +149,163 @@ body.light nav{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
     font-size:24px;
     font-weight:900;
-    letter-spacing:2px;
+    letter-spacing:-1px;
 }
 
-.logo span{
-    color:var(--accent);
+.logo-icon{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--gold),#7d5120);
+    color:#111;
+    box-shadow:0 8px 30px rgba(214,167,92,.2);
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:24px;
-}
-
-.nav-links a{
-    color:var(--muted);
+    gap:22px;
+    color:#cfc8bf;
     font-size:14px;
-    transition:.2s;
 }
 
 .nav-links a:hover{
-    color:var(--accent2);
+    color:var(--gold2);
 }
 
 .nav-actions{
     display:flex;
     align-items:center;
-    gap:9px;
+    gap:8px;
 }
 
 .icon-btn{
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--text);
+    border:1px solid var(--line);
+    background:#111;
+    color:#fff;
     width:42px;
     height:42px;
     border-radius:12px;
+    display:grid;
+    place-items:center;
 }
 
-.primary{
-    background:var(--accent);
-    color:#fff;
+.icon-btn:hover{
+    border-color:var(--gold);
+}
+
+.cart-btn{
+    position:relative;
+}
+
+.cart-count{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    min-width:19px;
+    height:19px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#111;
+    font-size:11px;
+    font-weight:900;
+    display:grid;
+    place-items:center;
+}
+
+/* BUTTONS */
+
+.btn{
     border:0;
-    padding:12px 18px;
-    border-radius:12px;
-    font-weight:700;
+    border-radius:13px;
+    padding:12px 17px;
+    font-weight:800;
+    transition:.2s;
 }
 
-.primary:hover{
-    background:var(--accent2);
+.btn:hover{
+    transform:translateY(-1px);
 }
 
-.secondary{
-    background:transparent;
-    color:var(--text);
-    border:1px solid var(--border);
-    padding:11px 17px;
-    border-radius:12px;
-    font-weight:700;
+.btn-primary{
+    background:linear-gradient(135deg,var(--gold2),var(--gold));
+    color:#17110a;
 }
 
-.mobile-btn{
-    display:none;
+.btn-dark{
+    background:#191919;
+    color:#fff;
+    border:1px solid var(--line);
+}
+
+.btn-danger{
+    background:rgba(227,107,107,.12);
+    color:#ff9898;
+    border:1px solid rgba(227,107,107,.25);
+}
+
+.btn-success{
+    background:rgba(111,214,155,.12);
+    color:#8ef0b4;
+    border:1px solid rgba(111,214,155,.25);
+}
+
+.btn-small{
+    padding:9px 12px;
+    font-size:13px;
 }
 
 /* HERO */
 
 .hero{
-    padding:90px 0 75px;
+    padding:92px 0 75px;
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.3fr .7fr;
-    gap:40px;
+    grid-template-columns:1.15fr .85fr;
+    gap:45px;
     align-items:center;
 }
 
 .badge{
-    display:inline-block;
-    padding:8px 13px;
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--accent2);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:1px solid rgba(214,167,92,.3);
+    color:var(--gold2);
+    background:rgba(214,167,92,.07);
+    padding:8px 12px;
     border-radius:999px;
     font-size:13px;
-    margin-bottom:22px;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(42px,7vw,82px);
-    line-height:.95;
+    font-size:clamp(45px,7vw,82px);
+    line-height:.96;
     letter-spacing:-4px;
-    margin-bottom:25px;
+    margin-bottom:24px;
 }
 
-.hero h1 span{
-    color:var(--accent);
+.gradient-text{
+    background:linear-gradient(90deg,#fff,var(--gold2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
 }
 
 .hero p{
-    max-width:650px;
     color:var(--muted);
+    max-width:650px;
     font-size:18px;
     line-height:1.7;
 }
@@ -216,50 +314,114 @@ body.light nav{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
-    margin-top:30px;
+    margin-top:28px;
 }
 
 .hero-card{
-    min-height:350px;
-    border:1px solid var(--border);
+    min-height:410px;
+    border:1px solid var(--line);
     border-radius:30px;
+    padding:28px;
     background:
-      radial-gradient(circle at 50% 25%,rgba(200,137,75,.25),transparent 40%),
-      var(--card);
+        linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015)),
+        radial-gradient(circle at 70% 20%,rgba(214,167,92,.2),transparent 35%),
+        #101010;
     box-shadow:var(--shadow);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
+    position:relative;
+    overflow:hidden;
 }
 
-.cup{
-    font-size:120px;
+.coffee-cup{
+    width:220px;
+    height:150px;
+    border-radius:25px 25px 70px 70px;
+    background:linear-gradient(145deg,#f1e4d1,#9e866b);
+    position:absolute;
+    left:50%;
+    top:48%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 30px 70px rgba(0,0,0,.6);
+}
+
+.coffee-cup:before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:45px;
+    border-radius:50%;
+    background:#3b2415;
+    top:-8px;
+    left:20px;
+}
+
+.coffee-cup:after{
+    content:"";
+    position:absolute;
+    width:55px;
+    height:70px;
+    border:14px solid #d0b99c;
+    border-left:0;
+    border-radius:0 50px 50px 0;
+    right:-52px;
+    top:28px;
+}
+
+.steam{
+    position:absolute;
+    width:3px;
+    height:90px;
+    background:linear-gradient(transparent,rgba(255,255,255,.35),transparent);
+    border-radius:50%;
+    top:55px;
+}
+
+.steam.one{left:42%}
+.steam.two{left:51%;height:75px}
+.steam.three{left:60%;height:100px}
+
+/* SECTIONS */
+
+.section{
+    padding:75px 0;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+    margin-bottom:28px;
+}
+
+.section-head h2{
+    font-size:38px;
+    letter-spacing:-1.5px;
+}
+
+.section-head p{
+    color:var(--muted);
+    max-width:570px;
+    line-height:1.6;
 }
 
 /* FEATURES */
 
 .features{
-    padding:30px 0 90px;
-}
-
-.feature-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
 }
 
 .feature{
-    border:1px solid var(--border);
     background:var(--card);
-    border-radius:20px;
+    border:1px solid var(--line);
+    border-radius:22px;
     padding:25px;
 }
 
 .feature-icon{
-    font-size:30px;
-    margin-bottom:15px;
+    font-size:28px;
+    margin-bottom:17px;
 }
 
 .feature h3{
@@ -268,144 +430,115 @@ body.light nav{
 
 .feature p{
     color:var(--muted);
-    line-height:1.5;
-    font-size:14px;
-}
-
-/* SECTION */
-
-section{
-    scroll-margin-top:90px;
-}
-
-.section{
-    padding:70px 0;
-}
-
-.section-title{
-    font-size:36px;
-    margin-bottom:10px;
-}
-
-.section-subtitle{
-    color:var(--muted);
-    margin-bottom:30px;
+    line-height:1.6;
 }
 
 /* MARKET */
 
 .market-tools{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:1fr 170px 170px;
     gap:10px;
-    margin-bottom:25px;
-}
-
-.search{
-    flex:1;
-    min-width:230px;
+    margin-bottom:22px;
 }
 
 .input,
 .select,
-textarea{
+.textarea{
     width:100%;
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--text);
-    border-radius:12px;
+    background:#111;
+    color:#fff;
+    border:1px solid var(--line);
+    border-radius:13px;
     padding:13px 14px;
     outline:none;
 }
 
 .input:focus,
 .select:focus,
-textarea:focus{
-    border-color:var(--accent);
+.textarea:focus{
+    border-color:var(--gold);
 }
 
-.category-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-bottom:30px;
+.textarea{
+    resize:vertical;
+    min-height:90px;
 }
 
-.category{
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--muted);
-    padding:9px 14px;
-    border-radius:999px;
-}
-
-.category.active{
-    background:var(--accent);
-    border-color:var(--accent);
-    color:white;
-}
-
-.products{
+.products-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:17px;
+    gap:15px;
 }
 
 .product{
-    border:1px solid var(--border);
     background:var(--card);
+    border:1px solid var(--line);
     border-radius:20px;
     overflow:hidden;
-    position:relative;
     transition:.2s;
 }
 
 .product:hover{
     transform:translateY(-4px);
+    border-color:#49443c;
 }
 
-.product-img{
-    height:170px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:70px;
+.product-image{
+    height:185px;
     background:
-      radial-gradient(circle at center,rgba(200,137,75,.2),transparent 65%),
-      var(--card2);
+        radial-gradient(circle at 50% 35%,rgba(214,167,92,.28),transparent 35%),
+        linear-gradient(135deg,#201810,#0f0f0f);
+    display:grid;
+    place-items:center;
+    font-size:70px;
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .favorite{
     position:absolute;
-    top:12px;
-    right:12px;
-    width:38px;
-    height:38px;
+    top:10px;
+    right:10px;
+    width:37px;
+    height:37px;
     border-radius:50%;
-    border:1px solid var(--border);
-    background:rgba(0,0,0,.35);
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(0,0,0,.45);
     color:white;
+    display:grid;
+    place-items:center;
+}
+
+.favorite.active{
+    color:#ff7474;
 }
 
 .product-body{
-    padding:18px;
+    padding:17px;
 }
 
 .product-shop{
-    color:var(--accent2);
+    color:var(--gold2);
     font-size:12px;
-    margin-bottom:8px;
+    font-weight:800;
+    margin-bottom:7px;
 }
 
 .product h3{
     margin-bottom:7px;
 }
 
-.product-description{
+.product-desc{
     color:var(--muted);
     font-size:13px;
-    line-height:1.5;
     min-height:40px;
+    line-height:1.45;
 }
 
 .product-bottom{
@@ -413,161 +546,192 @@ textarea:focus{
     align-items:center;
     justify-content:space-between;
     gap:10px;
-    margin-top:16px;
+    margin-top:15px;
 }
 
 .price{
-    font-size:18px;
-    font-weight:800;
-}
-
-.add{
-    background:var(--accent);
-    border:0;
-    color:white;
-    width:40px;
-    height:40px;
-    border-radius:11px;
-    font-size:20px;
+    font-size:17px;
+    font-weight:900;
 }
 
 /* SHOPS */
 
-.shops{
+.shops-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:16px;
 }
 
-.shop{
+.shop-card{
     background:var(--card);
-    border:1px solid var(--border);
+    border:1px solid var(--line);
     border-radius:22px;
-    padding:24px;
+    padding:23px;
 }
 
 .shop-logo{
-    width:58px;
-    height:58px;
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--card2);
-    font-size:28px;
-    margin-bottom:18px;
+    width:55px;
+    height:55px;
+    border-radius:17px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--gold),#76501f);
+    color:#111;
+    font-weight:900;
+    font-size:22px;
+    margin-bottom:16px;
 }
 
-.shop h3{
-    margin-bottom:8px;
+.shop-card h3{
+    margin-bottom:5px;
 }
 
-.shop p{
+.shop-city{
+    color:var(--gold2);
+    font-size:13px;
+}
+
+.shop-address{
     color:var(--muted);
-    line-height:1.6;
-    font-size:14px;
+    margin-top:13px;
+    line-height:1.5;
 }
 
-.status{
-    display:inline-block;
-    margin-top:15px;
-    padding:6px 10px;
-    border-radius:999px;
-    background:rgba(72,189,117,.12);
-    color:var(--success);
-    font-size:12px;
+/* FAQ */
+
+.faq{
+    display:grid;
+    gap:10px;
 }
 
-/* SEO */
-
-.seo-content{
-    border:1px solid var(--border);
+.faq-item{
+    border:1px solid var(--line);
     background:var(--card);
-    border-radius:25px;
-    padding:35px;
-    line-height:1.8;
+    border-radius:16px;
+    overflow:hidden;
 }
 
-.seo-content h2{
-    margin-bottom:15px;
+.faq-question{
+    padding:19px;
+    display:flex;
+    justify-content:space-between;
+    font-weight:800;
+    cursor:pointer;
 }
 
-.seo-content h3{
-    margin-top:25px;
-    margin-bottom:8px;
-}
-
-.seo-content p{
+.faq-answer{
+    display:none;
+    padding:0 19px 19px;
     color:var(--muted);
+    line-height:1.65;
+}
+
+.faq-item.open .faq-answer{
+    display:block;
 }
 
 /* FOOTER */
 
 footer{
-    border-top:1px solid var(--border);
-    padding:40px 0;
-    color:var(--muted);
+    border-top:1px solid var(--line);
+    padding:35px 0;
+    margin-top:30px;
 }
 
 .footer-inner{
     display:flex;
     justify-content:space-between;
     gap:20px;
-    flex-wrap:wrap;
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* MODAL */
 
 .modal{
-    display:none;
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.7);
     z-index:5000;
+    display:none;
+    align-items:center;
+    justify-content:center;
     padding:20px;
-    overflow:auto;
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(8px);
 }
 
 .modal.show{
     display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .modal-box{
-    width:min(520px,100%);
-    background:var(--card);
-    border:1px solid var(--border);
+    width:min(680px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:#111;
+    border:1px solid var(--line);
     border-radius:25px;
-    padding:28px;
     box-shadow:var(--shadow);
 }
 
 .modal-head{
+    padding:20px 22px;
+    border-bottom:1px solid var(--line);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:25px;
+    position:sticky;
+    top:0;
+    background:#111;
+    z-index:2;
 }
 
 .close{
     width:38px;
     height:38px;
+    border-radius:11px;
+    border:1px solid var(--line);
+    background:#181818;
+    color:#fff;
+}
+
+.modal-body{
+    padding:22px;
+}
+
+/* AUTH */
+
+.auth-tabs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#191919;
+    border-radius:13px;
+    padding:4px;
+    margin-bottom:18px;
+}
+
+.auth-tab{
+    padding:11px;
+    border:0;
+    background:transparent;
+    color:#aaa;
     border-radius:10px;
-    border:1px solid var(--border);
-    background:var(--card2);
-    color:var(--text);
+}
+
+.auth-tab.active{
+    background:#2b251d;
+    color:var(--gold2);
 }
 
 .form-group{
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 
 .form-group label{
     display:block;
-    margin-bottom:7px;
+    color:#cfc7bc;
     font-size:13px;
-    color:var(--muted);
+    margin-bottom:7px;
 }
 
 .form-row{
@@ -576,107 +740,234 @@ footer{
     gap:12px;
 }
 
-.form-actions{
-    display:flex;
-    gap:10px;
-    margin-top:20px;
-}
-
-.form-actions button{
-    flex:1;
-}
-
-.auth-switch{
-    margin-top:18px;
-    text-align:center;
-    color:var(--muted);
-    font-size:14px;
-}
-
-.auth-switch button{
-    border:0;
-    background:none;
-    color:var(--accent2);
-}
-
 /* CART */
 
 .cart-item{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:12px;
+    gap:15px;
     padding:15px 0;
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid var(--line);
 }
 
-.cart-info{
+.cart-item-info{
     flex:1;
 }
 
-.cart-info small{
-    color:var(--muted);
+.cart-item-name{
+    font-weight:800;
 }
 
-.qty{
+.cart-item-shop{
+    color:var(--gold2);
+    font-size:12px;
+    margin-top:4px;
+}
+
+.cart-controls{
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:7px;
+    margin-top:8px;
 }
 
-.qty button{
+.qty-btn{
     width:30px;
     height:30px;
-    border:1px solid var(--border);
-    background:var(--card2);
-    color:var(--text);
     border-radius:8px;
+    border:1px solid var(--line);
+    background:#181818;
+    color:#fff;
 }
 
 .cart-total{
     display:flex;
     justify-content:space-between;
-    font-size:20px;
-    font-weight:800;
-    padding-top:20px;
+    padding:20px 0;
+    font-size:19px;
+    font-weight:900;
 }
 
 /* DASHBOARD */
 
-.dashboard-stat-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
+.dashboard-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
     margin-bottom:20px;
 }
 
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:25px;
+}
+
 .stat{
-    background:var(--card2);
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:20px;
+    background:#181818;
+    border:1px solid var(--line);
+    border-radius:17px;
+    padding:18px;
 }
 
-.stat small{
+.stat-label{
     color:var(--muted);
+    font-size:12px;
+    margin-bottom:9px;
 }
 
-.stat strong{
-    display:block;
+.stat-value{
     font-size:25px;
-    margin-top:8px;
+    font-weight:900;
+}
+
+.dashboard-section{
+    border:1px solid var(--line);
+    background:#151515;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:16px;
+}
+
+.dashboard-section h3{
+    margin-bottom:17px;
 }
 
 .order-card{
-    border:1px solid var(--border);
+    border:1px solid var(--line);
+    background:#101010;
     border-radius:16px;
-    padding:18px;
-    margin-top:12px;
+    padding:16px;
+    margin-bottom:11px;
 }
 
-.order-status{
-    color:var(--accent2);
-    font-weight:700;
+.order-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.order-id{
+    font-size:12px;
+    color:var(--muted);
+}
+
+.status{
+    display:inline-flex;
+    padding:7px 10px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:900;
+}
+
+.status-new{
+    background:rgba(214,167,92,.12);
+    color:var(--gold2);
+}
+
+.status-accepted,
+.status-preparing{
+    background:rgba(92,160,255,.12);
+    color:#8dbdff;
+}
+
+.status-ready{
+    background:rgba(111,214,155,.12);
+    color:#8ef0b4;
+}
+
+.status-delivering{
+    background:rgba(178,119,255,.12);
+    color:#c69cff;
+}
+
+.status-delivered{
+    background:rgba(111,214,155,.08);
+    color:#75db9e;
+}
+
+.status-cancelled{
+    background:rgba(227,107,107,.12);
+    color:#ff9898;
+}
+
+.order-items{
+    margin:14px 0;
+    color:#d5cec4;
+    line-height:1.7;
+    font-size:13px;
+}
+
+.order-meta{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:13px;
+}
+
+.status-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+}
+
+.status-buttons button{
+    font-size:11px;
+    padding:8px 10px;
+    border-radius:9px;
+    border:1px solid var(--line);
+    background:#181818;
+    color:#ddd;
+}
+
+.status-buttons button:hover{
+    border-color:var(--gold);
+    color:var(--gold2);
+}
+
+.product-admin{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.product-admin:last-child{
+    border-bottom:0;
+}
+
+.product-admin-info{
+    flex:1;
+}
+
+.product-admin-info strong{
+    display:block;
+}
+
+.product-admin-info span{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* EMPTY */
+
+.empty{
+    text-align:center;
+    padding:45px 20px;
+    color:var(--muted);
+    border:1px dashed #36322d;
+    border-radius:18px;
+}
+
+.loading{
+    text-align:center;
+    padding:40px;
+    color:var(--muted);
 }
 
 /* TOAST */
@@ -685,16 +976,17 @@ footer{
     position:fixed;
     right:20px;
     bottom:20px;
-    z-index:9000;
-    background:var(--card);
-    color:var(--text);
-    border:1px solid var(--border);
-    padding:14px 18px;
-    border-radius:13px;
+    z-index:9999;
+    background:#181818;
+    border:1px solid var(--line);
+    color:#fff;
+    border-radius:14px;
+    padding:13px 16px;
     box-shadow:var(--shadow);
     transform:translateY(120px);
     opacity:0;
-    transition:.3s;
+    transition:.25s;
+    max-width:360px;
 }
 
 .toast.show{
@@ -702,54 +994,61 @@ footer{
     opacity:1;
 }
 
+.toast.success{
+    border-color:rgba(111,214,155,.4);
+}
+
+.toast.error{
+    border-color:rgba(227,107,107,.4);
+}
+
 /* MOBILE */
 
-@media(max-width:900px){
-
+@media(max-width:950px){
     .nav-links{
         display:none;
-    }
-
-    .mobile-btn{
-        display:block;
     }
 
     .hero-grid{
         grid-template-columns:1fr;
     }
 
-    .feature-grid{
+    .products-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .shops{
+    .features{
         grid-template-columns:1fr;
+    }
+
+    .shops-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
 @media(max-width:600px){
-
     .hero{
-        padding:55px 0;
+        padding:60px 0;
     }
 
     .hero h1{
         font-size:48px;
+        letter-spacing:-2.5px;
     }
 
     .hero p{
-        font-size:16px;
+        font-size:15px;
     }
 
-    .feature-grid{
+    .products-grid{
         grid-template-columns:1fr;
     }
 
-    .products{
+    .market-tools{
         grid-template-columns:1fr;
     }
 
@@ -757,1035 +1056,867 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .dashboard-stat-grid{
-        grid-template-columns:1fr;
+    .dashboard-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .nav-actions .secondary{
-        display:none;
+    .section{
+        padding:55px 0;
+    }
+
+    .section-head{
+        display:block;
+    }
+
+    .section-head h2{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+    }
+
+    .dashboard-top{
+        align-items:flex-start;
+        flex-direction:column;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<nav>
+<!-- NAV -->
+
+<nav class="nav">
 <div class="container nav-inner">
 
-<a href="#" class="logo">COFFEE<span>GO</span></a>
+<a href="#" class="logo">
+    <span class="logo-icon">☕</span>
+    COFFEEGO
+</a>
 
 <div class="nav-links">
-<a href="#market">Marketplace</a>
-<a href="#shops">Coffee Shoplar</a>
-<a href="#about">Biz haqimizda</a>
-<a href="#faq">FAQ</a>
+    <a href="#marketplace">Marketplace</a>
+    <a href="#shops">Coffee Shoplar</a>
+    <a href="#about">Biz haqimizda</a>
+    <a href="#faq">FAQ</a>
 </div>
 
 <div class="nav-actions">
 
-<button class="icon-btn" onclick="toggleTheme()" title="Tema">
-🌙
-</button>
+    <button class="icon-btn cart-btn" onclick="openCart()" title="Savat">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
 
-<button class="icon-btn" onclick="openCart()" title="Savat">
-🛒 <span id="cartCount">0</span>
-</button>
-
-<button class="secondary" onclick="openAuth()" id="authButton">
-Kirish
-</button>
-
-<button class="primary" onclick="openRegisterShop()">
-Shop ochish
-</button>
-
-<button class="icon-btn mobile-btn" onclick="toggleMobile()">
-☰
-</button>
+    <button class="btn btn-primary btn-small" id="authButton" onclick="openAuth()">
+        Kirish
+    </button>
 
 </div>
-
 </div>
 </nav>
 
-<!-- MOBILE MENU -->
-
-<div id="mobileMenu"
-style="
-display:none;
-position:fixed;
-top:72px;
-left:0;
-right:0;
-z-index:999;
-background:var(--card);
-border-bottom:1px solid var(--border);
-padding:20px;
-">
-
-<div class="container" style="display:grid;gap:15px">
-
-<a href="#market" onclick="toggleMobile()">Marketplace</a>
-<a href="#shops" onclick="toggleMobile()">Coffee Shoplar</a>
-<a href="#about" onclick="toggleMobile()">Biz haqimizda</a>
-<a href="#faq" onclick="toggleMobile()">FAQ</a>
-
-</div>
-</div>
 
 <!-- HERO -->
 
-<header class="hero">
-
+<section class="hero">
 <div class="container hero-grid">
 
 <div>
+    <div class="badge">☕ Samarqand coffee marketplace</div>
 
-<div class="badge">
-☕ O'zbekistondagi zamonaviy coffee marketplace
-</div>
+    <h1>
+        Kofe.
+        <span class="gradient-text">Bir joyda.</span>
+    </h1>
 
-<h1>
-Coffee.<br>
-<span>People.</span><br>
-Go.
-</h1>
+    <p>
+        COFFEEGO orqali Samarqand va O'zbekistondagi coffee shoplar,
+        kofe, dessert va nonushtalarni toping, savatga qo'shing va
+        online buyurtma qiling.
+    </p>
 
-<p>
-COFFEEGO orqali Samarqand va boshqa shaharlardagi
-coffee shoplardan kofe, dessert va nonushtalarni
-toping va online buyurtma qiling.
-</p>
+    <div class="hero-buttons">
+        <a href="#marketplace" class="btn btn-primary">
+            Kofe tanlash →
+        </a>
 
-<div class="hero-buttons">
-
-<a href="#market" class="primary">
-☕ Kofe tanlash
-</a>
-
-<button class="secondary" onclick="openRegisterShop()">
-🏪 Coffee Shop qo'shish
-</button>
-
-</div>
-
+        <button class="btn btn-dark" onclick="openShopRegister()">
+            🏪 Shop qo'shish
+        </button>
+    </div>
 </div>
 
 <div class="hero-card">
 
-<div>
-<div class="cup">☕</div>
-<h2>COFFEEGO</h2>
-<p style="color:var(--muted);margin-top:8px">
-Your coffee marketplace
-</p>
-</div>
+    <div class="steam one"></div>
+    <div class="steam two"></div>
+    <div class="steam three"></div>
+
+    <div class="coffee-cup"></div>
 
 </div>
 
 </div>
+</section>
 
-</header>
 
 <!-- FEATURES -->
 
-<section class="features">
-
-<div class="container feature-grid">
-
-<div class="feature">
-<div class="feature-icon">☕</div>
-<h3>Ko'p tanlov</h3>
-<p>
-Turli coffee shoplarning mahsulotlarini
-bir joydan toping.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">⚡</div>
-<h3>Tez buyurtma</h3>
-<p>
-Bir necha bosishda buyurtma bering.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">📦</div>
-<h3>Real buyurtma</h3>
-<p>
-Buyurtmalar Supabase database'da saqlanadi.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">⭐</div>
-<h3>VIP</h3>
-<p>
-Maxsus bonuslar va foydali takliflar.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- MARKET -->
-
-<section class="section" id="market">
-
+<section class="section">
 <div class="container">
 
-<h2 class="section-title">Marketplace</h2>
+<div class="section-head">
+    <div>
+        <h2>Nega COFFEEGO?</h2>
+        <p>
+            Coffee shoplar va mijozlarni bitta qulay marketplace'da
+            birlashtiramiz.
+        </p>
+    </div>
+</div>
 
-<p class="section-subtitle">
-Samarqand coffee shoplaridan mahsulot tanlang.
-</p>
+<div class="features">
+
+<div class="feature">
+    <div class="feature-icon">☕</div>
+    <h3>Ko'p coffee shop</h3>
+    <p>
+        Turli coffee shoplarning mahsulotlarini bitta platformada
+        ko'ring.
+    </p>
+</div>
+
+<div class="feature">
+    <div class="feature-icon">⚡</div>
+    <h3>Tez buyurtma</h3>
+    <p>
+        Kerakli mahsulotni tanlang, savatga qo'shing va buyurtma
+        yuboring.
+    </p>
+</div>
+
+<div class="feature">
+    <div class="feature-icon">🏪</div>
+    <h3>Biznes uchun</h3>
+    <p>
+        Coffee shop egalari o'z mahsulotlarini joylashtirib,
+        buyurtmalarni boshqarishi mumkin.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- MARKETPLACE -->
+
+<section class="section" id="marketplace">
+<div class="container">
+
+<div class="section-head">
+<div>
+    <h2>Marketplace</h2>
+    <p>
+        Kofe, sovuq ichimliklar, dessert va nonushtalarni tanlang.
+    </p>
+</div>
+</div>
 
 <div class="market-tools">
 
-<div class="search">
 <input
-class="input"
-id="searchInput"
-placeholder="☕ Kofe yoki dessert qidirish..."
-oninput="renderProducts()">
-</div>
+    class="input"
+    id="searchInput"
+    placeholder="🔎 Kofe yoki mahsulot qidirish..."
+    oninput="renderProducts()"
+>
 
-<select class="select" id="sortSelect" onchange="renderProducts()" style="max-width:220px">
-<option value="default">Saralash</option>
-<option value="cheap">Arzon → qimmat</option>
-<option value="expensive">Qimmat → arzon</option>
+<select class="select" id="categoryFilter" onchange="renderProducts()">
+    <option value="all">Barcha kategoriyalar</option>
+    <option value="coffee">☕ Coffee</option>
+    <option value="cold">🧊 Cold</option>
+    <option value="dessert">🍰 Dessert</option>
+    <option value="food">🥐 Food</option>
+</select>
+
+<select class="select" id="sortFilter" onchange="renderProducts()">
+    <option value="default">Saralash</option>
+    <option value="cheap">Arzon → qimmat</option>
+    <option value="expensive">Qimmat → arzon</option>
+    <option value="name">Nomi bo'yicha</option>
 </select>
 
 </div>
 
-<div class="category-row">
-
-<button class="category active" onclick="setCategory('all',this)">
-Hammasi
-</button>
-
-<button class="category" onclick="setCategory('coffee',this)">
-☕ Coffee
-</button>
-
-<button class="category" onclick="setCategory('cold',this)">
-🧊 Cold
-</button>
-
-<button class="category" onclick="setCategory('dessert',this)">
-🍰 Dessert
-</button>
-
-<button class="category" onclick="setCategory('food',this)">
-🥐 Food
-</button>
-
-</div>
-
-<div id="products" class="products">
-
-<div class="product">
-<div class="product-body">
-Yuklanmoqda...
-</div>
+<div id="productsGrid" class="products-grid">
+    <div class="loading">Mahsulotlar yuklanmoqda...</div>
 </div>
 
 </div>
-
-</div>
-
 </section>
+
 
 <!-- SHOPS -->
 
 <section class="section" id="shops">
-
 <div class="container">
 
-<h2 class="section-title">
-Coffee Shoplar
-</h2>
+<div class="section-head">
+<div>
+    <h2>Coffee Shoplar</h2>
+    <p>
+        COFFEEGO platformasidagi tasdiqlangan coffee shoplar.
+    </p>
+</div>
 
-<p class="section-subtitle">
-COFFEEGO'dagi tasdiqlangan coffee shoplar.
-</p>
-
-<div id="shopsList" class="shops"></div>
+<button class="btn btn-primary" onclick="openShopRegister()">
+    + Shop qo'shish
+</button>
 
 </div>
 
+<div id="shopsGrid" class="shops-grid">
+    <div class="loading">Coffee shoplar yuklanmoqda...</div>
+</div>
+
+</div>
 </section>
+
 
 <!-- ABOUT -->
 
 <section class="section" id="about">
-
 <div class="container">
 
-<div class="seo-content">
+<div class="section-head">
+<div>
+    <h2>COFFEEGO haqida</h2>
+    <p>
+        Bizning maqsadimiz — O'zbekistondagi coffee shoplarni
+        zamonaviy marketplace orqali mijozlarga bog'lash.
+    </p>
+</div>
+</div>
 
-<h2>
-COFFEEGO — Samarqand coffee marketplace
-</h2>
+<div class="feature">
 
-<p>
-COFFEEGO — Samarqanddagi coffee shoplar,
-kofe, dessert, nonushta va boshqa mahsulotlarni
-bir joyda topish imkonini beruvchi zamonaviy
-online marketplace.
+<h3>🚀 Oddiy g'oya, katta platforma</h3>
+
+<p style="margin-top:12px">
+    Mijoz coffee shop qidiradi → mahsulot tanlaydi →
+    savatga qo'shadi → buyurtma beradi.
 </p>
 
-<h3>Samarqand coffee shop</h3>
-
-<p>
-Samarqand shahrida kofe izlayapsizmi?
-COFFEEGO orqali turli coffee shoplarning
-mahsulotlarini ko'rishingiz, tanlashingiz
-va online buyurtma qilishingiz mumkin.
-</p>
-
-<h3>Samarqand kofe yetkazib berish</h3>
-
-<p>
-Platformaning keyingi bosqichlarida
-yetkazib berish va online to'lov tizimlari
-ham integratsiya qilinadi.
+<p style="margin-top:10px">
+    Coffee shop esa dashboard orqali buyurtmani qabul qiladi,
+    tayyorlaydi va statusini boshqaradi.
 </p>
 
 </div>
 
 </div>
-
 </section>
+
 
 <!-- FAQ -->
 
 <section class="section" id="faq">
-
 <div class="container">
 
-<h2 class="section-title">
-FAQ
-</h2>
+<div class="section-head">
+<div>
+    <h2>FAQ</h2>
+    <p>COFFEEGO haqida ko'p beriladigan savollar.</p>
+</div>
+</div>
 
-<div class="seo-content">
+<div class="faq">
 
-<h3>COFFEEGO nima?</h3>
-<p>
-COFFEEGO — coffee shoplar va mijozlarni
-bog'laydigan marketplace.
-</p>
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        COFFEEGO nima?
+        <span>＋</span>
+    </div>
+    <div class="faq-answer">
+        COFFEEGO — coffee shoplar va mijozlarni birlashtiruvchi
+        online marketplace.
+    </div>
+</div>
 
-<h3>Buyurtmalar qayerda saqlanadi?</h3>
-<p>
-Ro'yxatdan o'tgan foydalanuvchilarning
-buyurtmalari Supabase PostgreSQL database'ida
-saqlanadi.
-</p>
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        Buyurtma berish mumkinmi?
+        <span>＋</span>
+    </div>
+    <div class="faq-answer">
+        Ha. Mahsulotni savatga qo'shib, login qilgan holda buyurtma
+        yuborish mumkin.
+    </div>
+</div>
 
-<h3>Shop qanday qo'shiladi?</h3>
-<p>
-Coffee shop egasi "Shop ochish" orqali
-ariza yuborishi mumkin.
-</p>
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        Coffee shop qo'shish mumkinmi?
+        <span>＋</span>
+    </div>
+    <div class="faq-answer">
+        Ha. Shop egasi ro'yxatdan o'tib, coffee shopini COFFEEGO
+        platformasiga yuborishi mumkin.
+    </div>
+</div>
 
-<h3>To'lov ishlaydimi?</h3>
-<p>
-Hozircha buyurtma database'ga yoziladi.
-Click/Payme kabi real to'lov tizimlari
-keyingi backend bosqichida ulanadi.
-</p>
-
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+        Shop egasi buyurtmani qayerdan ko'radi?
+        <span>＋</span>
+    </div>
+    <div class="faq-answer">
+        Dashboard orqali. U yerda buyurtmalar, mahsulotlar va
+        savdo statistikasi ko'rsatiladi.
+    </div>
 </div>
 
 </div>
-
+</div>
 </section>
+
 
 <!-- FOOTER -->
 
 <footer>
-
 <div class="container footer-inner">
-
-<div>
-<strong>COFFEEGO</strong>
-<div style="margin-top:7px">
-Coffee marketplace Uzbekistan
+    <div>© 2026 COFFEEGO. All rights reserved.</div>
+    <div>Samarqand • Uzbekistan ☕</div>
 </div>
-</div>
-
-<div>
-© 2026 COFFEEGO
-</div>
-
-</div>
-
 </footer>
+
 
 <!-- AUTH MODAL -->
 
 <div class="modal" id="authModal">
-
 <div class="modal-box">
 
 <div class="modal-head">
-
-<h2 id="authTitle">
-Kirish
-</h2>
-
-<button class="close" onclick="closeModal('authModal')">
-✕
-</button>
-
+    <h3 id="authTitle">COFFEEGO hisob</h3>
+    <button class="close" onclick="closeModal('authModal')">×</button>
 </div>
 
-<form onsubmit="submitAuth(event)">
+<div class="modal-body">
 
-<div class="form-group" id="nameGroup" style="display:none">
+<div class="auth-tabs">
+    <button
+        class="auth-tab active"
+        id="loginTab"
+        onclick="switchAuth('login')"
+    >
+        Kirish
+    </button>
 
-<label>Ism</label>
-
-<input
-class="input"
-id="authName"
-placeholder="Ismingiz">
-
+    <button
+        class="auth-tab"
+        id="registerTab"
+        onclick="switchAuth('register')"
+    >
+        Ro'yxatdan o'tish
+    </button>
 </div>
+
+
+<div id="loginForm">
 
 <div class="form-group">
-
 <label>Email</label>
-
 <input
-class="input"
-id="authEmail"
-type="email"
-required
-placeholder="example@gmail.com">
-
+    class="input"
+    id="loginEmail"
+    type="email"
+    placeholder="email@example.com"
+>
 </div>
 
 <div class="form-group">
-
 <label>Parol</label>
-
 <input
-class="input"
-id="authPassword"
-type="password"
-required
-minlength="6"
-placeholder="Kamida 6 ta belgi">
-
+    class="input"
+    id="loginPassword"
+    type="password"
+    placeholder="••••••••"
+>
 </div>
 
-<button
-class="primary"
-style="width:100%"
-id="authSubmit">
-Kirish
-</button>
-
-</form>
-
-<div class="auth-switch">
-
-<span id="authSwitchText">
-Account yo'qmi?
-</span>
-
-<button onclick="switchAuthMode()">
-<span id="authSwitchButton">Register</span>
+<button class="btn btn-primary" style="width:100%" onclick="login()">
+    Kirish
 </button>
 
 </div>
 
+
+<div id="registerForm" style="display:none">
+
+<div class="form-group">
+<label>Ism</label>
+<input
+    class="input"
+    id="registerName"
+    placeholder="Ismingiz"
+>
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input
+    class="input"
+    id="registerEmail"
+    type="email"
+    placeholder="email@example.com"
+>
+</div>
+
+<div class="form-group">
+<label>Telefon</label>
+<input
+    class="input"
+    id="registerPhone"
+    placeholder="+998 90 123 45 67"
+>
+</div>
+
+<div class="form-group">
+<label>Parol</label>
+<input
+    class="input"
+    id="registerPassword"
+    type="password"
+    placeholder="Kamida 6 ta belgi"
+>
+</div>
+
+<button class="btn btn-primary" style="width:100%" onclick="register()">
+    Hisob yaratish
+</button>
+
 </div>
 
 </div>
+</div>
+</div>
+
 
 <!-- CART MODAL -->
 
 <div class="modal" id="cartModal">
-
 <div class="modal-box">
 
 <div class="modal-head">
-
-<h2>🛒 Savat</h2>
-
-<button class="close" onclick="closeModal('cartModal')">
-✕
-</button>
-
+    <h3>🛒 Savat</h3>
+    <button class="close" onclick="closeModal('cartModal')">×</button>
 </div>
+
+<div class="modal-body">
 
 <div id="cartItems"></div>
 
 <div class="cart-total">
-
-<span>Jami</span>
-
-<span id="cartTotal">
-0 so'm
-</span>
-
+    <span>Jami</span>
+    <span id="cartTotal">0 so'm</span>
 </div>
 
 <button
-class="primary"
-style="width:100%;margin-top:20px"
-onclick="checkout()">
-
-Buyurtma berish
-
+    class="btn btn-primary"
+    style="width:100%"
+    onclick="openCheckout()"
+>
+    Buyurtma berish →
 </button>
 
 </div>
-
 </div>
+</div>
+
 
 <!-- CHECKOUT MODAL -->
 
 <div class="modal" id="checkoutModal">
-
 <div class="modal-box">
 
 <div class="modal-head">
-
-<h2>📦 Buyurtma</h2>
-
-<button class="close" onclick="closeModal('checkoutModal')">
-✕
-</button>
-
+    <h3>📦 Buyurtma</h3>
+    <button class="close" onclick="closeModal('checkoutModal')">×</button>
 </div>
 
-<div class="form-group">
+<div class="modal-body">
 
+<div class="form-group">
 <label>Ism</label>
-
-<input class="input" id="orderName" required>
-
+<input class="input" id="checkoutName" placeholder="Ismingiz">
 </div>
 
 <div class="form-group">
-
 <label>Telefon</label>
-
-<input
-class="input"
-id="orderPhone"
-placeholder="+998 90 123 45 67"
-required>
-
+<input class="input" id="checkoutPhone" placeholder="+998 90 123 45 67">
 </div>
 
 <div class="form-group">
-
 <label>Yetkazib berish manzili</label>
-
 <textarea
-id="orderAddress"
-rows="3"
-placeholder="Manzil..."
-required></textarea>
-
+    class="textarea"
+    id="checkoutAddress"
+    placeholder="Manzilni kiriting..."
+></textarea>
 </div>
 
 <div class="form-group">
-
 <label>To'lov usuli</label>
 
 <select class="select" id="paymentMethod">
-
-<option value="cash">
-Naqd
-</option>
-
-<option value="card">
-Karta — keyin ulanadi
-</option>
-
+    <option value="cash">Naqd pul</option>
+    <option value="card">Karta</option>
 </select>
 
 </div>
 
 <button
-class="primary"
-style="width:100%"
-onclick="submitOrder()">
-
-Buyurtmani yuborish
-
+    class="btn btn-primary"
+    style="width:100%"
+    onclick="placeOrder()"
+>
+    Buyurtmani yuborish
 </button>
 
 </div>
-
 </div>
+</div>
+
 
 <!-- SHOP REGISTER -->
 
 <div class="modal" id="shopModal">
-
 <div class="modal-box">
 
 <div class="modal-head">
-
-<h2>🏪 Coffee Shop</h2>
-
-<button class="close" onclick="closeModal('shopModal')">
-✕
-</button>
-
+    <h3>🏪 Coffee Shop qo'shish</h3>
+    <button class="close" onclick="closeModal('shopModal')">×</button>
 </div>
 
-<div class="form-group">
+<div class="modal-body">
 
+<div class="form-group">
 <label>Shop nomi</label>
-
-<input class="input" id="shopName" placeholder="Masalan: My Coffee">
-
+<input
+    class="input"
+    id="shopName"
+    placeholder="Masalan: AURORA Coffee"
+>
 </div>
 
-<div class="form-group">
+<div class="form-row">
 
+<div class="form-group">
 <label>Shahar</label>
-
-<input class="input" id="shopCity" value="Samarqand">
-
+<input
+    class="input"
+    id="shopCity"
+    placeholder="Samarqand"
+>
 </div>
 
 <div class="form-group">
-
-<label>Manzil</label>
-
-<input class="input" id="shopAddress" placeholder="Manzil">
-
-</div>
-
-<div class="form-group">
-
 <label>Telefon</label>
-
-<input class="input" id="shopPhone" placeholder="+998">
+<input
+    class="input"
+    id="shopPhone"
+    placeholder="+998..."
+>
+</div>
 
 </div>
 
 <div class="form-group">
+<label>Manzil</label>
+<input
+    class="input"
+    id="shopAddress"
+    placeholder="Ko'cha, bino..."
+>
+</div>
 
-<label>Tavsif</label>
-
+<div class="form-group">
+<label>Shop haqida</label>
 <textarea
-id="shopDescription"
-rows="3"
-placeholder="Coffee shop haqida..."></textarea>
-
+    class="textarea"
+    id="shopDescription"
+    placeholder="Coffee shop haqida qisqacha..."
+></textarea>
 </div>
 
 <button
-class="primary"
-style="width:100%"
-onclick="registerShop()">
-
-Ariza yuborish
-
+    class="btn btn-primary"
+    style="width:100%"
+    onclick="registerShop()"
+>
+    Shopni yuborish
 </button>
 
-</div>
+<p style="color:var(--muted);font-size:12px;margin-top:12px">
+    Shop yuborilgach, admin tomonidan tasdiqlanadi.
+</p>
 
 </div>
+</div>
+</div>
+
 
 <!-- DASHBOARD -->
 
 <div class="modal" id="dashboardModal">
-
-<div class="modal-box" style="width:min(850px,100%)">
+<div class="modal-box" style="width:min(1050px,100%)">
 
 <div class="modal-head">
+    <div>
+        <h3>🏪 Shop Dashboard</h3>
+        <div id="dashboardShopName" style="color:var(--muted);font-size:12px;margin-top:4px"></div>
+    </div>
 
-<h2>📊 Shop Dashboard</h2>
+    <button class="close" onclick="closeModal('dashboardModal')">×</button>
+</div>
 
-<button class="close" onclick="closeModal('dashboardModal')">
-✕
+<div class="modal-body">
+
+<div id="dashboardContent">
+    <div class="loading">Dashboard yuklanmoqda...</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- PRODUCT ADD MODAL -->
+
+<div class="modal" id="productModal">
+<div class="modal-box">
+
+<div class="modal-head">
+    <h3>➕ Yangi mahsulot</h3>
+    <button class="close" onclick="closeModal('productModal')">×</button>
+</div>
+
+<div class="modal-body">
+
+<div class="form-group">
+<label>Mahsulot nomi</label>
+<input
+    class="input"
+    id="productName"
+    placeholder="Cappuccino"
+>
+</div>
+
+<div class="form-group">
+<label>Tavsif</label>
+<textarea
+    class="textarea"
+    id="productDescription"
+    placeholder="Mahsulot haqida..."
+></textarea>
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Kategoriya</label>
+
+<select class="select" id="productCategory">
+    <option value="coffee">Coffee</option>
+    <option value="cold">Cold</option>
+    <option value="dessert">Dessert</option>
+    <option value="food">Food</option>
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Narx (so'm)</label>
+<input
+    class="input"
+    id="productPrice"
+    type="number"
+    min="0"
+    placeholder="28000"
+>
+</div>
+
+</div>
+
+<div class="form-group">
+<label>Rasm URL — ixtiyoriy</label>
+<input
+    class="input"
+    id="productImage"
+    placeholder="https://..."
+>
+</div>
+
+<button
+    class="btn btn-primary"
+    style="width:100%"
+    onclick="addProduct()"
+>
+    Mahsulotni qo'shish
 </button>
 
 </div>
-
-<div id="dashboardContent">
-Yuklanmoqda...
+</div>
 </div>
 
-</div>
-
-</div>
 
 <!-- TOAST -->
 
 <div class="toast" id="toast"></div>
 
-<script type="module">
 
-/* =====================================
-   SUPABASE
-===================================== */
+<script type="module">
 
 import {
     createClient
 } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
 
+/* ==========================================
+   SUPABASE
+========================================== */
+
 const SUPABASE_URL =
-"https://lueszwmumvlikfrgerkf.supabase.co";
+    "https://lueszwmumvlikfrgerkf.supabase.co";
 
 const SUPABASE_KEY =
-"sb_publishable_ajQoNHS_ctqa05bbodyQAg_BslvqbSI";
+    "sb_publishable_ajQoNHS_ctqa05bbodyQAg_BslvqbSI";
 
 const supabase =
-createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-);
+    createClient(SUPABASE_URL, SUPABASE_KEY);
 
 
-/* =====================================
-   STATE
-===================================== */
+/* ==========================================
+   GLOBAL STATE
+========================================== */
 
 let currentUser = null;
-let profile = null;
-
+let currentProfile = null;
 let products = [];
 let shops = [];
+let favorites = [];
+let cart = JSON.parse(localStorage.getItem("coffeego_cart") || "[]");
 
-let cart = [];
+let dashboardShop = null;
+let dashboardProducts = [];
+let dashboardOrders = [];
 
-let currentCategory = "all";
-let authMode = "login";
 
-
-/* =====================================
+/* ==========================================
    HELPERS
-===================================== */
+========================================== */
 
-window.money = function(value){
+function money(value){
 
     return Number(value || 0)
         .toLocaleString("uz-UZ") + " so'm";
 
-};
+}
 
 
-window.toast = function(message){
+function escapeHTML(value){
+
+    return String(value ?? "")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+function toast(message,type="success"){
 
     const el =
         document.getElementById("toast");
 
     el.textContent = message;
 
-    el.classList.add("show");
+    el.className =
+        "toast show " + type;
 
-    setTimeout(()=>{
-        el.classList.remove("show");
-    },3000);
+    clearTimeout(window.__toastTimer);
 
-};
+    window.__toastTimer =
+        setTimeout(()=>{
+            el.className = "toast";
+        },3200);
+
+}
 
 
-window.closeModal = function(id){
+function saveCart(){
+
+    localStorage.setItem(
+        "coffeego_cart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+}
+
+
+function updateCartCount(){
+
+    const count =
+        cart.reduce(
+            (sum,item)=>sum + item.quantity,
+            0
+        );
+
+    document.getElementById("cartCount")
+        .textContent = count;
+
+}
+
+
+function openModal(id){
+
+    document
+        .getElementById(id)
+        .classList.add("show");
+
+}
+
+
+function closeModal(id){
 
     document
         .getElementById(id)
         .classList.remove("show");
 
-};
-
-
-/* =====================================
-   THEME
-===================================== */
-
-window.toggleTheme = function(){
-
-    document.body.classList.toggle("light");
-
-    localStorage.setItem(
-        "coffeego-theme",
-        document.body.classList.contains("light")
-            ? "light"
-            : "dark"
-    );
-
-};
-
-
-function loadTheme(){
-
-    const theme =
-        localStorage.getItem("coffeego-theme");
-
-    if(theme === "light"){
-        document.body.classList.add("light");
-    }
-
 }
 
 
-/* =====================================
-   MOBILE
-===================================== */
+window.closeModal = closeModal;
 
-window.toggleMobile = function(){
 
-    const menu =
-        document.getElementById("mobileMenu");
-
-    menu.style.display =
-        menu.style.display === "block"
-        ? "none"
-        : "block";
-
-};
-
-
-/* =====================================
-   AUTH
-===================================== */
-
-window.openAuth = function(){
-
-    if(currentUser){
-
-        logout();
-
-        return;
-
-    }
-
-    authMode = "login";
-
-    updateAuthUI();
-
-    document
-        .getElementById("authModal")
-        .classList.add("show");
-
-};
-
-
-window.switchAuthMode = function(){
-
-    authMode =
-        authMode === "login"
-        ? "register"
-        : "login";
-
-    updateAuthUI();
-
-};
-
-
-function updateAuthUI(){
-
-    const login =
-        authMode === "login";
-
-    document.getElementById("authTitle")
-        .textContent =
-        login ? "Kirish" : "Register";
-
-    document.getElementById("authSubmit")
-        .textContent =
-        login ? "Kirish" : "Account yaratish";
-
-    document.getElementById("nameGroup")
-        .style.display =
-        login ? "none" : "block";
-
-    document.getElementById("authSwitchText")
-        .textContent =
-        login
-        ? "Account yo'qmi?"
-        : "Account bormi?";
-
-    document.getElementById("authSwitchButton")
-        .textContent =
-        login
-        ? "Register"
-        : "Kirish";
-
-}
-
-
-window.submitAuth = async function(event){
-
-    event.preventDefault();
-
-    const email =
-        document.getElementById("authEmail")
-        .value.trim();
-
-    const password =
-        document.getElementById("authPassword")
-        .value;
-
-    const name =
-        document.getElementById("authName")
-        .value.trim();
-
-    try{
-
-        if(authMode === "register"){
-
-            const {
-                data,
-                error
-            } =
-            await supabase.auth.signUp({
-
-                email,
-                password,
-
-                options:{
-                    data:{
-                        full_name:name
-                    }
-                }
-
-            });
-
-            if(error) throw error;
-
-            toast(
-                "Account yaratildi! 🎉"
-            );
-
-            closeModal("authModal");
-
-        }else{
-
-            const {
-                data,
-                error
-            } =
-            await supabase.auth.signInWithPassword({
-
-                email,
-                password
-
-            });
-
-            if(error) throw error;
-
-            currentUser =
-                data.user;
-
-            await loadProfile();
-
-            updateAuthButton();
-
-            closeModal("authModal");
-
-            toast(
-                "Xush kelibsiz! ☕"
-            );
-
-        }
-
-    }catch(error){
-
-        console.error(error);
-
-        toast(
-            "Xatolik: " + error.message
-        );
-
-    }
-
-};
-
-
-async function logout(){
-
-    await supabase.auth.signOut();
-
-    currentUser = null;
-    profile = null;
-
-    updateAuthButton();
-
-    toast("Hisobdan chiqildi.");
-
-}
-
-
-function updateAuthButton(){
-
-    const btn =
-        document.getElementById("authButton");
-
-    if(currentUser){
-
-        btn.textContent =
-            "Chiqish";
-
-    }else{
-
-        btn.textContent =
-            "Kirish";
-
-    }
-
-}
-
-
-/* =====================================
-   PROFILE
-===================================== */
-
-async function loadProfile(){
-
-    if(!currentUser) return;
-
-    const {
-        data,
-        error
-    } =
-    await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id",currentUser.id)
-        .maybeSingle();
-
-    if(error){
-
-        console.error(error);
-
-        return;
-
-    }
-
-    profile = data;
-
-}
-
-
-/* =====================================
+/* ==========================================
    SESSION
-===================================== */
+========================================== */
 
 async function loadSession(){
 
     const {
         data
-    } =
-    await supabase.auth.getSession();
+    } = await supabase.auth.getSession();
 
     currentUser =
         data.session?.user || null;
@@ -1801,17 +1932,368 @@ async function loadSession(){
 }
 
 
-/* =====================================
+async function loadProfile(){
+
+    if(!currentUser) return;
+
+    const {
+        data,
+        error
+    } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id",currentUser.id)
+        .single();
+
+    if(!error){
+
+        currentProfile = data;
+
+    }
+
+}
+
+
+function updateAuthButton(){
+
+    const button =
+        document.getElementById("authButton");
+
+    if(!currentUser){
+
+        button.textContent = "Kirish";
+        button.onclick = openAuth;
+
+        return;
+
+    }
+
+    button.textContent =
+        currentProfile?.full_name ||
+        currentUser.email?.split("@")[0] ||
+        "Profil";
+
+    button.onclick =
+        openUserMenu;
+
+}
+
+
+/* ==========================================
+   USER MENU
+========================================== */
+
+window.openUserMenu = function(){
+
+    if(!currentUser){
+
+        openAuth();
+
+        return;
+
+    }
+
+    const isShop =
+        currentProfile?.role === "shop";
+
+    const dashboardButton =
+        isShop
+        ? `
+            <button
+                class="btn btn-primary"
+                style="width:100%;margin-bottom:9px"
+                onclick="closeModal('userMenuModal');openDashboard()"
+            >
+                🏪 Shop Dashboard
+            </button>
+        `
+        : `
+            <button
+                class="btn btn-dark"
+                style="width:100%;margin-bottom:9px"
+                onclick="closeModal('userMenuModal');openShopRegister()"
+            >
+                🏪 Coffee Shop qo'shish
+            </button>
+        `;
+
+    document.body.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div class="modal show" id="userMenuModal">
+            <div class="modal-box" style="max-width:400px">
+                <div class="modal-head">
+                    <h3>👤 Profil</h3>
+                    <button class="close"
+                        onclick="closeModal('userMenuModal');document.getElementById('userMenuModal')?.remove()">
+                        ×
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div style="padding:15px;background:#181818;border:1px solid var(--line);border-radius:15px;margin-bottom:15px">
+                        <strong>
+                            ${escapeHTML(currentProfile?.full_name || "Foydalanuvchi")}
+                        </strong>
+
+                        <div style="color:var(--muted);font-size:12px;margin-top:5px">
+                            ${escapeHTML(currentUser.email || "")}
+                        </div>
+                    </div>
+
+                    ${dashboardButton}
+
+                    <button
+                        class="btn btn-danger"
+                        style="width:100%"
+                        onclick="logout();closeModal('userMenuModal');document.getElementById('userMenuModal')?.remove()"
+                    >
+                        Chiqish
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        `
+    );
+
+};
+
+
+/* ==========================================
+   AUTH
+========================================== */
+
+window.openAuth = function(){
+
+    switchAuth("login");
+
+    openModal("authModal");
+
+};
+
+
+window.switchAuth = function(type){
+
+    const login =
+        document.getElementById("loginForm");
+
+    const register =
+        document.getElementById("registerForm");
+
+    const loginTab =
+        document.getElementById("loginTab");
+
+    const registerTab =
+        document.getElementById("registerTab");
+
+    if(type === "login"){
+
+        login.style.display = "block";
+        register.style.display = "none";
+
+        loginTab.classList.add("active");
+        registerTab.classList.remove("active");
+
+    }else{
+
+        login.style.display = "none";
+        register.style.display = "block";
+
+        loginTab.classList.remove("active");
+        registerTab.classList.add("active");
+
+    }
+
+};
+
+
+window.login = async function(){
+
+    const email =
+        document.getElementById("loginEmail")
+            .value.trim();
+
+    const password =
+        document.getElementById("loginPassword")
+            .value;
+
+    if(!email || !password){
+
+        toast("Email va parolni kiriting","error");
+
+        return;
+
+    }
+
+    const {
+        error
+    } = await supabase.auth
+        .signInWithPassword({
+            email,
+            password
+        });
+
+    if(error){
+
+        toast(error.message,"error");
+
+        return;
+
+    }
+
+    await loadSession();
+
+    closeModal("authModal");
+
+    toast("Muvaffaqiyatli kirdingiz!");
+
+
+    document.getElementById("loginPassword")
+        .value = "";
+
+};
+
+
+window.register = async function(){
+
+    const name =
+        document.getElementById("registerName")
+            .value.trim();
+
+    const email =
+        document.getElementById("registerEmail")
+            .value.trim();
+
+    const phone =
+        document.getElementById("registerPhone")
+            .value.trim();
+
+    const password =
+        document.getElementById("registerPassword")
+            .value;
+
+    if(!name || !email || !password){
+
+        toast(
+            "Ism, email va parolni kiriting",
+            "error"
+        );
+
+        return;
+
+    }
+
+    if(password.length < 6){
+
+        toast(
+            "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
+            "error"
+        );
+
+        return;
+
+    }
+
+    const {
+        data,
+        error
+    } = await supabase.auth
+        .signUp({
+            email,
+            password,
+            options:{
+                data:{
+                    full_name:name,
+                    phone:phone
+                }
+            }
+        });
+
+    if(error){
+
+        toast(error.message,"error");
+
+        return;
+
+    }
+
+    if(data.user){
+
+        currentUser = data.user;
+
+        await new Promise(
+            resolve=>setTimeout(resolve,500)
+        );
+
+        await loadProfile();
+
+        updateAuthButton();
+
+    }
+
+    closeModal("authModal");
+
+    toast(
+        "Hisob muvaffaqiyatli yaratildi!"
+    );
+
+};
+
+
+window.logout = async function(){
+
+    await supabase.auth.signOut();
+
+    currentUser = null;
+    currentProfile = null;
+
+    updateAuthButton();
+
+    toast("Hisobdan chiqdingiz");
+
+};
+
+
+/* ==========================================
+   AUTH STATE LISTENER
+========================================== */
+
+supabase.auth.onAuthStateChange(
+    async (_event,session)=>{
+
+        currentUser =
+            session?.user || null;
+
+        if(currentUser){
+
+            setTimeout(async()=>{
+                await loadProfile();
+                updateAuthButton();
+            },0);
+
+        }else{
+
+            currentProfile = null;
+            updateAuthButton();
+
+        }
+
+    }
+);
+
+
+/* ==========================================
    PRODUCTS
-===================================== */
+========================================== */
 
 async function loadProducts(){
 
     const {
         data,
         error
-    } =
-    await supabase
+    } = await supabase
         .from("products")
         .select(`
             *,
@@ -1822,15 +2304,19 @@ async function loadProducts(){
                 status
             )
         `)
-        .eq("is_available",true);
+        .eq("is_available",true)
+        .order("created_at",{ascending:false});
 
     if(error){
 
         console.error(error);
 
-        toast(
-            "Mahsulotlarni yuklashda xatolik."
-        );
+        document.getElementById("productsGrid")
+            .innerHTML = `
+                <div class="empty">
+                    Mahsulotlarni yuklashda xatolik.
+                </div>
+            `;
 
         return;
 
@@ -1838,53 +2324,57 @@ async function loadProducts(){
 
     products = data || [];
 
+    await loadFavorites();
+
     renderProducts();
 
 }
 
 
-/* =====================================
-   RENDER PRODUCTS
-===================================== */
-
 window.renderProducts = function(){
 
-    const container =
-        document.getElementById("products");
+    const grid =
+        document.getElementById("productsGrid");
 
     const search =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
+        document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+    const category =
+        document.getElementById("categoryFilter")
+            .value;
+
+    const sort =
+        document.getElementById("sortFilter")
+            .value;
 
     let list =
         products.filter(product=>{
 
-            const categoryOK =
-                currentCategory === "all"
-                ||
-                product.category === currentCategory;
+            const name =
+                (product.name || "").toLowerCase();
 
-            const text =
-                (
-                    product.name +
-                    " " +
-                    (product.description || "") +
-                    " " +
-                    (product.shops?.name || "")
-                ).toLowerCase();
+            const desc =
+                (product.description || "").toLowerCase();
 
-            return categoryOK &&
-                   text.includes(search);
+            const shop =
+                (product.shops?.name || "").toLowerCase();
+
+            const matchesSearch =
+                !search ||
+                name.includes(search) ||
+                desc.includes(search) ||
+                shop.includes(search);
+
+            const matchesCategory =
+                category === "all" ||
+                product.category === category;
+
+            return matchesSearch && matchesCategory;
 
         });
-
-    const sort =
-        document
-        .getElementById("sortSelect")
-        .value;
 
     if(sort === "cheap"){
 
@@ -1902,11 +2392,21 @@ window.renderProducts = function(){
 
     }
 
+    if(sort === "name"){
+
+        list.sort(
+            (a,b)=>
+                (a.name || "").localeCompare(
+                    b.name || ""
+                )
+        );
+
+    }
+
     if(!list.length){
 
-        container.innerHTML = `
-            <div class="seo-content"
-                 style="grid-column:1/-1">
+        grid.innerHTML = `
+            <div class="empty" style="grid-column:1/-1">
                 Hozircha mahsulot topilmadi.
             </div>
         `;
@@ -1915,8 +2415,11 @@ window.renderProducts = function(){
 
     }
 
-    container.innerHTML =
+    grid.innerHTML =
         list.map(product=>{
+
+            const favorite =
+                favorites.includes(product.id);
 
             let emoji = "☕";
 
@@ -1929,80 +2432,65 @@ window.renderProducts = function(){
             if(product.category === "food")
                 emoji = "🥐";
 
+            const image =
+                product.image_url
+                ? `
+                    <img
+                        src="${escapeHTML(product.image_url)}"
+                        alt="${escapeHTML(product.name)}"
+                    >
+                `
+                : emoji;
+
             return `
+                <article class="product">
 
-            <article class="product">
+                    <div class="product-image">
 
-                <button
-                    class="favorite"
-                    onclick="toggleFavorite('${product.id}')">
-
-                    ♡
-
-                </button>
-
-                <div class="product-img">
-
-                    ${
-                        product.image_url
-                        ?
-                        `<img
-                           src="${escapeHTML(product.image_url)}"
-                           style="width:100%;height:100%;object-fit:cover"
-                           alt="${escapeHTML(product.name)}">`
-                        :
-                        emoji
-                    }
-
-                </div>
-
-                <div class="product-body">
-
-                    <div class="product-shop">
-
-                        ${
-                            escapeHTML(
-                                product.shops?.name
-                                || "COFFEEGO Shop"
-                            )
-                        }
-
-                    </div>
-
-                    <h3>
-                        ${escapeHTML(product.name)}
-                    </h3>
-
-                    <div class="product-description">
-
-                        ${
-                            escapeHTML(
-                                product.description || ""
-                            )
-                        }
-
-                    </div>
-
-                    <div class="product-bottom">
-
-                        <div class="price">
-                            ${money(product.price)}
-                        </div>
+                        ${image}
 
                         <button
-                            class="add"
-                            onclick="addToCart('${product.id}')">
-
-                            +
-
+                            class="favorite ${favorite ? "active":""}"
+                            onclick="toggleFavorite('${product.id}')"
+                            title="Sevimlilarga"
+                        >
+                            ${favorite ? "♥":"♡"}
                         </button>
 
                     </div>
 
-                </div>
+                    <div class="product-body">
 
-            </article>
+                        <div class="product-shop">
+                            ${escapeHTML(product.shops?.name || "Coffee Shop")}
+                        </div>
 
+                        <h3>
+                            ${escapeHTML(product.name)}
+                        </h3>
+
+                        <div class="product-desc">
+                            ${escapeHTML(product.description || "")}
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ${money(product.price)}
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-small"
+                                onclick="addToCart('${product.id}')"
+                            >
+                                + Savat
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
             `;
 
         }).join("");
@@ -2010,42 +2498,111 @@ window.renderProducts = function(){
 };
 
 
-function escapeHTML(value){
+/* ==========================================
+   FAVORITES
+========================================== */
 
-    return String(value ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#039;");
+async function loadFavorites(){
+
+    if(!currentUser){
+
+        favorites = [];
+
+        return;
+
+    }
+
+    const {
+        data,
+        error
+    } = await supabase
+        .from("favorites")
+        .select("product_id")
+        .eq("user_id",currentUser.id);
+
+    if(!error){
+
+        favorites =
+            (data || [])
+                .map(x=>x.product_id);
+
+    }
 
 }
 
 
-/* =====================================
-   CATEGORY
-===================================== */
+window.toggleFavorite = async function(productId){
 
-window.setCategory = function(category,button){
+    if(!currentUser){
 
-    currentCategory = category;
+        toast(
+            "Sevimlilarga qo'shish uchun login qiling",
+            "error"
+        );
 
-    document
-        .querySelectorAll(".category")
-        .forEach(btn=>{
-            btn.classList.remove("active");
-        });
+        openAuth();
 
-    button.classList.add("active");
+        return;
+
+    }
+
+    const exists =
+        favorites.includes(productId);
+
+    if(exists){
+
+        const {
+            error
+        } = await supabase
+            .from("favorites")
+            .delete()
+            .eq("user_id",currentUser.id)
+            .eq("product_id",productId);
+
+        if(error){
+
+            toast(error.message,"error");
+
+            return;
+
+        }
+
+        favorites =
+            favorites.filter(
+                id=>id !== productId
+            );
+
+    }else{
+
+        const {
+            error
+        } = await supabase
+            .from("favorites")
+            .insert({
+                user_id:currentUser.id,
+                product_id:productId
+            });
+
+        if(error){
+
+            toast(error.message,"error");
+
+            return;
+
+        }
+
+        favorites.push(productId);
+
+    }
 
     renderProducts();
 
 };
 
 
-/* =====================================
+/* ==========================================
    CART
-===================================== */
+========================================== */
 
 window.addToCart = function(productId){
 
@@ -2058,17 +2615,21 @@ window.addToCart = function(productId){
 
     const existing =
         cart.find(
-            item=>item.product.id === productId
+            item=>item.id === productId
         );
 
     if(existing){
 
-        existing.quantity++;
+        existing.quantity += 1;
 
     }else{
 
         cart.push({
-            product,
+            id:product.id,
+            name:product.name,
+            price:product.price,
+            shop_id:product.shop_id,
+            shop_name:product.shops?.name || "",
             quantity:1
         });
 
@@ -2076,93 +2637,23 @@ window.addToCart = function(productId){
 
     saveCart();
 
-    updateCartCount();
-
     toast(
-        product.name + " savatga qo'shildi ☕"
+        `${product.name} savatga qo'shildi`
     );
 
 };
-
-
-function saveCart(){
-
-    localStorage.setItem(
-        "coffeego-cart",
-        JSON.stringify(
-            cart.map(item=>({
-                productId:item.product.id,
-                quantity:item.quantity
-            }))
-        )
-    );
-
-}
-
-
-function restoreCart(){
-
-    try{
-
-        const saved =
-            JSON.parse(
-                localStorage.getItem("coffeego-cart")
-                || "[]"
-            );
-
-        cart =
-            saved.map(item=>{
-
-                const product =
-                    products.find(
-                        p=>p.id === item.productId
-                    );
-
-                return product
-                    ? {
-                        product,
-                        quantity:item.quantity
-                    }
-                    : null;
-
-            }).filter(Boolean);
-
-    }catch{
-
-        cart = [];
-
-    }
-
-}
-
-
-function updateCartCount(){
-
-    const count =
-        cart.reduce(
-            (sum,item)=>
-                sum + item.quantity,
-            0
-        );
-
-    document.getElementById("cartCount")
-        .textContent = count;
-
-}
 
 
 window.openCart = function(){
 
     renderCart();
 
-    document
-        .getElementById("cartModal")
-        .classList.add("show");
+    openModal("cartModal");
 
 };
 
 
-function renderCart(){
+window.renderCart = function(){
 
     const container =
         document.getElementById("cartItems");
@@ -2170,11 +2661,8 @@ function renderCart(){
     if(!cart.length){
 
         container.innerHTML = `
-            <div style="
-                padding:30px 0;
-                text-align:center;
-                color:var(--muted)">
-                Savat bo'sh ☕
+            <div class="empty">
+                🛒 Savat hozircha bo'sh.
             </div>
         `;
 
@@ -2186,87 +2674,122 @@ function renderCart(){
     }
 
     container.innerHTML =
-        cart.map((item,index)=>`
+        cart.map(item=>`
 
-        <div class="cart-item">
+            <div class="cart-item">
 
-            <div class="cart-info">
+                <div class="cart-item-info">
+
+                    <div class="cart-item-name">
+                        ${escapeHTML(item.name)}
+                    </div>
+
+                    <div class="cart-item-shop">
+                        ${escapeHTML(item.shop_name)}
+                    </div>
+
+                    <div class="cart-controls">
+
+                        <button
+                            class="qty-btn"
+                            onclick="changeQty('${item.id}',-1)"
+                        >
+                            −
+                        </button>
+
+                        <strong>
+                            ${item.quantity}
+                        </strong>
+
+                        <button
+                            class="qty-btn"
+                            onclick="changeQty('${item.id}',1)"
+                        >
+                            +
+                        </button>
+
+                        <button
+                            class="qty-btn"
+                            style="margin-left:5px;color:#ff9898"
+                            onclick="removeFromCart('${item.id}')"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
 
                 <strong>
-                    ${escapeHTML(item.product.name)}
+                    ${money(item.price * item.quantity)}
                 </strong>
 
-                <small>
-                    ${money(item.product.price)}
-                </small>
-
             </div>
-
-            <div class="qty">
-
-                <button
-                    onclick="changeQty(${index},-1)">
-                    −
-                </button>
-
-                <span>
-                    ${item.quantity}
-                </span>
-
-                <button
-                    onclick="changeQty(${index},1)">
-                    +
-                </button>
-
-            </div>
-
-        </div>
 
         `).join("");
 
     const total =
         cart.reduce(
             (sum,item)=>
-                sum +
-                item.product.price *
-                item.quantity,
+                sum + item.price * item.quantity,
             0
         );
 
     document.getElementById("cartTotal")
         .textContent = money(total);
 
-}
+};
 
 
-window.changeQty = function(index,delta){
+window.changeQty = function(id,delta){
 
-    cart[index].quantity += delta;
+    const item =
+        cart.find(x=>x.id === id);
 
-    if(cart[index].quantity <= 0){
+    if(!item) return;
 
-        cart.splice(index,1);
+    item.quantity += delta;
+
+    if(item.quantity <= 0){
+
+        cart =
+            cart.filter(x=>x.id !== id);
 
     }
 
     saveCart();
-
-    updateCartCount();
-
     renderCart();
 
 };
 
 
-/* =====================================
-   CHECKOUT
-===================================== */
+window.removeFromCart = function(id){
 
-window.checkout = function(){
+    cart =
+        cart.filter(
+            item=>item.id !== id
+        );
+
+    saveCart();
+    renderCart();
+
+    toast("Mahsulot savatdan o'chirildi");
+
+};
+
+
+/* ==========================================
+   CHECKOUT
+========================================== */
+
+window.openCheckout = async function(){
 
     if(!cart.length){
 
-        toast("Savat bo'sh.");
+        toast(
+            "Savat bo'sh",
+            "error"
+        );
 
         return;
 
@@ -2277,7 +2800,8 @@ window.checkout = function(){
         closeModal("cartModal");
 
         toast(
-            "Buyurtma berish uchun avval kiring."
+            "Buyurtma berish uchun login qiling",
+            "error"
         );
 
         openAuth();
@@ -2286,28 +2810,28 @@ window.checkout = function(){
 
     }
 
-    document.getElementById("orderName")
+    await loadProfile();
+
+    document.getElementById("checkoutName")
         .value =
-        profile?.full_name || "";
+            currentProfile?.full_name || "";
+
+    document.getElementById("checkoutPhone")
+        .value =
+            currentProfile?.phone || "";
 
     closeModal("cartModal");
 
-    document
-        .getElementById("checkoutModal")
-        .classList.add("show");
+    openModal("checkoutModal");
 
 };
 
 
-/* =====================================
-   REAL ORDER
-===================================== */
-
-window.submitOrder = async function(){
+window.placeOrder = async function(){
 
     if(!currentUser){
 
-        toast("Avval login qiling.");
+        toast("Avval login qiling","error");
 
         return;
 
@@ -2315,164 +2839,158 @@ window.submitOrder = async function(){
 
     if(!cart.length){
 
-        toast("Savat bo'sh.");
+        toast("Savat bo'sh","error");
 
         return;
 
     }
 
     const name =
-        document
-        .getElementById("orderName")
-        .value.trim();
+        document.getElementById("checkoutName")
+            .value.trim();
 
     const phone =
-        document
-        .getElementById("orderPhone")
-        .value.trim();
+        document.getElementById("checkoutPhone")
+            .value.trim();
 
     const address =
-        document
-        .getElementById("orderAddress")
-        .value.trim();
+        document.getElementById("checkoutAddress")
+            .value.trim();
 
-    const payment =
-        document
-        .getElementById("paymentMethod")
-        .value;
+    const paymentMethod =
+        document.getElementById("paymentMethod")
+            .value;
 
     if(!name || !phone || !address){
 
         toast(
-            "Barcha ma'lumotlarni kiriting."
+            "Barcha ma'lumotlarni to'ldiring",
+            "error"
         );
 
         return;
 
     }
 
-    /*
-      Hozirgi cart ichidagi mahsulotlar
-      bir nechta shopdan bo'lishi mumkin.
-      Shuning uchun shop bo'yicha guruhlaymiz.
-    */
+
+    /* GROUP BY SHOP */
 
     const grouped = {};
 
     cart.forEach(item=>{
 
-        const shopId =
-            item.product.shop_id;
+        if(!grouped[item.shop_id]){
 
-        if(!grouped[shopId]){
-
-            grouped[shopId] = [];
+            grouped[item.shop_id] = [];
 
         }
 
-        grouped[shopId].push(item);
+        grouped[item.shop_id].push(item);
 
     });
 
-    try{
 
-        for(const shopId of Object.keys(grouped)){
+    const shopIds =
+        Object.keys(grouped);
 
-            const items =
-                grouped[shopId];
+    let successCount = 0;
 
-            const total =
-                items.reduce(
-                    (sum,item)=>
-                        sum +
-                        item.product.price *
-                        item.quantity,
-                    0
-                );
+    for(const shopId of shopIds){
 
-            const {
-                data:order,
-                error:orderError
-            } =
-            await supabase
-                .from("orders")
-                .insert({
+        const items =
+            grouped[shopId];
 
-                    customer_id:currentUser.id,
-
-                    shop_id:shopId,
-
-                    customer_name:name,
-
-                    customer_phone:phone,
-
-                    delivery_address:address,
-
-                    total_amount:total,
-
-                    payment_method:payment,
-
-                    status:"new",
-
-                    payment_status:"pending"
-
-                })
-                .select()
-                .single();
-
-            if(orderError)
-                throw orderError;
+        const total =
+            items.reduce(
+                (sum,item)=>
+                    sum + item.price * item.quantity,
+                0
+            );
 
 
-            const orderItems =
-                items.map(item=>({
-
-                    order_id:order.id,
-
-                    product_id:item.product.id,
-
-                    product_name:item.product.name,
-
-                    price:item.product.price,
-
-                    quantity:item.quantity
-
-                }));
-
-
-            const {
-                error:itemError
-            } =
-            await supabase
-                .from("order_items")
-                .insert(orderItems);
+        const {
+            data:order,
+            error:orderError
+        } = await supabase
+            .from("orders")
+            .insert({
+                customer_id:currentUser.id,
+                shop_id:shopId,
+                customer_name:name,
+                customer_phone:phone,
+                delivery_address:address,
+                total_amount:total,
+                status:"new",
+                payment_status:"pending",
+                payment_method:paymentMethod
+            })
+            .select()
+            .single();
 
 
-            if(itemError)
-                throw itemError;
+        if(orderError){
+
+            console.error(orderError);
+
+            toast(
+                "Buyurtma yaratishda xatolik: " +
+                orderError.message,
+                "error"
+            );
+
+            continue;
 
         }
 
+
+        const itemRows =
+            items.map(item=>({
+                order_id:order.id,
+                product_id:item.id,
+                product_name:item.name,
+                price:item.price,
+                quantity:item.quantity
+            }));
+
+
+        const {
+            error:itemError
+        } = await supabase
+            .from("order_items")
+            .insert(itemRows);
+
+
+        if(itemError){
+
+            console.error(itemError);
+
+            toast(
+                "Buyurtma mahsulotlarini saqlashda xatolik",
+                "error"
+            );
+
+            continue;
+
+        }
+
+        successCount++;
+
+    }
+
+
+    if(successCount > 0){
 
         cart = [];
 
         saveCart();
 
-        updateCartCount();
-
         closeModal("checkoutModal");
 
-        toast(
-            "Buyurtma muvaffaqiyatli yuborildi! 🎉"
-        );
-
-    }catch(error){
-
-        console.error(error);
+        document.getElementById("checkoutAddress")
+            .value = "";
 
         toast(
-            "Buyurtmada xatolik: " +
-            error.message
+            `${successCount} ta shopga buyurtma yuborildi!`
         );
 
     }
@@ -2480,86 +2998,16 @@ window.submitOrder = async function(){
 };
 
 
-/* =====================================
-   FAVORITES
-===================================== */
-
-window.toggleFavorite = async function(productId){
-
-    if(!currentUser){
-
-        toast(
-            "Sevimlilarga qo'shish uchun kiring."
-        );
-
-        openAuth();
-
-        return;
-
-    }
-
-    const {
-        data
-    } =
-    await supabase
-        .from("favorites")
-        .select("id")
-        .eq("user_id",currentUser.id)
-        .eq("product_id",productId)
-        .maybeSingle();
-
-    if(data){
-
-        await supabase
-            .from("favorites")
-            .delete()
-            .eq("id",data.id);
-
-        toast("Sevimlilardan olib tashlandi.");
-
-    }else{
-
-        const {
-            error
-        } =
-        await supabase
-            .from("favorites")
-            .insert({
-
-                user_id:currentUser.id,
-
-                product_id:productId
-
-            });
-
-        if(error){
-
-            toast(
-                "Xatolik: " + error.message
-            );
-
-            return;
-
-        }
-
-        toast("Sevimlilarga qo'shildi ❤️");
-
-    }
-
-};
-
-
-/* =====================================
+/* ==========================================
    SHOPS
-===================================== */
+========================================== */
 
 async function loadShops(){
 
     const {
         data,
         error
-    } =
-    await supabase
+    } = await supabase
         .from("shops")
         .select("*")
         .eq("status","approved")
@@ -2568,6 +3016,13 @@ async function loadShops(){
     if(error){
 
         console.error(error);
+
+        document.getElementById("shopsGrid")
+            .innerHTML = `
+                <div class="empty">
+                    Coffee shoplarni yuklashda xatolik.
+                </div>
+            `;
 
         return;
 
@@ -2580,94 +3035,89 @@ async function loadShops(){
 }
 
 
-function renderShops(){
+window.renderShops = function(){
 
-    const container =
-        document.getElementById("shopsList");
+    const grid =
+        document.getElementById("shopsGrid");
 
     if(!shops.length){
 
-        container.innerHTML = `
-
-            <div class="seo-content"
-                 style="grid-column:1/-1">
-
+        grid.innerHTML = `
+            <div class="empty" style="grid-column:1/-1">
                 Hozircha tasdiqlangan coffee shoplar yo'q.
-
-                <br><br>
-
-                Birinchi shop bo'lish uchun
-                <button
-                    class="primary"
-                    onclick="openRegisterShop()">
-                    Shop ochish
-                </button>
-
             </div>
-
         `;
 
         return;
 
     }
 
-    container.innerHTML =
-        shops.map(shop=>`
+    grid.innerHTML =
+        shops.map(shop=>{
 
-        <article class="shop">
+            const first =
+                (shop.name || "C")
+                    .charAt(0)
+                    .toUpperCase();
 
-            <div class="shop-logo">
-                ☕
-            </div>
+            return `
+                <div class="shop-card">
 
-            <h3>
-                ${escapeHTML(shop.name)}
-            </h3>
+                    <div class="shop-logo">
+                        ${escapeHTML(first)}
+                    </div>
 
-            <p>
-                ${escapeHTML(
-                    shop.description || "Coffee shop"
-                )}
-            </p>
+                    <h3>
+                        ${escapeHTML(shop.name)}
+                    </h3>
 
-            <p style="margin-top:8px">
-                📍 ${escapeHTML(shop.city)}
-                ${shop.address
-                    ? " — " + escapeHTML(shop.address)
-                    : ""}
-            </p>
+                    <div class="shop-city">
+                        📍 ${escapeHTML(shop.city)}
+                    </div>
 
-            ${
-                shop.phone
-                ?
-                `<p style="margin-top:6px">
-                    📞 ${escapeHTML(shop.phone)}
-                 </p>`
-                :
-                ""
-            }
+                    <div class="shop-address">
+                        ${escapeHTML(shop.address || "Manzil ko'rsatilmagan")}
+                    </div>
 
-            <span class="status">
-                ✓ Tasdiqlangan
-            </span>
+                    ${
+                        shop.description
+                        ? `
+                            <div style="color:var(--muted);font-size:13px;margin-top:10px;line-height:1.5">
+                                ${escapeHTML(shop.description)}
+                            </div>
+                        `
+                        : ""
+                    }
 
-        </article>
+                    ${
+                        shop.phone
+                        ? `
+                            <div style="margin-top:12px;font-size:13px">
+                                📞 ${escapeHTML(shop.phone)}
+                            </div>
+                        `
+                        : ""
+                    }
 
-        `).join("");
+                </div>
+            `;
 
-}
+        }).join("");
+
+};
 
 
-/* =====================================
-   REGISTER SHOP
-===================================== */
+/* ==========================================
+   SHOP REGISTER
+========================================== */
 
-window.openRegisterShop = function(){
+window.openShopRegister = function(){
 
     if(!currentUser){
 
         toast(
-            "Shop ochish uchun avval account yarating."
+            "Shop qo'shish uchun avval ro'yxatdan o'ting",
+            "error"
         );
 
         openAuth();
@@ -2676,9 +3126,7 @@ window.openRegisterShop = function(){
 
     }
 
-    document
-        .getElementById("shopModal")
-        .classList.add("show");
+    openModal("shopModal");
 
 };
 
@@ -2687,96 +3135,124 @@ window.registerShop = async function(){
 
     if(!currentUser){
 
-        toast("Avval login qiling.");
+        toast(
+            "Avval login qiling",
+            "error"
+        );
 
         return;
 
     }
 
     const name =
-        document
-        .getElementById("shopName")
-        .value.trim();
+        document.getElementById("shopName")
+            .value.trim();
 
     const city =
-        document
-        .getElementById("shopCity")
-        .value.trim();
+        document.getElementById("shopCity")
+            .value.trim();
 
     const address =
-        document
-        .getElementById("shopAddress")
-        .value.trim();
+        document.getElementById("shopAddress")
+            .value.trim();
 
     const phone =
-        document
-        .getElementById("shopPhone")
-        .value.trim();
+        document.getElementById("shopPhone")
+            .value.trim();
 
     const description =
-        document
-        .getElementById("shopDescription")
-        .value.trim();
+        document.getElementById("shopDescription")
+            .value.trim();
 
-    if(!name || !city){
+
+    if(!name || !city || !address){
 
         toast(
-            "Shop nomi va shahar kerak."
+            "Shop nomi, shahar va manzilni kiriting",
+            "error"
         );
 
         return;
 
     }
 
+
     const {
         error
-    } =
-    await supabase
+    } = await supabase
         .from("shops")
         .insert({
-
             owner_id:currentUser.id,
-
             name,
-
             city,
-
             address,
-
             phone,
-
             description,
-
             status:"pending"
-
         });
+
 
     if(error){
 
         toast(
-            "Xatolik: " + error.message
+            error.message,
+            "error"
         );
 
         return;
 
     }
 
+
+    /* CHANGE PROFILE ROLE TO SHOP */
+
+    const {
+        error:profileError
+    } = await supabase
+        .from("profiles")
+        .update({
+            role:"shop"
+        })
+        .eq("id",currentUser.id);
+
+
+    if(!profileError){
+
+        await loadProfile();
+
+        updateAuthButton();
+
+    }
+
+
     closeModal("shopModal");
 
+    document.getElementById("shopName").value = "";
+    document.getElementById("shopCity").value = "";
+    document.getElementById("shopAddress").value = "";
+    document.getElementById("shopPhone").value = "";
+    document.getElementById("shopDescription").value = "";
+
+
     toast(
-        "Shop arizasi yuborildi! ☕"
+        "Shop yuborildi! Admin tasdiqlashini kuting."
     );
 
 };
 
 
-/* =====================================
+/* ==========================================
    SHOP DASHBOARD
-===================================== */
+========================================== */
 
 window.openDashboard = async function(){
 
     if(!currentUser){
+
+        toast(
+            "Dashboard uchun login qiling",
+            "error"
+        );
 
         openAuth();
 
@@ -2784,226 +3260,823 @@ window.openDashboard = async function(){
 
     }
 
-    const {
-        data:myShops
-    } =
-    await supabase
-        .from("shops")
-        .select("*")
-        .eq("owner_id",currentUser.id);
+    openModal("dashboardModal");
 
-    const content =
-        document.getElementById(
-            "dashboardContent"
-        );
-
-    if(!myShops?.length){
-
-        content.innerHTML = `
-
-            <p style="color:var(--muted)">
-                Sizda hali coffee shop yo'q.
-            </p>
-
-            <button
-                class="primary"
-                style="margin-top:15px"
-                onclick="closeModal('dashboardModal');openRegisterShop()">
-
-                Shop ochish
-
-            </button>
-
+    document.getElementById("dashboardContent")
+        .innerHTML = `
+            <div class="loading">
+                Dashboard yuklanmoqda...
+            </div>
         `;
 
-        document
-            .getElementById("dashboardModal")
-            .classList.add("show");
+    await loadDashboard();
+
+};
+
+
+async function loadDashboard(){
+
+    /* OWN SHOPS */
+
+    const {
+        data:ownShops,
+        error:shopError
+    } = await supabase
+        .from("shops")
+        .select("*")
+        .eq("owner_id",currentUser.id)
+        .order("created_at",{ascending:false});
+
+
+    if(shopError){
+
+        document.getElementById("dashboardContent")
+            .innerHTML = `
+                <div class="empty">
+                    ${escapeHTML(shopError.message)}
+                </div>
+            `;
 
         return;
 
     }
 
-    let html = "";
 
-    for(const shop of myShops){
+    if(!ownShops || !ownShops.length){
 
-        const {
-            data:orders
-        } =
-        await supabase
-            .from("orders")
-            .select("*")
-            .eq("shop_id",shop.id)
-            .order("created_at",{ascending:false})
-            .limit(50);
+        document.getElementById("dashboardContent")
+            .innerHTML = `
+                <div class="empty">
 
-        const total =
-            (orders || [])
-            .filter(o=>o.status !== "cancelled")
-            .reduce(
-                (sum,o)=>
-                    sum + Number(o.total_amount),
-                0
-            );
-
-        html += `
-
-            <div style="
-                border:1px solid var(--border);
-                border-radius:20px;
-                padding:20px;
-                margin-bottom:25px">
-
-                <h3>
-                    ☕ ${escapeHTML(shop.name)}
-                </h3>
-
-                <p style="
-                    color:var(--muted);
-                    margin-top:5px">
-
-                    ${escapeHTML(shop.city)}
-
-                </p>
-
-                <div class="dashboard-stat-grid"
-                     style="margin-top:18px">
-
-                    <div class="stat">
-
-                        <small>Buyurtmalar</small>
-
-                        <strong>
-                            ${(orders || []).length}
-                        </strong>
-
+                    <div style="font-size:45px">
+                        🏪
                     </div>
 
-                    <div class="stat">
+                    <h3 style="margin:10px 0">
+                        Sizda hali shop yo'q
+                    </h3>
 
-                        <small>Savdo</small>
+                    <p>
+                        Avval coffee shopingizni qo'shing.
+                    </p>
 
-                        <strong>
-                            ${money(total)}
-                        </strong>
-
-                    </div>
-
-                    <div class="stat">
-
-                        <small>Status</small>
-
-                        <strong style="font-size:17px">
-
-                            ${
-                                shop.status === "approved"
-                                ? "✓ Faol"
-                                : "⏳ Kutilmoqda"
-                            }
-
-                        </strong>
-
-                    </div>
+                    <button
+                        class="btn btn-primary"
+                        style="margin-top:15px"
+                        onclick="closeModal('dashboardModal');openShopRegister()"
+                    >
+                        + Shop qo'shish
+                    </button>
 
                 </div>
+            `;
 
-                <h3 style="margin-top:20px">
-                    Buyurtmalar
-                </h3>
-
-                ${
-                    orders?.length
-                    ?
-                    orders.map(order=>`
-
-                        <div class="order-card">
-
-                            <div style="
-                                display:flex;
-                                justify-content:space-between;
-                                gap:15px;
-                                flex-wrap:wrap">
-
-                                <strong>
-                                    #${order.id.slice(0,8)}
-                                </strong>
-
-                                <span class="order-status">
-                                    ${escapeHTML(order.status)}
-                                </span>
-
-                            </div>
-
-                            <p style="
-                                color:var(--muted);
-                                margin-top:8px">
-
-                                ${escapeHTML(
-                                    order.customer_name || ""
-                                )}
-
-                                ·
-
-                                ${escapeHTML(
-                                    order.customer_phone || ""
-                                )}
-
-                            </p>
-
-                            <p style="margin-top:8px">
-                                ${money(order.total_amount)}
-                            </p>
-
-                            <p style="
-                                color:var(--muted);
-                                margin-top:6px">
-
-                                📍 ${escapeHTML(
-                                    order.delivery_address || ""
-                                )}
-
-                            </p>
-
-                        </div>
-
-                    `).join("")
-                    :
-                    `<p style="color:var(--muted);margin-top:10px">
-                        Hali buyurtmalar yo'q.
-                    </p>`
-                }
-
-            </div>
-
-        `;
+        return;
 
     }
 
-    content.innerHTML = html;
 
-    document
-        .getElementById("dashboardModal")
-        .classList.add("show");
+    /*
+       Agar bir nechta shop bo'lsa,
+       birinchi shop ishlatiladi.
+    */
+
+    dashboardShop = ownShops[0];
+
+    dashboardShopName.textContent =
+        dashboardShop.name +
+        " • " +
+        dashboardShop.city;
+
+
+    await loadDashboardProducts();
+
+    await loadDashboardOrders();
+
+    renderDashboard();
+
+}
+
+
+async function loadDashboardProducts(){
+
+    const {
+        data,
+        error
+    } = await supabase
+        .from("products")
+        .select("*")
+        .eq("shop_id",dashboardShop.id)
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        console.error(error);
+
+        dashboardProducts = [];
+
+        return;
+
+    }
+
+    dashboardProducts = data || [];
+
+}
+
+
+async function loadDashboardOrders(){
+
+    const {
+        data,
+        error
+    } = await supabase
+        .from("orders")
+        .select(`
+            *,
+            order_items (
+                id,
+                product_name,
+                price,
+                quantity
+            )
+        `)
+        .eq("shop_id",dashboardShop.id)
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        console.error(error);
+
+        dashboardOrders = [];
+
+        return;
+
+    }
+
+    dashboardOrders = data || [];
+
+}
+
+
+window.renderDashboard = function(){
+
+    const content =
+        document.getElementById("dashboardContent");
+
+
+    const totalSales =
+        dashboardOrders
+            .filter(o=>o.status !== "cancelled")
+            .reduce(
+                (sum,o)=>
+                    sum + Number(o.total_amount || 0),
+                0
+            );
+
+
+    const pending =
+        dashboardOrders.filter(
+            o=>o.status === "new"
+        ).length;
+
+
+    const delivered =
+        dashboardOrders.filter(
+            o=>o.status === "delivered"
+        ).length;
+
+
+    content.innerHTML = `
+
+        <div class="dashboard-top">
+
+            <div>
+                <div style="color:var(--muted);font-size:13px">
+                    Shop holati
+                </div>
+
+                <div style="margin-top:5px">
+                    <span class="status ${
+                        dashboardShop.status === "approved"
+                        ? "status-ready"
+                        : "status-new"
+                    }">
+                        ${escapeHTML(dashboardShop.status)}
+                    </span>
+                </div>
+            </div>
+
+            <button
+                class="btn btn-dark"
+                onclick="loadDashboard()"
+            >
+                ↻ Yangilash
+            </button>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+            <div class="stat">
+                <div class="stat-label">
+                    Jami buyurtmalar
+                </div>
+                <div class="stat-value">
+                    ${dashboardOrders.length}
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">
+                    Yangi buyurtmalar
+                </div>
+                <div class="stat-value">
+                    ${pending}
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">
+                    Yetkazilgan
+                </div>
+                <div class="stat-value">
+                    ${delivered}
+                </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">
+                    Jami savdo
+                </div>
+                <div class="stat-value" style="font-size:19px">
+                    ${money(totalSales)}
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-section">
+
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:15px">
+
+                <h3>
+                    📦 Buyurtmalar
+                </h3>
+
+                <span style="color:var(--muted);font-size:12px">
+                    ${dashboardOrders.length} ta
+                </span>
+
+            </div>
+
+            ${
+                dashboardOrders.length
+                ? dashboardOrders.map(renderOrder).join("")
+                : `
+                    <div class="empty">
+                        Hozircha buyurtmalar yo'q.
+                    </div>
+                `
+            }
+
+        </div>
+
+
+        <div class="dashboard-section">
+
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:15px">
+
+                <h3>
+                    ☕ Mahsulotlar
+                </h3>
+
+                <button
+                    class="btn btn-primary btn-small"
+                    onclick="openProductModal()"
+                >
+                    + Mahsulot
+                </button>
+
+            </div>
+
+            ${
+                dashboardProducts.length
+                ? dashboardProducts.map(
+                    renderAdminProduct
+                ).join("")
+                : `
+                    <div class="empty">
+                        Hali mahsulot qo'shilmagan.
+                    </div>
+                `
+            }
+
+        </div>
+
+    `;
 
 };
 
 
-/* =====================================
-   INIT
-===================================== */
+function renderOrder(order){
 
-loadTheme();
+    const status =
+        order.status || "new";
 
-await loadSession();
+    const items =
+        order.order_items || [];
 
-await loadProducts();
+    return `
 
-restoreCart();
+        <div class="order-card">
 
-updateCartCount();
+            <div class="order-head">
 
-await loadShops();
+                <div>
+
+                    <strong>
+                        📦 Buyurtma #${escapeHTML(order.id.slice(0,8))}
+                    </strong>
+
+                    <div class="order-id">
+                        ${new Date(order.created_at)
+                            .toLocaleString("uz-UZ")}
+                    </div>
+
+                </div>
+
+                <span class="status status-${escapeHTML(status)}">
+                    ${statusText(status)}
+                </span>
+
+            </div>
+
+
+            <div class="order-items">
+
+                ${
+                    items.length
+                    ? items.map(item=>`
+                        <div>
+                            ${escapeHTML(item.product_name)}
+                            × ${item.quantity}
+                            — ${money(item.price * item.quantity)}
+                        </div>
+                    `).join("")
+                    : "Mahsulot ma'lumotlari yo'q"
+                }
+
+            </div>
+
+
+            <div class="order-meta">
+
+                👤 ${escapeHTML(order.customer_name || "")}
+                <br>
+
+                📞 ${escapeHTML(order.customer_phone || "")}
+                <br>
+
+                📍 ${escapeHTML(order.delivery_address || "")}
+                <br>
+
+                💳 ${escapeHTML(order.payment_method || "cash")}
+                <br>
+
+                💰 <strong>
+                    ${money(order.total_amount)}
+                </strong>
+
+            </div>
+
+
+            <div class="status-buttons">
+
+                <button
+                    onclick="updateOrderStatus('${order.id}','accepted')"
+                >
+                    ✓ Qabul qilish
+                </button>
+
+                <button
+                    onclick="updateOrderStatus('${order.id}','preparing')"
+                >
+                    ☕ Tayyorlanmoqda
+                </button>
+
+                <button
+                    onclick="updateOrderStatus('${order.id}','ready')"
+                >
+                    📦 Tayyor
+                </button>
+
+                <button
+                    onclick="updateOrderStatus('${order.id}','delivering')"
+                >
+                    🚚 Yetkazilmoqda
+                </button>
+
+                <button
+                    onclick="updateOrderStatus('${order.id}','delivered')"
+                >
+                    ✅ Yetkazildi
+                </button>
+
+                <button
+                    onclick="updateOrderStatus('${order.id}','cancelled')"
+                    style="color:#ff9898"
+                >
+                    ✕ Bekor qilish
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+function statusText(status){
+
+    const map = {
+
+        new:"Yangi",
+
+        accepted:"Qabul qilindi",
+
+        preparing:"Tayyorlanmoqda",
+
+        ready:"Tayyor",
+
+        delivering:"Yetkazilmoqda",
+
+        delivered:"Yetkazildi",
+
+        cancelled:"Bekor qilindi"
+
+    };
+
+    return map[status] || status;
+
+}
+
+
+/* ==========================================
+   UPDATE ORDER STATUS
+========================================== */
+
+window.updateOrderStatus = async function(
+    orderId,
+    newStatus
+){
+
+    if(!currentUser || !dashboardShop){
+
+        return;
+
+    }
+
+
+    const order =
+        dashboardOrders.find(
+            o=>o.id === orderId
+        );
+
+    if(!order) return;
+
+
+    const oldStatus =
+        order.status;
+
+
+    const {
+        error
+    } = await supabase
+        .from("orders")
+        .update({
+            status:newStatus,
+            updated_at:new Date().toISOString()
+        })
+        .eq("id",orderId)
+        .eq("shop_id",dashboardShop.id);
+
+
+    if(error){
+
+        console.error(error);
+
+        toast(
+            "Statusni o'zgartirib bo'lmadi: " +
+            error.message,
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    /* STATUS HISTORY */
+
+    await supabase
+        .from("order_status_history")
+        .insert({
+            order_id:orderId,
+            old_status:oldStatus,
+            new_status:newStatus,
+            changed_by:currentUser.id
+        });
+
+
+    toast(
+        "Buyurtma statusi yangilandi"
+    );
+
+
+    await loadDashboardOrders();
+
+    renderDashboard();
+
+};
+
+
+/* ==========================================
+   ADD PRODUCT
+========================================== */
+
+window.openProductModal = function(){
+
+    if(!dashboardShop){
+
+        toast(
+            "Avval shopni tanlang",
+            "error"
+        );
+
+        return;
+
+    }
+
+    document.getElementById("productName")
+        .value = "";
+
+    document.getElementById("productDescription")
+        .value = "";
+
+    document.getElementById("productPrice")
+        .value = "";
+
+    document.getElementById("productImage")
+        .value = "";
+
+    openModal("productModal");
+
+};
+
+
+window.addProduct = async function(){
+
+    if(!currentUser || !dashboardShop){
+
+        toast(
+            "Shop topilmadi",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    const name =
+        document.getElementById("productName")
+            .value.trim();
+
+    const description =
+        document.getElementById("productDescription")
+            .value.trim();
+
+    const category =
+        document.getElementById("productCategory")
+            .value;
+
+    const price =
+        Number(
+            document.getElementById("productPrice")
+                .value
+        );
+
+    const image =
+        document.getElementById("productImage")
+            .value.trim();
+
+
+    if(!name || !price){
+
+        toast(
+            "Mahsulot nomi va narxini kiriting",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    const {
+        error
+    } = await supabase
+        .from("products")
+        .insert({
+            shop_id:dashboardShop.id,
+            name,
+            description,
+            category,
+            price,
+            image_url:image || null,
+            is_available:true
+        });
+
+
+    if(error){
+
+        toast(
+            "Mahsulot qo'shilmadi: " +
+            error.message,
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    closeModal("productModal");
+
+    toast(
+        "Mahsulot muvaffaqiyatli qo'shildi!"
+    );
+
+
+    await loadDashboardProducts();
+
+    await loadProducts();
+
+    renderDashboard();
+
+};
+
+
+/* ==========================================
+   DELETE PRODUCT
+========================================== */
+
+window.deleteProduct = async function(
+    productId
+){
+
+    if(!confirm(
+        "Bu mahsulotni o'chirishni xohlaysizmi?"
+    )){
+
+        return;
+
+    }
+
+
+    const {
+        error
+    } = await supabase
+        .from("products")
+        .delete()
+        .eq("id",productId)
+        .eq("shop_id",dashboardShop.id);
+
+
+    if(error){
+
+        toast(
+            "O'chirishda xatolik: " +
+            error.message,
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    toast(
+        "Mahsulot o'chirildi"
+    );
+
+
+    await loadDashboardProducts();
+
+    await loadProducts();
+
+    renderDashboard();
+
+};
+
+
+function renderAdminProduct(product){
+
+    return `
+
+        <div class="product-admin">
+
+            <div class="product-admin-info">
+
+                <strong>
+                    ${escapeHTML(product.name)}
+                </strong>
+
+                <span>
+                    ${escapeHTML(product.category)}
+                    •
+                    ${money(product.price)}
+                    •
+                    ${
+                        product.is_available
+                        ? "Mavjud"
+                        : "Mavjud emas"
+                    }
+                </span>
+
+            </div>
+
+            <button
+                class="btn btn-danger btn-small"
+                onclick="deleteProduct('${product.id}')"
+            >
+                🗑️
+            </button>
+
+        </div>
+
+    `;
+
+}
+
+
+/* ==========================================
+   FAQ
+========================================== */
+
+window.toggleFaq = function(el){
+
+    el.parentElement
+        .classList.toggle("open");
+
+};
+
+
+/* ==========================================
+   CLOSE MODALS BY BACKDROP
+========================================== */
+
+document.querySelectorAll(".modal")
+    .forEach(modal=>{
+
+        modal.addEventListener(
+            "click",
+            e=>{
+
+                if(e.target === modal){
+
+                    modal.classList.remove("show");
+
+                }
+
+            }
+        );
+
+    });
+
+
+/* ==========================================
+   INITIALIZATION
+========================================== */
+
+async function init(){
+
+    updateCartCount();
+
+    await loadSession();
+
+    await loadProducts();
+
+    await loadShops();
+
+}
+
+
+init();
 
 </script>
 
