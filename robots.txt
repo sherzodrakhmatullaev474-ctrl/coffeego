@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/sitemap.xml
