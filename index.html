@@ -7,68 +7,33 @@
 <title>COFFEEGO Samarqand — Kofe, Coffee Shop va Yetkazib Berish</title>
 
 <meta name="description" content="COFFEEGO — Samarqand va O'zbekistondagi zamonaviy coffee marketplace. Coffee shoplar, kofe, dessert, nonushta va online buyurtmalarni bir joydan toping.">
-
-<meta name="keywords" content="
-COFFEEGO,
-COFFEEGO Samarqand,
-Samarqand coffee,
-Samarqand kofe,
-Samarqand coffee shop,
-Samarqand kafelar,
-Samarqand kofe shop,
-Samarqand coffee delivery,
-kofe yetkazib berish Samarqand,
-coffee shop Uzbekistan,
-kofe O'zbekiston,
-coffee marketplace Uzbekistan,
-coffee marketplace Samarqand,
-online kofe buyurtma,
-kofe buyurtma Samarqand
-">
-
+<meta name="keywords" content="COFFEEGO, COFFEEGO Samarqand, Samarqand coffee, Samarqand kofe, Samarqand coffee shop, kofe yetkazib berish Samarqand">
 <meta name="author" content="COFFEEGO">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="yandex" content="index, follow">
-
 <link rel="canonical" href="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
 
-<!-- GOOGLE SEARCH CONSOLE -->
 <meta name="google-site-verification" content="FUeToDqfKJxB8Sy8c8OXbkmj54KzZs4xhYBZNGu6BCA">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="COFFEEGO Samarqand — Kofe va Coffee Shoplar">
-<meta property="og:description" content="Samarqand coffee shoplari, kofe, dessert va online buyurtmalar — COFFEEGO marketplace.">
+<meta property="og:description" content="Samarqand coffee shoplari, kofe, dessert va online buyurtmalar.">
 <meta property="og:url" content="https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/">
 <meta property="og:site_name" content="COFFEEGO">
 <meta property="og:locale" content="uz_UZ">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="COFFEEGO Samarqand — Coffee Marketplace">
-<meta name="twitter:description" content="Samarqand coffee shoplari, kofe va dessertlarni COFFEEGO orqali toping.">
 
 <meta name="geo.region" content="UZ-SA">
 <meta name="geo.placename" content="Samarqand, Uzbekistan">
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"COFFEEGO",
-  "alternateName":"COFFEEGO Samarqand",
-  "url":"https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/",
-  "description":"Samarqand va O'zbekistondagi zamonaviy coffee marketplace.",
-  "inLanguage":"uz"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"COFFEEGO",
-  "url":"https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/",
-  "description":"O'zbekistondagi coffee marketplace va coffee shoplar platformasi."
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"COFFEEGO",
+ "alternateName":"COFFEEGO Samarqand",
+ "url":"https://sherzodrakhmatullaev474-ctrl.github.io/coffeego/",
+ "description":"Samarqand va O'zbekistondagi zamonaviy coffee marketplace.",
+ "inLanguage":"uz"
 }
 </script>
 
@@ -77,14 +42,16 @@ kofe buyurtma Samarqand
     --bg:#080808;
     --bg2:#101010;
     --card:#151515;
-    --card2:#1c1c1c;
-    --text:#f7f3ed;
-    --muted:#a9a29a;
-    --line:#2b2926;
-    --gold:#d6a75c;
-    --gold2:#f1ca82;
-    --danger:#e36b6b;
-    --success:#6fd69b;
+    --card2:#1b1b1b;
+    --text:#f5f5f5;
+    --muted:#999;
+    --line:rgba(255,255,255,.09);
+    --accent:#c58b55;
+    --accent2:#e2b27d;
+    --danger:#ef4444;
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --blue:#3b82f6;
     --shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
@@ -99,19 +66,16 @@ html{
 }
 
 body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:
-        radial-gradient(circle at 20% 0%,rgba(214,167,92,.08),transparent 30%),
-        radial-gradient(circle at 90% 20%,rgba(255,255,255,.04),transparent 25%),
-        var(--bg);
+    font-family:Inter,Arial,sans-serif;
+    background:var(--bg);
     color:var(--text);
     min-height:100vh;
 }
 
 button,
 input,
-textarea,
-select{
+select,
+textarea{
     font:inherit;
 }
 
@@ -124,265 +88,213 @@ a{
     text-decoration:none;
 }
 
-.container{
-    width:min(1180px,92%);
-    margin:auto;
+.hidden{
+    display:none!important;
 }
 
-/* NAVBAR */
+/* NAV */
 
 .nav{
     position:sticky;
     top:0;
     z-index:1000;
-    backdrop-filter:blur(18px);
-    background:rgba(8,8,8,.86);
-    border-bottom:1px solid var(--line);
-}
-
-.nav-inner{
-    min-height:74px;
+    height:72px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    padding:0 5%;
+    background:rgba(8,8,8,.88);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:24px;
+    font-size:25px;
     font-weight:900;
-    letter-spacing:-1px;
+    letter-spacing:2px;
+    color:var(--accent2);
 }
 
-.logo-icon{
-    width:38px;
-    height:38px;
-    border-radius:12px;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(135deg,var(--gold),#7d5120);
-    color:#111;
-    box-shadow:0 8px 30px rgba(214,167,92,.2);
+.logo span{
+    color:white;
 }
 
-.nav-links{
+.navlinks{
     display:flex;
+    gap:25px;
     align-items:center;
-    gap:22px;
-    color:#cfc8bf;
-    font-size:14px;
 }
 
-.nav-links a:hover{
-    color:var(--gold2);
-}
-
-.nav-actions{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.icon-btn{
-    border:1px solid var(--line);
-    background:#111;
-    color:#fff;
-    width:42px;
-    height:42px;
-    border-radius:12px;
-    display:grid;
-    place-items:center;
-}
-
-.icon-btn:hover{
-    border-color:var(--gold);
-}
-
-.cart-btn{
-    position:relative;
-}
-
-.cart-count{
-    position:absolute;
-    top:-5px;
-    right:-5px;
-    min-width:19px;
-    height:19px;
-    border-radius:50%;
-    background:var(--gold);
-    color:#111;
-    font-size:11px;
-    font-weight:900;
-    display:grid;
-    place-items:center;
-}
-
-/* BUTTONS */
-
-.btn{
-    border:0;
-    border-radius:13px;
-    padding:12px 17px;
-    font-weight:800;
+.navlinks a{
+    color:#bbb;
     transition:.2s;
 }
 
-.btn:hover{
-    transform:translateY(-1px);
+.navlinks a:hover{
+    color:white;
 }
 
-.btn-primary{
-    background:linear-gradient(135deg,var(--gold2),var(--gold));
-    color:#17110a;
+.navright{
+    display:flex;
+    gap:9px;
+    align-items:center;
 }
 
-.btn-dark{
-    background:#191919;
-    color:#fff;
+.iconbtn{
+    width:42px;
+    height:42px;
     border:1px solid var(--line);
+    background:#151515;
+    color:white;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.btn-danger{
-    background:rgba(227,107,107,.12);
-    color:#ff9898;
-    border:1px solid rgba(227,107,107,.25);
+.iconbtn:hover{
+    border-color:var(--accent);
 }
 
-.btn-success{
-    background:rgba(111,214,155,.12);
-    color:#8ef0b4;
-    border:1px solid rgba(111,214,155,.25);
+.userbtn{
+    padding:10px 15px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#151515;
+    color:white;
 }
 
-.btn-small{
-    padding:9px 12px;
-    font-size:13px;
+.cartcount{
+    background:var(--accent);
+    color:#111;
+    padding:2px 6px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:900;
+    margin-left:3px;
 }
 
 /* HERO */
 
 .hero{
-    padding:92px 0 75px;
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    padding:70px 7%;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 75% 40%,rgba(197,139,85,.20),transparent 30%),
+        radial-gradient(circle at 10% 80%,rgba(197,139,85,.08),transparent 30%);
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:45px;
-    align-items:center;
+.hero:after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(197,139,85,.06);
+    right:-150px;
+    top:-100px;
+    filter:blur(10px);
+}
+
+.hero-content{
+    max-width:780px;
+    position:relative;
+    z-index:2;
 }
 
 .badge{
     display:inline-flex;
-    align-items:center;
-    gap:8px;
-    border:1px solid rgba(214,167,92,.3);
-    color:var(--gold2);
-    background:rgba(214,167,92,.07);
-    padding:8px 12px;
+    padding:8px 13px;
+    border:1px solid rgba(197,139,85,.3);
+    background:rgba(197,139,85,.08);
+    color:var(--accent2);
     border-radius:999px;
-    font-size:13px;
-    font-weight:700;
     margin-bottom:20px;
+    font-size:13px;
 }
 
 .hero h1{
-    font-size:clamp(45px,7vw,82px);
-    line-height:.96;
-    letter-spacing:-4px;
+    font-size:clamp(44px,7vw,82px);
+    line-height:.98;
     margin-bottom:24px;
+    letter-spacing:-3px;
 }
 
-.gradient-text{
-    background:linear-gradient(90deg,#fff,var(--gold2));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+.hero h1 span{
+    color:var(--accent2);
 }
 
 .hero p{
-    color:var(--muted);
-    max-width:650px;
+    color:#aaa;
     font-size:18px;
     line-height:1.7;
+    max-width:650px;
+    margin-bottom:30px;
 }
 
-.hero-buttons{
+.actions{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
-    margin-top:28px;
 }
 
-.hero-card{
-    min-height:410px;
+/* BUTTONS */
+
+.btn{
+    border:none;
+    border-radius:13px;
+    padding:13px 20px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:#111;
+}
+
+.btn-secondary{
+    background:#1a1a1a;
+    color:white;
     border:1px solid var(--line);
-    border-radius:30px;
-    padding:28px;
-    background:
-        linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015)),
-        radial-gradient(circle at 70% 20%,rgba(214,167,92,.2),transparent 35%),
-        #101010;
-    box-shadow:var(--shadow);
-    position:relative;
-    overflow:hidden;
 }
 
-.coffee-cup{
-    width:220px;
-    height:150px;
-    border-radius:25px 25px 70px 70px;
-    background:linear-gradient(145deg,#f1e4d1,#9e866b);
-    position:absolute;
-    left:50%;
-    top:48%;
-    transform:translate(-50%,-50%);
-    box-shadow:0 30px 70px rgba(0,0,0,.6);
+.btn-danger{
+    background:rgba(239,68,68,.12);
+    color:#ff7777;
+    border:1px solid rgba(239,68,68,.25);
 }
 
-.coffee-cup:before{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:45px;
-    border-radius:50%;
-    background:#3b2415;
-    top:-8px;
-    left:20px;
+.btn-success{
+    background:rgba(34,197,94,.12);
+    color:#67e68a;
+    border:1px solid rgba(34,197,94,.25);
 }
 
-.coffee-cup:after{
-    content:"";
-    position:absolute;
-    width:55px;
-    height:70px;
-    border:14px solid #d0b99c;
-    border-left:0;
-    border-radius:0 50px 50px 0;
-    right:-52px;
-    top:28px;
+.btn-warning{
+    background:rgba(245,158,11,.12);
+    color:#ffc15c;
+    border:1px solid rgba(245,158,11,.25);
 }
 
-.steam{
-    position:absolute;
-    width:3px;
-    height:90px;
-    background:linear-gradient(transparent,rgba(255,255,255,.35),transparent);
-    border-radius:50%;
-    top:55px;
+.btn-blue{
+    background:rgba(59,130,246,.12);
+    color:#78aaff;
+    border:1px solid rgba(59,130,246,.25);
 }
 
-.steam.one{left:42%}
-.steam.two{left:51%;height:75px}
-.steam.three{left:60%;height:100px}
-
-/* SECTIONS */
+/* SECTION */
 
 .section{
-    padding:75px 0;
+    padding:70px 6%;
 }
 
 .section-head{
@@ -394,52 +306,21 @@ a{
 }
 
 .section-head h2{
-    font-size:38px;
-    letter-spacing:-1.5px;
+    font-size:34px;
 }
 
 .section-head p{
     color:var(--muted);
-    max-width:570px;
-    line-height:1.6;
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-}
-
-.feature{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:22px;
-    padding:25px;
-}
-
-.feature-icon{
-    font-size:28px;
-    margin-bottom:17px;
-}
-
-.feature h3{
-    margin-bottom:8px;
-}
-
-.feature p{
-    color:var(--muted);
-    line-height:1.6;
+    margin-top:7px;
 }
 
 /* MARKET */
 
 .market-tools{
     display:grid;
-    grid-template-columns:1fr 170px 170px;
-    gap:10px;
-    margin-bottom:22px;
+    grid-template-columns:1fr 180px 180px;
+    gap:12px;
+    margin-bottom:25px;
 }
 
 .input,
@@ -447,297 +328,459 @@ a{
 .textarea{
     width:100%;
     background:#111;
-    color:#fff;
+    color:white;
     border:1px solid var(--line);
-    border-radius:13px;
-    padding:13px 14px;
+    border-radius:12px;
+    padding:13px 15px;
     outline:none;
 }
 
 .input:focus,
 .select:focus,
 .textarea:focus{
-    border-color:var(--gold);
+    border-color:var(--accent);
 }
 
-.textarea{
-    resize:vertical;
-    min-height:90px;
-}
-
-.products-grid{
+.grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:18px;
 }
 
-.product{
-    background:var(--card);
+.card{
+    background:linear-gradient(180deg,#171717,#111);
     border:1px solid var(--line);
     border-radius:20px;
     overflow:hidden;
-    transition:.2s;
+    transition:.25s;
 }
 
-.product:hover{
-    transform:translateY(-4px);
-    border-color:#49443c;
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(197,139,85,.35);
+    box-shadow:var(--shadow);
 }
 
-.product-image{
-    height:185px;
+.product-img{
+    height:210px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:75px;
     background:
-        radial-gradient(circle at 50% 35%,rgba(214,167,92,.28),transparent 35%),
-        linear-gradient(135deg,#201810,#0f0f0f);
-    display:grid;
-    place-items:center;
-    font-size:70px;
-    position:relative;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.favorite{
-    position:absolute;
-    top:10px;
-    right:10px;
-    width:37px;
-    height:37px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(0,0,0,.45);
-    color:white;
-    display:grid;
-    place-items:center;
-}
-
-.favorite.active{
-    color:#ff7474;
+        radial-gradient(circle at 50% 35%,rgba(197,139,85,.20),transparent 45%),
+        #121212;
 }
 
 .product-body{
     padding:17px;
 }
 
-.product-shop{
-    color:var(--gold2);
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:7px;
-}
-
-.product h3{
-    margin-bottom:7px;
-}
-
-.product-desc{
-    color:var(--muted);
-    font-size:13px;
-    min-height:40px;
-    line-height:1.45;
-}
-
-.product-bottom{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    margin-top:15px;
-}
-
-.price{
-    font-size:17px;
+.product-title{
+    font-size:18px;
     font-weight:900;
-}
-
-/* SHOPS */
-
-.shops-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-}
-
-.shop-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:22px;
-    padding:23px;
-}
-
-.shop-logo{
-    width:55px;
-    height:55px;
-    border-radius:17px;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(135deg,var(--gold),#76501f);
-    color:#111;
-    font-weight:900;
-    font-size:22px;
-    margin-bottom:16px;
-}
-
-.shop-card h3{
     margin-bottom:5px;
 }
 
-.shop-city{
-    color:var(--gold2);
+.shop-name{
+    color:#999;
     font-size:13px;
 }
 
-.shop-address{
-    color:var(--muted);
-    margin-top:13px;
-    line-height:1.5;
+.price{
+    font-size:20px;
+    color:var(--accent2);
+    font-weight:900;
 }
 
-/* FAQ */
-
-.faq{
-    display:grid;
-    gap:10px;
-}
-
-.faq-item{
-    border:1px solid var(--line);
-    background:var(--card);
-    border-radius:16px;
-    overflow:hidden;
-}
-
-.faq-question{
-    padding:19px;
+.product-bottom{
+    margin-top:17px;
     display:flex;
     justify-content:space-between;
-    font-weight:800;
-    cursor:pointer;
+    align-items:center;
+    gap:8px;
 }
 
-.faq-answer{
-    display:none;
-    padding:0 19px 19px;
-    color:var(--muted);
-    line-height:1.65;
+.small-btn{
+    border:1px solid var(--line);
+    background:#191919;
+    color:white;
+    border-radius:10px;
+    padding:9px 11px;
 }
 
-.faq-item.open .faq-answer{
-    display:block;
+.small-btn:hover{
+    border-color:var(--accent);
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.feature{
+    padding:25px;
+    border:1px solid var(--line);
+    background:#111;
+    border-radius:20px;
+}
+
+.feature-icon{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#999;
+    line-height:1.6;
 }
 
 /* FOOTER */
 
 footer{
+    padding:50px 6%;
     border-top:1px solid var(--line);
-    padding:35px 0;
-    margin-top:30px;
+    background:#050505;
+    color:#888;
 }
 
-.footer-inner{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    color:var(--muted);
-    font-size:14px;
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:12px;
+}
+
+footer p{
+    line-height:1.7;
+}
+
+footer a{
+    display:block;
+    margin:8px 0;
 }
 
 /* MODAL */
 
-.modal{
+.overlay{
     position:fixed;
     inset:0;
-    z-index:5000;
-    display:none;
+    z-index:2000;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    display:flex;
     align-items:center;
     justify-content:center;
     padding:20px;
-    background:rgba(0,0,0,.72);
-    backdrop-filter:blur(8px);
 }
 
-.modal.show{
-    display:flex;
-}
-
-.modal-box{
-    width:min(680px,100%);
+.modal{
+    width:min(650px,100%);
     max-height:90vh;
     overflow:auto;
     background:#111;
     border:1px solid var(--line);
-    border-radius:25px;
+    border-radius:22px;
     box-shadow:var(--shadow);
 }
 
 .modal-head{
-    padding:20px 22px;
+    padding:20px;
     border-bottom:1px solid var(--line);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    position:sticky;
-    top:0;
-    background:#111;
-    z-index:2;
 }
 
-.close{
-    width:38px;
-    height:38px;
-    border-radius:11px;
-    border:1px solid var(--line);
-    background:#181818;
-    color:#fff;
+.modal-head h2{
+    font-size:21px;
 }
 
 .modal-body{
-    padding:22px;
+    padding:20px;
 }
 
-/* AUTH */
-
-.auth-tabs{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    background:#191919;
-    border-radius:13px;
-    padding:4px;
-    margin-bottom:18px;
-}
-
-.auth-tab{
-    padding:11px;
-    border:0;
-    background:transparent;
-    color:#aaa;
+.close{
+    border:none;
+    background:#1c1c1c;
+    color:white;
+    width:36px;
+    height:36px;
     border-radius:10px;
 }
 
-.auth-tab.active{
-    background:#2b251d;
-    color:var(--gold2);
-}
-
 .form-group{
-    margin-bottom:14px;
+    margin-bottom:15px;
 }
 
 .form-group label{
     display:block;
-    color:#cfc7bc;
-    font-size:13px;
     margin-bottom:7px;
+    color:#aaa;
+    font-size:13px;
 }
 
-.form-row{
+.form-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:12px;
+    gap:13px;
+}
+
+/* TOAST */
+
+#toast{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:5000;
+    background:#1b1b1b;
+    color:white;
+    border:1px solid var(--line);
+    border-radius:13px;
+    padding:14px 18px;
+    transform:translateY(120px);
+    opacity:0;
+    transition:.3s;
+}
+
+#toast.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    min-height:100vh;
+    padding:35px 5%;
+}
+
+.dashboard-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.dashboard-top h1{
+    font-size:34px;
+}
+
+.dashboard-top p{
+    color:#888;
+    margin-top:5px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-bottom:25px;
+}
+
+.stat{
+    padding:22px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:linear-gradient(145deg,#181818,#101010);
+}
+
+.stat-icon{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.stat-value{
+    font-size:28px;
+    font-weight:900;
+}
+
+.stat-label{
+    color:#888;
+    font-size:13px;
+    margin-top:5px;
+}
+
+.panel{
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:#111;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+.panel-head{
+    padding:18px 20px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.panel-head h2{
+    font-size:19px;
+}
+
+.panel-body{
+    padding:20px;
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
+}
+
+th,
+td{
+    padding:13px 12px;
+    border-bottom:1px solid var(--line);
+    text-align:left;
+    white-space:nowrap;
+}
+
+th{
+    color:#888;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+td{
+    font-size:14px;
+}
+
+.badge-status{
+    display:inline-block;
+    padding:6px 9px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.status-approved,
+.status-delivered{
+    color:#6bea8a;
+    background:rgba(34,197,94,.10);
+}
+
+.status-pending,
+.status-new,
+.status-preparing{
+    color:#ffc15c;
+    background:rgba(245,158,11,.10);
+}
+
+.status-blocked,
+.status-cancelled{
+    color:#ff7777;
+    background:rgba(239,68,68,.10);
+}
+
+.status-accepted,
+.status-ready,
+.status-delivering{
+    color:#7db0ff;
+    background:rgba(59,130,246,.10);
+}
+
+/* ADMIN */
+
+.admin-hero{
+    padding:35px 5% 10px;
+}
+
+.admin-tabs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:22px;
+}
+
+.admin-tab{
+    border:1px solid var(--line);
+    background:#141414;
+    color:#aaa;
+    padding:11px 15px;
+    border-radius:11px;
+}
+
+.admin-tab.active{
+    background:var(--accent);
+    color:#111;
+    border-color:var(--accent);
+    font-weight:900;
+}
+
+.admin-content{
+    padding:0 5% 50px;
+}
+
+.admin-section{
+    display:none;
+}
+
+.admin-section.active{
+    display:block;
+}
+
+.admin-actions{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.admin-card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.admin-info-card{
+    border:1px solid var(--line);
+    border-radius:17px;
+    padding:18px;
+    background:#151515;
+}
+
+.admin-info-card h3{
+    margin-bottom:8px;
+}
+
+.admin-info-card p{
+    color:#888;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.empty{
+    padding:50px 20px;
+    text-align:center;
+    color:#777;
+}
+
+.loading{
+    padding:45px;
+    text-align:center;
+    color:#999;
 }
 
 /* CART */
@@ -750,336 +793,132 @@ footer{
     border-bottom:1px solid var(--line);
 }
 
-.cart-item-info{
-    flex:1;
+.cart-info h4{
+    margin-bottom:5px;
 }
 
-.cart-item-name{
-    font-weight:800;
+.cart-info p{
+    color:#888;
+    font-size:13px;
 }
 
-.cart-item-shop{
-    color:var(--gold2);
-    font-size:12px;
-    margin-top:4px;
+.cart-price{
+    color:var(--accent2);
+    font-weight:900;
 }
 
-.cart-controls{
+.qty{
     display:flex;
     align-items:center;
     gap:7px;
     margin-top:8px;
 }
 
-.qty-btn{
-    width:30px;
-    height:30px;
-    border-radius:8px;
+.qty button{
+    width:28px;
+    height:28px;
+    border-radius:7px;
     border:1px solid var(--line);
-    background:#181818;
-    color:#fff;
+    background:#191919;
+    color:white;
 }
 
-.cart-total{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 0;
-    font-size:19px;
-    font-weight:900;
-}
-
-/* DASHBOARD */
-
-.dashboard-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
-    margin-bottom:20px;
-}
-
-.dashboard-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-    margin-bottom:25px;
-}
-
-.stat{
-    background:#181818;
-    border:1px solid var(--line);
-    border-radius:17px;
+.total-box{
     padding:18px;
+    background:#181818;
+    border-radius:15px;
+    margin-top:18px;
 }
 
-.stat-label{
-    color:var(--muted);
-    font-size:12px;
-    margin-bottom:9px;
+.total-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
 }
 
-.stat-value{
-    font-size:25px;
+.total-row:last-child{
+    margin-bottom:0;
+    font-size:20px;
     font-weight:900;
 }
 
-.dashboard-section{
-    border:1px solid var(--line);
-    background:#151515;
-    border-radius:20px;
-    padding:20px;
-    margin-bottom:16px;
-}
+/* RESPONSIVE */
 
-.dashboard-section h3{
-    margin-bottom:17px;
-}
-
-.order-card{
-    border:1px solid var(--line);
-    background:#101010;
-    border-radius:16px;
-    padding:16px;
-    margin-bottom:11px;
-}
-
-.order-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
-}
-
-.order-id{
-    font-size:12px;
-    color:var(--muted);
-}
-
-.status{
-    display:inline-flex;
-    padding:7px 10px;
-    border-radius:999px;
-    font-size:11px;
-    font-weight:900;
-}
-
-.status-new{
-    background:rgba(214,167,92,.12);
-    color:var(--gold2);
-}
-
-.status-accepted,
-.status-preparing{
-    background:rgba(92,160,255,.12);
-    color:#8dbdff;
-}
-
-.status-ready{
-    background:rgba(111,214,155,.12);
-    color:#8ef0b4;
-}
-
-.status-delivering{
-    background:rgba(178,119,255,.12);
-    color:#c69cff;
-}
-
-.status-delivered{
-    background:rgba(111,214,155,.08);
-    color:#75db9e;
-}
-
-.status-cancelled{
-    background:rgba(227,107,107,.12);
-    color:#ff9898;
-}
-
-.order-items{
-    margin:14px 0;
-    color:#d5cec4;
-    line-height:1.7;
-    font-size:13px;
-}
-
-.order-meta{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.6;
-    margin-bottom:13px;
-}
-
-.status-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-}
-
-.status-buttons button{
-    font-size:11px;
-    padding:8px 10px;
-    border-radius:9px;
-    border:1px solid var(--line);
-    background:#181818;
-    color:#ddd;
-}
-
-.status-buttons button:hover{
-    border-color:var(--gold);
-    color:var(--gold2);
-}
-
-.product-admin{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:13px 0;
-    border-bottom:1px solid var(--line);
-}
-
-.product-admin:last-child{
-    border-bottom:0;
-}
-
-.product-admin-info{
-    flex:1;
-}
-
-.product-admin-info strong{
-    display:block;
-}
-
-.product-admin-info span{
-    color:var(--muted);
-    font-size:12px;
-}
-
-/* EMPTY */
-
-.empty{
-    text-align:center;
-    padding:45px 20px;
-    color:var(--muted);
-    border:1px dashed #36322d;
-    border-radius:18px;
-}
-
-.loading{
-    text-align:center;
-    padding:40px;
-    color:var(--muted);
-}
-
-/* TOAST */
-
-.toast{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:9999;
-    background:#181818;
-    border:1px solid var(--line);
-    color:#fff;
-    border-radius:14px;
-    padding:13px 16px;
-    box-shadow:var(--shadow);
-    transform:translateY(120px);
-    opacity:0;
-    transition:.25s;
-    max-width:360px;
-}
-
-.toast.show{
-    transform:translateY(0);
-    opacity:1;
-}
-
-.toast.success{
-    border-color:rgba(111,214,155,.4);
-}
-
-.toast.error{
-    border-color:rgba(227,107,107,.4);
-}
-
-/* MOBILE */
-
-@media(max-width:950px){
-    .nav-links{
-        display:none;
-    }
-
-    .hero-grid{
-        grid-template-columns:1fr;
-    }
-
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
+@media(max-width:1100px){
+    .grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
     .features{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .shops-grid{
-        grid-template-columns:1fr;
-    }
-
-    .dashboard-grid{
+    .stats{
         grid-template-columns:repeat(2,1fr);
     }
 }
 
-@media(max-width:600px){
-    .hero{
-        padding:60px 0;
+@media(max-width:800px){
+    .nav{
+        padding:0 4%;
     }
 
-    .hero h1{
-        font-size:48px;
-        letter-spacing:-2.5px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .products-grid{
-        grid-template-columns:1fr;
+    .navlinks{
+        display:none;
     }
 
     .market-tools{
         grid-template-columns:1fr;
     }
 
-    .form-row{
-        grid-template-columns:1fr;
+    .grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .dashboard-grid{
+    .footer-grid{
         grid-template-columns:1fr 1fr;
     }
 
+    .admin-card-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+    .hero{
+        padding:55px 5%;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
     .section{
-        padding:55px 0;
+        padding:50px 5%;
     }
 
-    .section-head{
-        display:block;
+    .grid{
+        grid-template-columns:1fr;
     }
 
-    .section-head h2{
-        font-size:30px;
-        margin-bottom:10px;
+    .features{
+        grid-template-columns:1fr;
     }
 
-    .footer-inner{
-        flex-direction:column;
+    .stats{
+        grid-template-columns:1fr 1fr;
     }
 
-    .dashboard-top{
-        align-items:flex-start;
-        flex-direction:column;
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .userbtn{
+        display:none;
     }
 }
 </style>
@@ -1088,708 +927,702 @@ footer{
 <body>
 
 <!-- NAV -->
-
 <nav class="nav">
-<div class="container nav-inner">
+    <a href="#" class="logo">COFFEE<span>GO</span></a>
 
-<a href="#" class="logo">
-    <span class="logo-icon">☕</span>
-    COFFEEGO
-</a>
+    <div class="navlinks">
+        <a href="#market">Marketplace</a>
+        <a href="#features">Imkoniyatlar</a>
+        <a href="#shops">Shoplar</a>
+        <a href="#about">Biz haqimizda</a>
+    </div>
 
-<div class="nav-links">
-    <a href="#marketplace">Marketplace</a>
-    <a href="#shops">Coffee Shoplar</a>
-    <a href="#about">Biz haqimizda</a>
-    <a href="#faq">FAQ</a>
-</div>
+    <div class="navright">
+        <button class="iconbtn" onclick="toggleTheme()" title="Theme">◐</button>
 
-<div class="nav-actions">
+        <button class="iconbtn" onclick="openCart()">
+            🛒 <span id="cartCount" class="cartcount">0</span>
+        </button>
 
-    <button class="icon-btn cart-btn" onclick="openCart()" title="Savat">
-        🛒
-        <span class="cart-count" id="cartCount">0</span>
-    </button>
+        <button id="authBtn" class="userbtn" onclick="openAuth()">
+            Kirish
+        </button>
 
-    <button class="btn btn-primary btn-small" id="authButton" onclick="openAuth()">
-        Kirish
-    </button>
+        <button id="dashboardBtn" class="userbtn hidden" onclick="openDashboard()">
+            Dashboard
+        </button>
 
-</div>
-</div>
+        <button id="adminBtn" class="userbtn hidden" onclick="openAdmin()">
+            👑 Admin
+        </button>
+    </div>
 </nav>
 
 
-<!-- HERO -->
+<!-- HOME -->
+<main id="homePage">
 
 <section class="hero">
-<div class="container hero-grid">
+    <div class="hero-content">
+        <div class="badge">☕ Samarqand Coffee Marketplace</div>
 
-<div>
-    <div class="badge">☕ Samarqand coffee marketplace</div>
+        <h1>
+            Eng yaxshi <span>coffee</span>
+            bir joyda.
+        </h1>
 
-    <h1>
-        Kofe.
-        <span class="gradient-text">Bir joyda.</span>
-    </h1>
+        <p>
+            COFFEEGO orqali Samarqand va O'zbekistondagi
+            coffee shoplar, kofe, dessert va nonushtalarni
+            toping, buyurtma qiling va sevimli mahsulotlaringizni
+            saqlang.
+        </p>
 
-    <p>
-        COFFEEGO orqali Samarqand va O'zbekistondagi coffee shoplar,
-        kofe, dessert va nonushtalarni toping, savatga qo'shing va
-        online buyurtma qiling.
-    </p>
+        <div class="actions">
+            <button class="btn btn-primary" onclick="document.getElementById('market').scrollIntoView()">
+                ☕ Kofe tanlash
+            </button>
 
-    <div class="hero-buttons">
-        <a href="#marketplace" class="btn btn-primary">
-            Kofe tanlash →
-        </a>
-
-        <button class="btn btn-dark" onclick="openShopRegister()">
-            🏪 Shop qo'shish
-        </button>
+            <button class="btn btn-secondary" onclick="openShopRegister()">
+                🏪 Shop ochish
+            </button>
+        </div>
     </div>
-</div>
-
-<div class="hero-card">
-
-    <div class="steam one"></div>
-    <div class="steam two"></div>
-    <div class="steam three"></div>
-
-    <div class="coffee-cup"></div>
-
-</div>
-
-</div>
 </section>
 
 
 <!-- FEATURES -->
+<section class="section" id="features">
 
-<section class="section">
-<div class="container">
-
-<div class="section-head">
-    <div>
-        <h2>Nega COFFEEGO?</h2>
-        <p>
-            Coffee shoplar va mijozlarni bitta qulay marketplace'da
-            birlashtiramiz.
-        </p>
+    <div class="section-head">
+        <div>
+            <h2>Nega COFFEEGO?</h2>
+            <p>Oddiy, tez va zamonaviy coffee marketplace.</p>
+        </div>
     </div>
-</div>
 
-<div class="features">
+    <div class="features">
 
-<div class="feature">
-    <div class="feature-icon">☕</div>
-    <h3>Ko'p coffee shop</h3>
-    <p>
-        Turli coffee shoplarning mahsulotlarini bitta platformada
-        ko'ring.
-    </p>
-</div>
+        <div class="feature">
+            <div class="feature-icon">☕</div>
+            <h3>Ko'p tanlov</h3>
+            <p>
+                Turli coffee shoplardan kofe,
+                dessert va nonushtalarni toping.
+            </p>
+        </div>
 
-<div class="feature">
-    <div class="feature-icon">⚡</div>
-    <h3>Tez buyurtma</h3>
-    <p>
-        Kerakli mahsulotni tanlang, savatga qo'shing va buyurtma
-        yuboring.
-    </p>
-</div>
+        <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Tez buyurtma</h3>
+            <p>
+                Mahsulotni tanlang, savatga qo'shing
+                va buyurtma yuboring.
+            </p>
+        </div>
 
-<div class="feature">
-    <div class="feature-icon">🏪</div>
-    <h3>Biznes uchun</h3>
-    <p>
-        Coffee shop egalari o'z mahsulotlarini joylashtirib,
-        buyurtmalarni boshqarishi mumkin.
-    </p>
-</div>
+        <div class="feature">
+            <div class="feature-icon">❤️</div>
+            <h3>Sevimlilar</h3>
+            <p>
+                Yoqtirgan mahsulotlaringizni
+                hisobingizda saqlang.
+            </p>
+        </div>
 
-</div>
-</div>
+        <div class="feature">
+            <div class="feature-icon">👑</div>
+            <h3>VIP</h3>
+            <p>
+                Maxsus takliflar va kelajakdagi
+                VIP imkoniyatlardan foydalaning.
+            </p>
+        </div>
+
+    </div>
 </section>
 
 
-<!-- MARKETPLACE -->
+<!-- MARKET -->
+<section class="section" id="market">
 
-<section class="section" id="marketplace">
-<div class="container">
+    <div class="section-head">
+        <div>
+            <h2>Marketplace</h2>
+            <p id="productInfo">Mahsulotlar yuklanmoqda...</p>
+        </div>
+    </div>
 
-<div class="section-head">
-<div>
-    <h2>Marketplace</h2>
-    <p>
-        Kofe, sovuq ichimliklar, dessert va nonushtalarni tanlang.
-    </p>
-</div>
-</div>
+    <div class="market-tools">
 
-<div class="market-tools">
+        <input
+            id="searchInput"
+            class="input"
+            placeholder="🔎 Kofe, dessert yoki shop qidiring..."
+            oninput="renderProducts()"
+        >
 
-<input
-    class="input"
-    id="searchInput"
-    placeholder="🔎 Kofe yoki mahsulot qidirish..."
-    oninput="renderProducts()"
->
+        <select id="categoryFilter" class="select" onchange="renderProducts()">
+            <option value="all">Barcha kategoriyalar</option>
+            <option value="coffee">☕ Coffee</option>
+            <option value="cold">🧊 Cold</option>
+            <option value="dessert">🍰 Dessert</option>
+            <option value="food">🥐 Food</option>
+        </select>
 
-<select class="select" id="categoryFilter" onchange="renderProducts()">
-    <option value="all">Barcha kategoriyalar</option>
-    <option value="coffee">☕ Coffee</option>
-    <option value="cold">🧊 Cold</option>
-    <option value="dessert">🍰 Dessert</option>
-    <option value="food">🥐 Food</option>
-</select>
+        <select id="sortFilter" class="select" onchange="renderProducts()">
+            <option value="default">Saralash</option>
+            <option value="low">Arzon → Qimmat</option>
+            <option value="high">Qimmat → Arzon</option>
+            <option value="name">Nom bo'yicha</option>
+        </select>
 
-<select class="select" id="sortFilter" onchange="renderProducts()">
-    <option value="default">Saralash</option>
-    <option value="cheap">Arzon → qimmat</option>
-    <option value="expensive">Qimmat → arzon</option>
-    <option value="name">Nomi bo'yicha</option>
-</select>
+    </div>
 
-</div>
+    <div id="productGrid" class="grid">
+        <div class="loading">☕ Mahsulotlar yuklanmoqda...</div>
+    </div>
 
-<div id="productsGrid" class="products-grid">
-    <div class="loading">Mahsulotlar yuklanmoqda...</div>
-</div>
-
-</div>
 </section>
 
 
 <!-- SHOPS -->
-
 <section class="section" id="shops">
-<div class="container">
 
-<div class="section-head">
-<div>
-    <h2>Coffee Shoplar</h2>
-    <p>
-        COFFEEGO platformasidagi tasdiqlangan coffee shoplar.
-    </p>
-</div>
+    <div class="section-head">
+        <div>
+            <h2>Coffee Shoplar</h2>
+            <p>Samarqand va boshqa shaharlardagi hamkorlar.</p>
+        </div>
+    </div>
 
-<button class="btn btn-primary" onclick="openShopRegister()">
-    + Shop qo'shish
-</button>
+    <div id="shopGrid" class="admin-card-grid">
+        <div class="loading">Shoplar yuklanmoqda...</div>
+    </div>
 
-</div>
-
-<div id="shopsGrid" class="shops-grid">
-    <div class="loading">Coffee shoplar yuklanmoqda...</div>
-</div>
-
-</div>
 </section>
 
 
 <!-- ABOUT -->
-
 <section class="section" id="about">
-<div class="container">
 
-<div class="section-head">
-<div>
-    <h2>COFFEEGO haqida</h2>
-    <p>
-        Bizning maqsadimiz — O'zbekistondagi coffee shoplarni
-        zamonaviy marketplace orqali mijozlarga bog'lash.
-    </p>
-</div>
-</div>
+    <div class="section-head">
+        <div>
+            <h2>COFFEEGO haqida</h2>
+            <p>
+                Coffee shoplar va mijozlarni birlashtiruvchi
+                zamonaviy marketplace.
+            </p>
+        </div>
+    </div>
 
-<div class="feature">
+    <div class="feature">
+        <h3>Bizning maqsadimiz</h3>
+        <p style="margin-top:10px">
+            COFFEEGO — O'zbekistonda coffee marketplace
+            ekotizimini yaratishga mo'ljallangan platforma.
+            Mijozlar mahsulot topadi, coffee shoplar esa
+            online buyurtmalarni boshqaradi.
+        </p>
+    </div>
 
-<h3>🚀 Oddiy g'oya, katta platforma</h3>
+</section>
 
-<p style="margin-top:12px">
-    Mijoz coffee shop qidiradi → mahsulot tanlaydi →
-    savatga qo'shadi → buyurtma beradi.
-</p>
+</main>
 
-<p style="margin-top:10px">
-    Coffee shop esa dashboard orqali buyurtmani qabul qiladi,
-    tayyorlaydi va statusini boshqaradi.
-</p>
 
-</div>
+<!-- DASHBOARD PAGE -->
+<section id="dashboardPage" class="dashboard hidden">
 
-</div>
+    <div class="dashboard-top">
+        <div>
+            <h1>🏪 Shop Dashboard</h1>
+            <p id="dashboardShopName">Shop</p>
+        </div>
+
+        <button class="btn btn-secondary" onclick="closeDashboard()">
+            ← Marketplace
+        </button>
+    </div>
+
+    <div id="dashboardContent">
+        <div class="loading">Yuklanmoqda...</div>
+    </div>
+
 </section>
 
 
-<!-- FAQ -->
+<!-- ADMIN PAGE -->
+<section id="adminPage" class="hidden">
 
-<section class="section" id="faq">
-<div class="container">
+    <div class="admin-hero">
+        <div class="dashboard-top">
+            <div>
+                <h1>👑 COFFEEGO Admin</h1>
+                <p>Platformani boshqarish markazi</p>
+            </div>
 
-<div class="section-head">
-<div>
-    <h2>FAQ</h2>
-    <p>COFFEEGO haqida ko'p beriladigan savollar.</p>
-</div>
-</div>
+            <button class="btn btn-secondary" onclick="closeAdmin()">
+                ← Marketplace
+            </button>
+        </div>
 
-<div class="faq">
+        <div class="admin-tabs">
 
-<div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-        COFFEEGO nima?
-        <span>＋</span>
-    </div>
-    <div class="faq-answer">
-        COFFEEGO — coffee shoplar va mijozlarni birlashtiruvchi
-        online marketplace.
-    </div>
-</div>
+            <button class="admin-tab active"
+                    onclick="adminTab('overview',this)">
+                📊 Overview
+            </button>
 
-<div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-        Buyurtma berish mumkinmi?
-        <span>＋</span>
-    </div>
-    <div class="faq-answer">
-        Ha. Mahsulotni savatga qo'shib, login qilgan holda buyurtma
-        yuborish mumkin.
-    </div>
-</div>
+            <button class="admin-tab"
+                    onclick="adminTab('shops',this)">
+                ☕ Shops
+            </button>
 
-<div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-        Coffee shop qo'shish mumkinmi?
-        <span>＋</span>
-    </div>
-    <div class="faq-answer">
-        Ha. Shop egasi ro'yxatdan o'tib, coffee shopini COFFEEGO
-        platformasiga yuborishi mumkin.
-    </div>
-</div>
+            <button class="admin-tab"
+                    onclick="adminTab('products',this)">
+                📦 Products
+            </button>
 
-<div class="faq-item">
-    <div class="faq-question" onclick="toggleFaq(this)">
-        Shop egasi buyurtmani qayerdan ko'radi?
-        <span>＋</span>
-    </div>
-    <div class="faq-answer">
-        Dashboard orqali. U yerda buyurtmalar, mahsulotlar va
-        savdo statistikasi ko'rsatiladi.
-    </div>
-</div>
+            <button class="admin-tab"
+                    onclick="adminTab('orders',this)">
+                🛒 Orders
+            </button>
 
-</div>
-</div>
+            <button class="admin-tab"
+                    onclick="adminTab('users',this)">
+                👥 Users
+            </button>
+
+            <button class="admin-tab"
+                    onclick="adminTab('vip',this)">
+                ⭐ VIP
+            </button>
+
+            <button class="admin-tab"
+                    onclick="adminTab('promo',this)">
+                🎟️ Promo
+            </button>
+
+        </div>
+    </div>
+
+
+    <div class="admin-content">
+
+        <!-- OVERVIEW -->
+        <div id="admin-overview" class="admin-section active">
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-icon">👥</div>
+                    <div id="statUsers" class="stat-value">0</div>
+                    <div class="stat-label">Foydalanuvchilar</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">☕</div>
+                    <div id="statShops" class="stat-value">0</div>
+                    <div class="stat-label">Coffee Shoplar</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">📦</div>
+                    <div id="statProducts" class="stat-value">0</div>
+                    <div class="stat-label">Mahsulotlar</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">🛒</div>
+                    <div id="statOrders" class="stat-value">0</div>
+                    <div class="stat-label">Buyurtmalar</div>
+                </div>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-icon">💰</div>
+                    <div id="statSales" class="stat-value">0 so'm</div>
+                    <div class="stat-label">Umumiy savdo</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">💵</div>
+                    <div id="statCommission" class="stat-value">0 so'm</div>
+                    <div class="stat-label">Platforma komissiyasi</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">⏳</div>
+                    <div id="statPendingShops" class="stat-value">0</div>
+                    <div class="stat-label">Tasdiqlanmagan shoplar</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">⭐</div>
+                    <div id="statVip" class="stat-value">0</div>
+                    <div class="stat-label">VIP a'zolar</div>
+                </div>
+
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h2>🚀 Platforma</h2>
+                    <button class="btn btn-primary" onclick="loadAdminData()">
+                        ↻ Yangilash
+                    </button>
+                </div>
+
+                <div class="panel-body">
+                    <div class="admin-card-grid">
+
+                        <div class="admin-info-card">
+                            <h3>☕ Coffee Shop</h3>
+                            <p>
+                                Yangi shoplarni tekshiring,
+                                tasdiqlang yoki bloklang.
+                            </p>
+                        </div>
+
+                        <div class="admin-info-card">
+                            <h3>📦 Mahsulotlar</h3>
+                            <p>
+                                Platformadagi barcha mahsulotlarni
+                                nazorat qiling.
+                            </p>
+                        </div>
+
+                        <div class="admin-info-card">
+                            <h3>🛒 Buyurtmalar</h3>
+                            <p>
+                                Barcha buyurtmalar va ularning
+                                holatini kuzating.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- SHOPS -->
+        <div id="admin-shops" class="admin-section">
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>☕ Coffee Shoplar</h2>
+
+                    <button class="btn btn-primary"
+                            onclick="loadAdminShops()">
+                        ↻ Yangilash
+                    </button>
+                </div>
+
+                <div class="panel-body">
+                    <div class="table-wrap">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Shop</th>
+                                    <th>Shahar</th>
+                                    <th>Telefon</th>
+                                    <th>Status</th>
+                                    <th>Sana</th>
+                                    <th>Amal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="adminShopsTable"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div id="admin-products" class="admin-section">
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>📦 Barcha mahsulotlar</h2>
+
+                    <button class="btn btn-primary"
+                            onclick="loadAdminProducts()">
+                        ↻ Yangilash
+                    </button>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Mahsulot</th>
+                                    <th>Shop</th>
+                                    <th>Kategoriya</th>
+                                    <th>Narx</th>
+                                    <th>Holat</th>
+                                    <th>Amal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="adminProductsTable"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORDERS -->
+        <div id="admin-orders" class="admin-section">
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>🛒 Barcha buyurtmalar</h2>
+
+                    <button class="btn btn-primary"
+                            onclick="loadAdminOrders()">
+                        ↻ Yangilash
+                    </button>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Mijoz</th>
+                                    <th>Shop</th>
+                                    <th>Summa</th>
+                                    <th>Status</th>
+                                    <th>To'lov</th>
+                                    <th>Sana</th>
+                                    <th>Amal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="adminOrdersTable"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- USERS -->
+        <div id="admin-users" class="admin-section">
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>👥 Foydalanuvchilar</h2>
+
+                    <button class="btn btn-primary"
+                            onclick="loadAdminUsers()">
+                        ↻ Yangilash
+                    </button>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Ism</th>
+                                    <th>Telefon</th>
+                                    <th>Role</th>
+                                    <th>Ro'yxatdan o'tgan</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="adminUsersTable"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIP -->
+        <div id="admin-vip" class="admin-section">
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>⭐ VIP Members</h2>
+
+                    <button class="btn btn-primary"
+                            onclick="loadAdminVip()">
+                        ↻ Yangilash
+                    </button>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Plan</th>
+                                    <th>Boshlangan</th>
+                                    <th>Tugaydi</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="adminVipTable"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROMO -->
+        <div id="admin-promo" class="admin-section">
+
+            <div class="panel">
+
+                <div class="panel-head">
+                    <h2>🎟️ Promo Codes</h2>
+
+                    <button class="btn btn-primary"
+                            onclick="openPromoModal()">
+                        + Promo yaratish
+                    </button>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Kod</th>
+                                    <th>Chegirma</th>
+                                    <th>Ishlatilgan</th>
+                                    <th>Max</th>
+                                    <th>Holat</th>
+                                    <th>Amal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="adminPromoTable"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 
 <!-- FOOTER -->
-
 <footer>
-<div class="container footer-inner">
-    <div>© 2026 COFFEEGO. All rights reserved.</div>
-    <div>Samarqand • Uzbekistan ☕</div>
-</div>
+    <div class="footer-grid">
+
+        <div>
+            <div class="logo">COFFEE<span>GO</span></div>
+            <p style="margin-top:12px">
+                Coffee marketplace.
+                Samarqanddan boshlangan zamonaviy
+                coffee platforma.
+            </p>
+        </div>
+
+        <div>
+            <h3>Marketplace</h3>
+            <a href="#market">Kofe</a>
+            <a href="#market">Dessert</a>
+            <a href="#shops">Coffee Shoplar</a>
+        </div>
+
+        <div>
+            <h3>Platforma</h3>
+            <a href="#" onclick="openShopRegister()">Shop ochish</a>
+            <a href="#" onclick="openAuth()">Kirish</a>
+            <a href="#" onclick="openCart()">Savat</a>
+        </div>
+
+        <div>
+            <h3>COFFEEGO</h3>
+            <p>© 2026 COFFEEGO</p>
+            <p>Uzbekistan 🇺🇿</p>
+        </div>
+
+    </div>
 </footer>
 
 
-<!-- AUTH MODAL -->
+<!-- MODAL ROOT -->
+<div id="modalRoot"></div>
 
-<div class="modal" id="authModal">
-<div class="modal-box">
+<div id="toast"></div>
 
-<div class="modal-head">
-    <h3 id="authTitle">COFFEEGO hisob</h3>
-    <button class="close" onclick="closeModal('authModal')">×</button>
-</div>
 
-<div class="modal-body">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<div class="auth-tabs">
-    <button
-        class="auth-tab active"
-        id="loginTab"
-        onclick="switchAuth('login')"
-    >
-        Kirish
-    </button>
+<script>
 
-    <button
-        class="auth-tab"
-        id="registerTab"
-        onclick="switchAuth('register')"
-    >
-        Ro'yxatdan o'tish
-    </button>
-</div>
-
-
-<div id="loginForm">
-
-<div class="form-group">
-<label>Email</label>
-<input
-    class="input"
-    id="loginEmail"
-    type="email"
-    placeholder="email@example.com"
->
-</div>
-
-<div class="form-group">
-<label>Parol</label>
-<input
-    class="input"
-    id="loginPassword"
-    type="password"
-    placeholder="••••••••"
->
-</div>
-
-<button class="btn btn-primary" style="width:100%" onclick="login()">
-    Kirish
-</button>
-
-</div>
-
-
-<div id="registerForm" style="display:none">
-
-<div class="form-group">
-<label>Ism</label>
-<input
-    class="input"
-    id="registerName"
-    placeholder="Ismingiz"
->
-</div>
-
-<div class="form-group">
-<label>Email</label>
-<input
-    class="input"
-    id="registerEmail"
-    type="email"
-    placeholder="email@example.com"
->
-</div>
-
-<div class="form-group">
-<label>Telefon</label>
-<input
-    class="input"
-    id="registerPhone"
-    placeholder="+998 90 123 45 67"
->
-</div>
-
-<div class="form-group">
-<label>Parol</label>
-<input
-    class="input"
-    id="registerPassword"
-    type="password"
-    placeholder="Kamida 6 ta belgi"
->
-</div>
-
-<button class="btn btn-primary" style="width:100%" onclick="register()">
-    Hisob yaratish
-</button>
-
-</div>
-
-</div>
-</div>
-</div>
-
-
-<!-- CART MODAL -->
-
-<div class="modal" id="cartModal">
-<div class="modal-box">
-
-<div class="modal-head">
-    <h3>🛒 Savat</h3>
-    <button class="close" onclick="closeModal('cartModal')">×</button>
-</div>
-
-<div class="modal-body">
-
-<div id="cartItems"></div>
-
-<div class="cart-total">
-    <span>Jami</span>
-    <span id="cartTotal">0 so'm</span>
-</div>
-
-<button
-    class="btn btn-primary"
-    style="width:100%"
-    onclick="openCheckout()"
->
-    Buyurtma berish →
-</button>
-
-</div>
-</div>
-</div>
-
-
-<!-- CHECKOUT MODAL -->
-
-<div class="modal" id="checkoutModal">
-<div class="modal-box">
-
-<div class="modal-head">
-    <h3>📦 Buyurtma</h3>
-    <button class="close" onclick="closeModal('checkoutModal')">×</button>
-</div>
-
-<div class="modal-body">
-
-<div class="form-group">
-<label>Ism</label>
-<input class="input" id="checkoutName" placeholder="Ismingiz">
-</div>
-
-<div class="form-group">
-<label>Telefon</label>
-<input class="input" id="checkoutPhone" placeholder="+998 90 123 45 67">
-</div>
-
-<div class="form-group">
-<label>Yetkazib berish manzili</label>
-<textarea
-    class="textarea"
-    id="checkoutAddress"
-    placeholder="Manzilni kiriting..."
-></textarea>
-</div>
-
-<div class="form-group">
-<label>To'lov usuli</label>
-
-<select class="select" id="paymentMethod">
-    <option value="cash">Naqd pul</option>
-    <option value="card">Karta</option>
-</select>
-
-</div>
-
-<button
-    class="btn btn-primary"
-    style="width:100%"
-    onclick="placeOrder()"
->
-    Buyurtmani yuborish
-</button>
-
-</div>
-</div>
-</div>
-
-
-<!-- SHOP REGISTER -->
-
-<div class="modal" id="shopModal">
-<div class="modal-box">
-
-<div class="modal-head">
-    <h3>🏪 Coffee Shop qo'shish</h3>
-    <button class="close" onclick="closeModal('shopModal')">×</button>
-</div>
-
-<div class="modal-body">
-
-<div class="form-group">
-<label>Shop nomi</label>
-<input
-    class="input"
-    id="shopName"
-    placeholder="Masalan: AURORA Coffee"
->
-</div>
-
-<div class="form-row">
-
-<div class="form-group">
-<label>Shahar</label>
-<input
-    class="input"
-    id="shopCity"
-    placeholder="Samarqand"
->
-</div>
-
-<div class="form-group">
-<label>Telefon</label>
-<input
-    class="input"
-    id="shopPhone"
-    placeholder="+998..."
->
-</div>
-
-</div>
-
-<div class="form-group">
-<label>Manzil</label>
-<input
-    class="input"
-    id="shopAddress"
-    placeholder="Ko'cha, bino..."
->
-</div>
-
-<div class="form-group">
-<label>Shop haqida</label>
-<textarea
-    class="textarea"
-    id="shopDescription"
-    placeholder="Coffee shop haqida qisqacha..."
-></textarea>
-</div>
-
-<button
-    class="btn btn-primary"
-    style="width:100%"
-    onclick="registerShop()"
->
-    Shopni yuborish
-</button>
-
-<p style="color:var(--muted);font-size:12px;margin-top:12px">
-    Shop yuborilgach, admin tomonidan tasdiqlanadi.
-</p>
-
-</div>
-</div>
-</div>
-
-
-<!-- DASHBOARD -->
-
-<div class="modal" id="dashboardModal">
-<div class="modal-box" style="width:min(1050px,100%)">
-
-<div class="modal-head">
-    <div>
-        <h3>🏪 Shop Dashboard</h3>
-        <div id="dashboardShopName" style="color:var(--muted);font-size:12px;margin-top:4px"></div>
-    </div>
-
-    <button class="close" onclick="closeModal('dashboardModal')">×</button>
-</div>
-
-<div class="modal-body">
-
-<div id="dashboardContent">
-    <div class="loading">Dashboard yuklanmoqda...</div>
-</div>
-
-</div>
-</div>
-</div>
-
-
-<!-- PRODUCT ADD MODAL -->
-
-<div class="modal" id="productModal">
-<div class="modal-box">
-
-<div class="modal-head">
-    <h3>➕ Yangi mahsulot</h3>
-    <button class="close" onclick="closeModal('productModal')">×</button>
-</div>
-
-<div class="modal-body">
-
-<div class="form-group">
-<label>Mahsulot nomi</label>
-<input
-    class="input"
-    id="productName"
-    placeholder="Cappuccino"
->
-</div>
-
-<div class="form-group">
-<label>Tavsif</label>
-<textarea
-    class="textarea"
-    id="productDescription"
-    placeholder="Mahsulot haqida..."
-></textarea>
-</div>
-
-<div class="form-row">
-
-<div class="form-group">
-<label>Kategoriya</label>
-
-<select class="select" id="productCategory">
-    <option value="coffee">Coffee</option>
-    <option value="cold">Cold</option>
-    <option value="dessert">Dessert</option>
-    <option value="food">Food</option>
-</select>
-
-</div>
-
-<div class="form-group">
-<label>Narx (so'm)</label>
-<input
-    class="input"
-    id="productPrice"
-    type="number"
-    min="0"
-    placeholder="28000"
->
-</div>
-
-</div>
-
-<div class="form-group">
-<label>Rasm URL — ixtiyoriy</label>
-<input
-    class="input"
-    id="productImage"
-    placeholder="https://..."
->
-</div>
-
-<button
-    class="btn btn-primary"
-    style="width:100%"
-    onclick="addProduct()"
->
-    Mahsulotni qo'shish
-</button>
-
-</div>
-</div>
-</div>
-
-
-<!-- TOAST -->
-
-<div class="toast" id="toast"></div>
-
-
-<script type="module">
-
-import {
-    createClient
-} from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
-
-
-/* ==========================================
+/* =========================================================
    SUPABASE
-========================================== */
+========================================================= */
 
 const SUPABASE_URL =
     "https://lueszwmumvlikfrgerkf.supabase.co";
@@ -1797,503 +1630,428 @@ const SUPABASE_URL =
 const SUPABASE_KEY =
     "sb_publishable_ajQoNHS_ctqa05bbodyQAg_BslvqbSI";
 
-const supabase =
-    createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
 
 
-/* ==========================================
+/* =========================================================
    GLOBAL STATE
-========================================== */
+========================================================= */
 
 let currentUser = null;
 let currentProfile = null;
+
 let products = [];
 let shops = [];
-let favorites = [];
-let cart = JSON.parse(localStorage.getItem("coffeego_cart") || "[]");
 
-let dashboardShop = null;
-let dashboardProducts = [];
-let dashboardOrders = [];
+let cart = JSON.parse(
+    localStorage.getItem("coffeego_cart") || "[]"
+);
 
 
-/* ==========================================
+/* =========================================================
    HELPERS
-========================================== */
+========================================================= */
 
 function money(value){
-
-    return Number(value || 0)
-        .toLocaleString("uz-UZ") + " so'm";
-
+    return Number(value || 0).toLocaleString("uz-UZ") + " so'm";
 }
-
 
 function escapeHTML(value){
-
     return String(value ?? "")
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
-
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
 }
 
-
-function toast(message,type="success"){
-
-    const el =
-        document.getElementById("toast");
+function toast(message){
+    const el = document.getElementById("toast");
 
     el.textContent = message;
+    el.classList.add("show");
 
-    el.className =
-        "toast show " + type;
-
-    clearTimeout(window.__toastTimer);
-
-    window.__toastTimer =
-        setTimeout(()=>{
-            el.className = "toast";
-        },3200);
-
+    setTimeout(()=>{
+        el.classList.remove("show");
+    },3000);
 }
 
-
 function saveCart(){
-
     localStorage.setItem(
         "coffeego_cart",
         JSON.stringify(cart)
     );
 
     updateCartCount();
-
 }
-
 
 function updateCartCount(){
+    const count = cart.reduce(
+        (sum,item)=>sum + Number(item.quantity || 0),
+        0
+    );
 
-    const count =
-        cart.reduce(
-            (sum,item)=>sum + item.quantity,
-            0
-        );
+    document.getElementById("cartCount").textContent = count;
+}
 
-    document.getElementById("cartCount")
-        .textContent = count;
+function categoryIcon(category){
+    const icons = {
+        coffee:"☕",
+        cold:"🧊",
+        dessert:"🍰",
+        food:"🥐"
+    };
 
+    return icons[category] || "☕";
+}
+
+function statusClass(status){
+    return "status-" + String(status || "")
+        .toLowerCase()
+        .replaceAll("_","-");
 }
 
 
-function openModal(id){
+/* =========================================================
+   INIT
+========================================================= */
 
-    document
-        .getElementById(id)
-        .classList.add("show");
+document.addEventListener("DOMContentLoaded", async ()=>{
 
-}
+    updateCartCount();
 
+    await checkSession();
 
-function closeModal(id){
+    await loadMarketplace();
 
-    document
-        .getElementById(id)
-        .classList.remove("show");
-
-}
+});
 
 
-window.closeModal = closeModal;
-
-
-/* ==========================================
-   SESSION
-========================================== */
-
-async function loadSession(){
+async function checkSession(){
 
     const {
-        data
-    } = await supabase.auth.getSession();
+        data:{
+            session
+        }
+    } = await supabaseClient.auth.getSession();
 
-    currentUser =
-        data.session?.user || null;
-
-    if(currentUser){
-
+    if(session){
+        currentUser = session.user;
         await loadProfile();
-
     }
 
-    updateAuthButton();
-
+    updateAuthUI();
 }
 
 
 async function loadProfile(){
 
-    if(!currentUser) return;
+    if(!currentUser){
+        currentProfile = null;
+        return;
+    }
 
     const {
         data,
         error
-    } = await supabase
+    } = await supabaseClient
         .from("profiles")
         .select("*")
         .eq("id",currentUser.id)
-        .single();
+        .maybeSingle();
 
-    if(!error){
-
-        currentProfile = data;
-
+    if(error){
+        console.error(error);
+        return;
     }
 
+    currentProfile = data;
 }
 
 
-function updateAuthButton(){
+/* =========================================================
+   AUTH UI
+========================================================= */
 
-    const button =
-        document.getElementById("authButton");
+function updateAuthUI(){
 
-    if(!currentUser){
+    const authBtn =
+        document.getElementById("authBtn");
 
-        button.textContent = "Kirish";
-        button.onclick = openAuth;
+    const dashboardBtn =
+        document.getElementById("dashboardBtn");
 
-        return;
+    const adminBtn =
+        document.getElementById("adminBtn");
 
-    }
+    if(currentUser){
 
-    button.textContent =
-        currentProfile?.full_name ||
-        currentUser.email?.split("@")[0] ||
-        "Profil";
+        authBtn.textContent =
+            currentProfile?.full_name ||
+            currentUser.email?.split("@")[0] ||
+            "Profil";
 
-    button.onclick =
-        openUserMenu;
+        authBtn.onclick = openProfile;
 
-}
+        if(
+            currentProfile?.role === "shop" ||
+            currentProfile?.role === "admin"
+        ){
+            dashboardBtn.classList.remove("hidden");
+        }else{
+            dashboardBtn.classList.add("hidden");
+        }
 
-
-/* ==========================================
-   USER MENU
-========================================== */
-
-window.openUserMenu = function(){
-
-    if(!currentUser){
-
-        openAuth();
-
-        return;
-
-    }
-
-    const isShop =
-        currentProfile?.role === "shop";
-
-    const dashboardButton =
-        isShop
-        ? `
-            <button
-                class="btn btn-primary"
-                style="width:100%;margin-bottom:9px"
-                onclick="closeModal('userMenuModal');openDashboard()"
-            >
-                🏪 Shop Dashboard
-            </button>
-        `
-        : `
-            <button
-                class="btn btn-dark"
-                style="width:100%;margin-bottom:9px"
-                onclick="closeModal('userMenuModal');openShopRegister()"
-            >
-                🏪 Coffee Shop qo'shish
-            </button>
-        `;
-
-    document.body.insertAdjacentHTML(
-        "beforeend",
-        `
-        <div class="modal show" id="userMenuModal">
-            <div class="modal-box" style="max-width:400px">
-                <div class="modal-head">
-                    <h3>👤 Profil</h3>
-                    <button class="close"
-                        onclick="closeModal('userMenuModal');document.getElementById('userMenuModal')?.remove()">
-                        ×
-                    </button>
-                </div>
-
-                <div class="modal-body">
-
-                    <div style="padding:15px;background:#181818;border:1px solid var(--line);border-radius:15px;margin-bottom:15px">
-                        <strong>
-                            ${escapeHTML(currentProfile?.full_name || "Foydalanuvchi")}
-                        </strong>
-
-                        <div style="color:var(--muted);font-size:12px;margin-top:5px">
-                            ${escapeHTML(currentUser.email || "")}
-                        </div>
-                    </div>
-
-                    ${dashboardButton}
-
-                    <button
-                        class="btn btn-danger"
-                        style="width:100%"
-                        onclick="logout();closeModal('userMenuModal');document.getElementById('userMenuModal')?.remove()"
-                    >
-                        Chiqish
-                    </button>
-
-                </div>
-            </div>
-        </div>
-        `
-    );
-
-};
-
-
-/* ==========================================
-   AUTH
-========================================== */
-
-window.openAuth = function(){
-
-    switchAuth("login");
-
-    openModal("authModal");
-
-};
-
-
-window.switchAuth = function(type){
-
-    const login =
-        document.getElementById("loginForm");
-
-    const register =
-        document.getElementById("registerForm");
-
-    const loginTab =
-        document.getElementById("loginTab");
-
-    const registerTab =
-        document.getElementById("registerTab");
-
-    if(type === "login"){
-
-        login.style.display = "block";
-        register.style.display = "none";
-
-        loginTab.classList.add("active");
-        registerTab.classList.remove("active");
+        if(currentProfile?.role === "admin"){
+            adminBtn.classList.remove("hidden");
+        }else{
+            adminBtn.classList.add("hidden");
+        }
 
     }else{
 
-        login.style.display = "none";
-        register.style.display = "block";
+        authBtn.textContent = "Kirish";
+        authBtn.onclick = openAuth;
 
-        loginTab.classList.remove("active");
-        registerTab.classList.add("active");
-
+        dashboardBtn.classList.add("hidden");
+        adminBtn.classList.add("hidden");
     }
+}
 
-};
+
+/* =========================================================
+   AUTH MODAL
+========================================================= */
+
+function openAuth(){
+
+    showModal(`
+        <div class="modal">
+
+            <div class="modal-head">
+                <h2>🔐 COFFEEGO Login</h2>
+                <button class="close" onclick="closeModal()">×</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input
+                        id="authEmail"
+                        class="input"
+                        type="email"
+                        placeholder="email@example.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Parol</label>
+                    <input
+                        id="authPassword"
+                        class="input"
+                        type="password"
+                        placeholder="••••••••"
+                    >
+                </div>
+
+                <div class="actions">
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="loginUser()">
+                        Kirish
+                    </button>
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="registerUser()">
+                        Ro'yxatdan o'tish
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    `);
+
+}
 
 
-window.login = async function(){
+async function loginUser(){
 
     const email =
-        document.getElementById("loginEmail")
-            .value.trim();
+        document.getElementById("authEmail").value.trim();
 
     const password =
-        document.getElementById("loginPassword")
-            .value;
+        document.getElementById("authPassword").value;
 
     if(!email || !password){
-
-        toast("Email va parolni kiriting","error");
-
+        toast("Email va parolni kiriting.");
         return;
-
-    }
-
-    const {
-        error
-    } = await supabase.auth
-        .signInWithPassword({
-            email,
-            password
-        });
-
-    if(error){
-
-        toast(error.message,"error");
-
-        return;
-
-    }
-
-    await loadSession();
-
-    closeModal("authModal");
-
-    toast("Muvaffaqiyatli kirdingiz!");
-
-
-    document.getElementById("loginPassword")
-        .value = "";
-
-};
-
-
-window.register = async function(){
-
-    const name =
-        document.getElementById("registerName")
-            .value.trim();
-
-    const email =
-        document.getElementById("registerEmail")
-            .value.trim();
-
-    const phone =
-        document.getElementById("registerPhone")
-            .value.trim();
-
-    const password =
-        document.getElementById("registerPassword")
-            .value;
-
-    if(!name || !email || !password){
-
-        toast(
-            "Ism, email va parolni kiriting",
-            "error"
-        );
-
-        return;
-
-    }
-
-    if(password.length < 6){
-
-        toast(
-            "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
-            "error"
-        );
-
-        return;
-
     }
 
     const {
         data,
         error
-    } = await supabase.auth
-        .signUp({
-            email,
-            password,
-            options:{
-                data:{
-                    full_name:name,
-                    phone:phone
-                }
-            }
-        });
+    } = await supabaseClient.auth.signInWithPassword({
+        email,
+        password
+    });
 
     if(error){
-
-        toast(error.message,"error");
-
+        toast(error.message);
         return;
-
     }
 
-    if(data.user){
+    currentUser = data.user;
 
-        currentUser = data.user;
+    await loadProfile();
 
-        await new Promise(
-            resolve=>setTimeout(resolve,500)
-        );
+    updateAuthUI();
 
+    closeModal();
+
+    toast("Xush kelibsiz! 👋");
+
+}
+
+
+async function registerUser(){
+
+    const email =
+        document.getElementById("authEmail").value.trim();
+
+    const password =
+        document.getElementById("authPassword").value;
+
+    if(!email || !password){
+        toast("Email va parolni kiriting.");
+        return;
+    }
+
+    if(password.length < 6){
+        toast("Parol kamida 6 ta belgidan iborat bo'lsin.");
+        return;
+    }
+
+    const {
+        data,
+        error
+    } = await supabaseClient.auth.signUp({
+        email,
+        password
+    });
+
+    if(error){
+        toast(error.message);
+        return;
+    }
+
+    currentUser = data.user;
+
+    if(currentUser){
         await loadProfile();
-
-        updateAuthButton();
-
     }
 
-    closeModal("authModal");
+    updateAuthUI();
 
-    toast(
-        "Hisob muvaffaqiyatli yaratildi!"
-    );
+    closeModal();
 
-};
+    toast("Hisob yaratildi! 🎉");
+}
 
 
-window.logout = async function(){
+async function logoutUser(){
 
-    await supabase.auth.signOut();
+    await supabaseClient.auth.signOut();
 
     currentUser = null;
     currentProfile = null;
 
-    updateAuthButton();
+    updateAuthUI();
 
-    toast("Hisobdan chiqdingiz");
+    closeModal();
 
-};
+    toast("Hisobdan chiqildi.");
+}
 
 
-/* ==========================================
-   AUTH STATE LISTENER
-========================================== */
+function openProfile(){
 
-supabase.auth.onAuthStateChange(
-    async (_event,session)=>{
-
-        currentUser =
-            session?.user || null;
-
-        if(currentUser){
-
-            setTimeout(async()=>{
-                await loadProfile();
-                updateAuthButton();
-            },0);
-
-        }else{
-
-            currentProfile = null;
-            updateAuthButton();
-
-        }
-
+    if(!currentUser){
+        openAuth();
+        return;
     }
-);
+
+    showModal(`
+        <div class="modal">
+
+            <div class="modal-head">
+                <h2>👤 Profil</h2>
+                <button class="close" onclick="closeModal()">×</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="admin-info-card">
+
+                    <h3>
+                        ${escapeHTML(
+                            currentProfile?.full_name ||
+                            currentUser.email
+                        )}
+                    </h3>
+
+                    <p style="margin-top:8px">
+                        📧 ${escapeHTML(currentUser.email)}
+                    </p>
+
+                    <p>
+                        🎭 Role:
+                        ${escapeHTML(
+                            currentProfile?.role || "customer"
+                        )}
+                    </p>
+
+                </div>
+
+                <div style="margin-top:15px">
+                    <button
+                        class="btn btn-danger"
+                        onclick="logoutUser()">
+                        Chiqish
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    `);
+}
 
 
-/* ==========================================
-   PRODUCTS
-========================================== */
+/* =========================================================
+   MARKETPLACE
+========================================================= */
 
-async function loadProducts(){
+async function loadMarketplace(){
+
+    const productGrid =
+        document.getElementById("productGrid");
+
+    productGrid.innerHTML =
+        `<div class="loading">☕ Yuklanmoqda...</div>`;
 
     const {
         data,
         error
-    } = await supabase
+    } = await supabaseClient
         .from("products")
         .select(`
             *,
@@ -2311,30 +2069,24 @@ async function loadProducts(){
 
         console.error(error);
 
-        document.getElementById("productsGrid")
-            .innerHTML = `
-                <div class="empty">
-                    Mahsulotlarni yuklashda xatolik.
-                </div>
-            `;
+        productGrid.innerHTML =
+            `<div class="empty">
+                Mahsulotlarni yuklashda xatolik.
+            </div>`;
 
         return;
-
     }
 
     products = data || [];
 
-    await loadFavorites();
-
     renderProducts();
+
+    await loadShops();
 
 }
 
 
-window.renderProducts = function(){
-
-    const grid =
-        document.getElementById("productsGrid");
+function renderProducts(){
 
     const search =
         document.getElementById("searchInput")
@@ -2350,286 +2102,226 @@ window.renderProducts = function(){
         document.getElementById("sortFilter")
             .value;
 
-    let list =
-        products.filter(product=>{
+    let list = [...products];
 
-            const name =
-                (product.name || "").toLowerCase();
+    if(search){
 
-            const desc =
-                (product.description || "").toLowerCase();
+        list = list.filter(p=>{
 
-            const shop =
-                (product.shops?.name || "").toLowerCase();
+            const text = (
+                p.name + " " +
+                (p.description || "") + " " +
+                (p.shops?.name || "")
+            ).toLowerCase();
 
-            const matchesSearch =
-                !search ||
-                name.includes(search) ||
-                desc.includes(search) ||
-                shop.includes(search);
-
-            const matchesCategory =
-                category === "all" ||
-                product.category === category;
-
-            return matchesSearch && matchesCategory;
-
+            return text.includes(search);
         });
-
-    if(sort === "cheap"){
-
-        list.sort(
-            (a,b)=>a.price-b.price
-        );
 
     }
 
-    if(sort === "expensive"){
-
-        list.sort(
-            (a,b)=>b.price-a.price
+    if(category !== "all"){
+        list = list.filter(
+            p => p.category === category
         );
+    }
 
+    if(sort === "low"){
+        list.sort((a,b)=>a.price-b.price);
+    }
+
+    if(sort === "high"){
+        list.sort((a,b)=>b.price-a.price);
     }
 
     if(sort === "name"){
-
-        list.sort(
-            (a,b)=>
-                (a.name || "").localeCompare(
-                    b.name || ""
-                )
+        list.sort((a,b)=>
+            a.name.localeCompare(b.name)
         );
-
     }
+
+    const grid =
+        document.getElementById("productGrid");
+
+    document.getElementById("productInfo").textContent =
+        `${list.length} ta mahsulot`;
 
     if(!list.length){
 
-        grid.innerHTML = `
-            <div class="empty" style="grid-column:1/-1">
-                Hozircha mahsulot topilmadi.
-            </div>
-        `;
+        grid.innerHTML =
+            `<div class="empty">
+                🔎 Mahsulot topilmadi.
+            </div>`;
 
         return;
-
     }
 
-    grid.innerHTML =
-        list.map(product=>{
+    grid.innerHTML = list.map(p=>{
 
-            const favorite =
-                favorites.includes(product.id);
+        const shopName =
+            p.shops?.name || "Coffee Shop";
 
-            let emoji = "☕";
+        return `
+            <div class="card">
 
-            if(product.category === "cold")
-                emoji = "🧊";
+                <div class="product-img">
+                    ${p.image_url
+                        ? `<img
+                            src="${escapeHTML(p.image_url)}"
+                            style="width:100%;height:100%;object-fit:cover"
+                           >`
+                        : categoryIcon(p.category)
+                    }
+                </div>
 
-            if(product.category === "dessert")
-                emoji = "🍰";
+                <div class="product-body">
 
-            if(product.category === "food")
-                emoji = "🥐";
-
-            const image =
-                product.image_url
-                ? `
-                    <img
-                        src="${escapeHTML(product.image_url)}"
-                        alt="${escapeHTML(product.name)}"
-                    >
-                `
-                : emoji;
-
-            return `
-                <article class="product">
-
-                    <div class="product-image">
-
-                        ${image}
-
-                        <button
-                            class="favorite ${favorite ? "active":""}"
-                            onclick="toggleFavorite('${product.id}')"
-                            title="Sevimlilarga"
-                        >
-                            ${favorite ? "♥":"♡"}
-                        </button>
-
+                    <div class="product-title">
+                        ${escapeHTML(p.name)}
                     </div>
 
-                    <div class="product-body">
+                    <div class="shop-name">
+                        ☕ ${escapeHTML(shopName)}
+                    </div>
 
-                        <div class="product-shop">
-                            ${escapeHTML(product.shops?.name || "Coffee Shop")}
+                    <div style="color:#777;font-size:12px;margin-top:7px">
+                        ${escapeHTML(
+                            p.description || ""
+                        )}
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <div class="price">
+                            ${money(p.price)}
                         </div>
 
-                        <h3>
-                            ${escapeHTML(product.name)}
-                        </h3>
-
-                        <div class="product-desc">
-                            ${escapeHTML(product.description || "")}
-                        </div>
-
-                        <div class="product-bottom">
-
-                            <div class="price">
-                                ${money(product.price)}
-                            </div>
+                        <div style="display:flex;gap:6px">
 
                             <button
-                                class="btn btn-primary btn-small"
-                                onclick="addToCart('${product.id}')"
-                            >
-                                + Savat
+                                class="small-btn"
+                                onclick="addToCart('${p.id}')">
+                                🛒
+                            </button>
+
+                            <button
+                                class="small-btn"
+                                onclick="toggleFavorite('${p.id}')">
+                                ❤️
                             </button>
 
                         </div>
 
                     </div>
 
-                </article>
-            `;
+                </div>
 
-        }).join("");
+            </div>
+        `;
 
-};
-
-
-/* ==========================================
-   FAVORITES
-========================================== */
-
-async function loadFavorites(){
-
-    if(!currentUser){
-
-        favorites = [];
-
-        return;
-
-    }
-
-    const {
-        data,
-        error
-    } = await supabase
-        .from("favorites")
-        .select("product_id")
-        .eq("user_id",currentUser.id);
-
-    if(!error){
-
-        favorites =
-            (data || [])
-                .map(x=>x.product_id);
-
-    }
+    }).join("");
 
 }
 
 
-window.toggleFavorite = async function(productId){
+/* =========================================================
+   SHOPS
+========================================================= */
 
-    if(!currentUser){
+async function loadShops(){
 
-        toast(
-            "Sevimlilarga qo'shish uchun login qiling",
-            "error"
-        );
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("shops")
+        .select("*")
+        .eq("status","approved")
+        .order("created_at",{ascending:false});
 
-        openAuth();
+    if(error){
+        console.error(error);
+        return;
+    }
+
+    shops = data || [];
+
+    const grid =
+        document.getElementById("shopGrid");
+
+    if(!shops.length){
+
+        grid.innerHTML =
+            `<div class="empty">
+                Hozircha shoplar yo'q.
+            </div>`;
 
         return;
-
     }
 
-    const exists =
-        favorites.includes(productId);
+    grid.innerHTML = shops.map(shop=>`
 
-    if(exists){
+        <div class="admin-info-card">
 
-        const {
-            error
-        } = await supabase
-            .from("favorites")
-            .delete()
-            .eq("user_id",currentUser.id)
-            .eq("product_id",productId);
+            <div style="font-size:35px;margin-bottom:12px">
+                ☕
+            </div>
 
-        if(error){
+            <h3>
+                ${escapeHTML(shop.name)}
+            </h3>
 
-            toast(error.message,"error");
+            <p style="margin-top:7px">
+                📍 ${escapeHTML(shop.city || "")}
+            </p>
 
-            return;
+            <p>
+                ${escapeHTML(shop.address || "")}
+            </p>
 
-        }
+            <p>
+                📞 ${escapeHTML(shop.phone || "")}
+            </p>
 
-        favorites =
-            favorites.filter(
-                id=>id !== productId
-            );
+            <div style="margin-top:13px">
+                <span class="badge-status status-approved">
+                    APPROVED
+                </span>
+            </div>
 
-    }else{
+        </div>
 
-        const {
-            error
-        } = await supabase
-            .from("favorites")
-            .insert({
-                user_id:currentUser.id,
-                product_id:productId
-            });
+    `).join("");
 
-        if(error){
-
-            toast(error.message,"error");
-
-            return;
-
-        }
-
-        favorites.push(productId);
-
-    }
-
-    renderProducts();
-
-};
+}
 
 
-/* ==========================================
+/* =========================================================
    CART
-========================================== */
+========================================================= */
 
-window.addToCart = function(productId){
+function addToCart(productId){
 
     const product =
-        products.find(
-            p=>p.id === productId
-        );
+        products.find(p=>p.id === productId);
 
-    if(!product) return;
+    if(!product){
+        toast("Mahsulot topilmadi.");
+        return;
+    }
 
     const existing =
-        cart.find(
-            item=>item.id === productId
-        );
+        cart.find(i=>i.productId === productId);
 
     if(existing){
-
-        existing.quantity += 1;
-
+        existing.quantity++;
     }else{
 
         cart.push({
-            id:product.id,
+            productId:product.id,
             name:product.name,
             price:product.price,
-            shop_id:product.shop_id,
-            shop_name:product.shops?.name || "",
+            shopId:product.shop_id,
+            shopName:product.shops?.name || "",
             quantity:1
         });
 
@@ -2637,213 +2329,266 @@ window.addToCart = function(productId){
 
     saveCart();
 
-    toast(
-        `${product.name} savatga qo'shildi`
-    );
-
-};
+    toast(`${product.name} savatga qo'shildi 🛒`);
+}
 
 
-window.openCart = function(){
-
-    renderCart();
-
-    openModal("cartModal");
-
-};
-
-
-window.renderCart = function(){
-
-    const container =
-        document.getElementById("cartItems");
-
-    if(!cart.length){
-
-        container.innerHTML = `
-            <div class="empty">
-                🛒 Savat hozircha bo'sh.
-            </div>
-        `;
-
-        document.getElementById("cartTotal")
-            .textContent = "0 so'm";
-
-        return;
-
-    }
-
-    container.innerHTML =
-        cart.map(item=>`
-
-            <div class="cart-item">
-
-                <div class="cart-item-info">
-
-                    <div class="cart-item-name">
-                        ${escapeHTML(item.name)}
-                    </div>
-
-                    <div class="cart-item-shop">
-                        ${escapeHTML(item.shop_name)}
-                    </div>
-
-                    <div class="cart-controls">
-
-                        <button
-                            class="qty-btn"
-                            onclick="changeQty('${item.id}',-1)"
-                        >
-                            −
-                        </button>
-
-                        <strong>
-                            ${item.quantity}
-                        </strong>
-
-                        <button
-                            class="qty-btn"
-                            onclick="changeQty('${item.id}',1)"
-                        >
-                            +
-                        </button>
-
-                        <button
-                            class="qty-btn"
-                            style="margin-left:5px;color:#ff9898"
-                            onclick="removeFromCart('${item.id}')"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <strong>
-                    ${money(item.price * item.quantity)}
-                </strong>
-
-            </div>
-
-        `).join("");
-
-    const total =
-        cart.reduce(
-            (sum,item)=>
-                sum + item.price * item.quantity,
-            0
-        );
-
-    document.getElementById("cartTotal")
-        .textContent = money(total);
-
-};
-
-
-window.changeQty = function(id,delta){
+function changeQty(productId,delta){
 
     const item =
-        cart.find(x=>x.id === id);
+        cart.find(i=>i.productId === productId);
 
     if(!item) return;
 
     item.quantity += delta;
 
     if(item.quantity <= 0){
-
         cart =
-            cart.filter(x=>x.id !== id);
-
+            cart.filter(i=>i.productId !== productId);
     }
 
     saveCart();
-    renderCart();
 
-};
+    openCart();
+}
 
 
-window.removeFromCart = function(id){
+function removeCart(productId){
 
     cart =
-        cart.filter(
-            item=>item.id !== id
-        );
+        cart.filter(i=>i.productId !== productId);
 
     saveCart();
-    renderCart();
 
-    toast("Mahsulot savatdan o'chirildi");
-
-};
+    openCart();
+}
 
 
-/* ==========================================
+function openCart(){
+
+    let total =
+        cart.reduce(
+            (sum,item)=>
+                sum + item.price * item.quantity,
+            0
+        );
+
+    showModal(`
+
+        <div class="modal">
+
+            <div class="modal-head">
+
+                <h2>🛒 Savat</h2>
+
+                <button
+                    class="close"
+                    onclick="closeModal()">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                ${
+                    cart.length
+                    ?
+                    cart.map(item=>`
+
+                        <div class="cart-item">
+
+                            <div class="cart-info">
+
+                                <h4>
+                                    ${escapeHTML(item.name)}
+                                </h4>
+
+                                <p>
+                                    ${money(item.price)}
+                                </p>
+
+                                <div class="qty">
+
+                                    <button
+                                        onclick="changeQty('${item.productId}',-1)">
+                                        −
+                                    </button>
+
+                                    <span>
+                                        ${item.quantity}
+                                    </span>
+
+                                    <button
+                                        onclick="changeQty('${item.productId}',1)">
+                                        +
+                                    </button>
+
+                                    <button
+                                        onclick="removeCart('${item.productId}')"
+                                        style="margin-left:7px">
+                                        🗑
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cart-price">
+                                ${money(
+                                    item.price *
+                                    item.quantity
+                                )}
+                            </div>
+
+                        </div>
+
+                    `).join("")
+                    :
+                    `<div class="empty">
+                        🛒 Savatingiz bo'sh.
+                    </div>`
+                }
+
+                ${
+                    cart.length
+                    ?
+                    `
+                    <div class="total-box">
+
+                        <div class="total-row">
+                            <span>Mahsulotlar</span>
+                            <span>${money(total)}</span>
+                        </div>
+
+                        <div class="total-row">
+                            <span>Yetkazib berish</span>
+                            <span>Bepul</span>
+                        </div>
+
+                        <div class="total-row">
+                            <span>Jami</span>
+                            <span>${money(total)}</span>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary"
+                        style="width:100%;margin-top:15px"
+                        onclick="openCheckout()">
+                        Buyurtma berish →
+                    </button>
+                    `
+                    :
+                    ""
+                }
+
+            </div>
+
+        </div>
+
+    `);
+
+}
+
+
+/* =========================================================
    CHECKOUT
-========================================== */
+========================================================= */
 
-window.openCheckout = async function(){
-
-    if(!cart.length){
-
-        toast(
-            "Savat bo'sh",
-            "error"
-        );
-
-        return;
-
-    }
+function openCheckout(){
 
     if(!currentUser){
-
-        closeModal("cartModal");
-
-        toast(
-            "Buyurtma berish uchun login qiling",
-            "error"
-        );
-
+        closeModal();
+        toast("Buyurtma uchun avval kiring.");
         openAuth();
-
         return;
-
-    }
-
-    await loadProfile();
-
-    document.getElementById("checkoutName")
-        .value =
-            currentProfile?.full_name || "";
-
-    document.getElementById("checkoutPhone")
-        .value =
-            currentProfile?.phone || "";
-
-    closeModal("cartModal");
-
-    openModal("checkoutModal");
-
-};
-
-
-window.placeOrder = async function(){
-
-    if(!currentUser){
-
-        toast("Avval login qiling","error");
-
-        return;
-
     }
 
     if(!cart.length){
-
-        toast("Savat bo'sh","error");
-
+        toast("Savat bo'sh.");
         return;
-
     }
+
+    showModal(`
+
+        <div class="modal">
+
+            <div class="modal-head">
+                <h2>📦 Buyurtma</h2>
+                <button class="close" onclick="closeModal()">×</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Ism</label>
+                    <input
+                        id="checkoutName"
+                        class="input"
+                        value="${escapeHTML(
+                            currentProfile?.full_name || ""
+                        )}"
+                        placeholder="Ismingiz"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input
+                        id="checkoutPhone"
+                        class="input"
+                        value="${escapeHTML(
+                            currentProfile?.phone || ""
+                        )}"
+                        placeholder="+998 90 123 45 67"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Yetkazib berish manzili</label>
+                    <textarea
+                        id="checkoutAddress"
+                        class="textarea"
+                        rows="3"
+                        placeholder="Manzil..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>To'lov usuli</label>
+
+                    <select id="paymentMethod" class="select">
+
+                        <option value="cash">
+                            💵 Naqd
+                        </option>
+
+                        <option value="card">
+                            💳 Karta
+                        </option>
+
+                    </select>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    style="width:100%"
+                    onclick="createOrder()">
+                    Buyurtmani tasdiqlash
+                </button>
+
+            </div>
+
+        </div>
+
+    `);
+
+}
+
+
+async function createOrder(){
 
     const name =
         document.getElementById("checkoutName")
@@ -2862,287 +2607,248 @@ window.placeOrder = async function(){
             .value;
 
     if(!name || !phone || !address){
-
-        toast(
-            "Barcha ma'lumotlarni to'ldiring",
-            "error"
-        );
-
+        toast("Barcha ma'lumotlarni kiriting.");
         return;
-
     }
-
-
-    /* GROUP BY SHOP */
-
-    const grouped = {};
-
-    cart.forEach(item=>{
-
-        if(!grouped[item.shop_id]){
-
-            grouped[item.shop_id] = [];
-
-        }
-
-        grouped[item.shop_id].push(item);
-
-    });
-
 
     const shopIds =
-        Object.keys(grouped);
+        [...new Set(cart.map(i=>i.shopId))];
 
-    let successCount = 0;
-
-    for(const shopId of shopIds){
-
-        const items =
-            grouped[shopId];
-
-        const total =
-            items.reduce(
-                (sum,item)=>
-                    sum + item.price * item.quantity,
-                0
-            );
-
-
-        const {
-            data:order,
-            error:orderError
-        } = await supabase
-            .from("orders")
-            .insert({
-                customer_id:currentUser.id,
-                shop_id:shopId,
-                customer_name:name,
-                customer_phone:phone,
-                delivery_address:address,
-                total_amount:total,
-                status:"new",
-                payment_status:"pending",
-                payment_method:paymentMethod
-            })
-            .select()
-            .single();
-
-
-        if(orderError){
-
-            console.error(orderError);
-
-            toast(
-                "Buyurtma yaratishda xatolik: " +
-                orderError.message,
-                "error"
-            );
-
-            continue;
-
-        }
-
-
-        const itemRows =
-            items.map(item=>({
-                order_id:order.id,
-                product_id:item.id,
-                product_name:item.name,
-                price:item.price,
-                quantity:item.quantity
-            }));
-
-
-        const {
-            error:itemError
-        } = await supabase
-            .from("order_items")
-            .insert(itemRows);
-
-
-        if(itemError){
-
-            console.error(itemError);
-
-            toast(
-                "Buyurtma mahsulotlarini saqlashda xatolik",
-                "error"
-            );
-
-            continue;
-
-        }
-
-        successCount++;
-
-    }
-
-
-    if(successCount > 0){
-
-        cart = [];
-
-        saveCart();
-
-        closeModal("checkoutModal");
-
-        document.getElementById("checkoutAddress")
-            .value = "";
+    if(shopIds.length !== 1){
 
         toast(
-            `${successCount} ta shopga buyurtma yuborildi!`
+            "Hozircha bitta buyurtmada faqat bitta shop mahsulotlarini buyurtma qilish mumkin."
         );
 
+        return;
     }
 
-};
+    const shopId = shopIds[0];
 
-
-/* ==========================================
-   SHOPS
-========================================== */
-
-async function loadShops(){
+    const total =
+        cart.reduce(
+            (sum,item)=>
+                sum + item.price * item.quantity,
+            0
+        );
 
     const {
-        data,
-        error
-    } = await supabase
-        .from("shops")
-        .select("*")
-        .eq("status","approved")
-        .order("created_at",{ascending:false});
+        data:order,
+        error:orderError
+    } = await supabaseClient
+        .from("orders")
+        .insert({
+            customer_id:currentUser.id,
+            shop_id:shopId,
+            customer_name:name,
+            customer_phone:phone,
+            delivery_address:address,
+            total_amount:total,
+            status:"new",
+            payment_status:"pending",
+            payment_method:paymentMethod
+        })
+        .select()
+        .single();
 
-    if(error){
+    if(orderError){
 
-        console.error(error);
+        console.error(orderError);
 
-        document.getElementById("shopsGrid")
-            .innerHTML = `
-                <div class="empty">
-                    Coffee shoplarni yuklashda xatolik.
-                </div>
-            `;
+        toast(orderError.message);
 
         return;
-
     }
 
-    shops = data || [];
+    const items =
+        cart.map(item=>({
+            order_id:order.id,
+            product_id:item.productId,
+            product_name:item.name,
+            price:item.price,
+            quantity:item.quantity
+        }));
 
-    renderShops();
+    const {
+        error:itemError
+    } = await supabaseClient
+        .from("order_items")
+        .insert(items);
+
+    if(itemError){
+
+        console.error(itemError);
+
+        toast(
+            "Buyurtma yaratildi, lekin mahsulotlar saqlanmadi."
+        );
+
+        return;
+    }
+
+    cart = [];
+
+    saveCart();
+
+    closeModal();
+
+    toast("Buyurtmangiz qabul qilindi! 🎉");
 
 }
 
 
-window.renderShops = function(){
+/* =========================================================
+   FAVORITES
+========================================================= */
 
-    const grid =
-        document.getElementById("shopsGrid");
-
-    if(!shops.length){
-
-        grid.innerHTML = `
-            <div class="empty" style="grid-column:1/-1">
-                Hozircha tasdiqlangan coffee shoplar yo'q.
-            </div>
-        `;
-
-        return;
-
-    }
-
-    grid.innerHTML =
-        shops.map(shop=>{
-
-            const first =
-                (shop.name || "C")
-                    .charAt(0)
-                    .toUpperCase();
-
-            return `
-                <div class="shop-card">
-
-                    <div class="shop-logo">
-                        ${escapeHTML(first)}
-                    </div>
-
-                    <h3>
-                        ${escapeHTML(shop.name)}
-                    </h3>
-
-                    <div class="shop-city">
-                        📍 ${escapeHTML(shop.city)}
-                    </div>
-
-                    <div class="shop-address">
-                        ${escapeHTML(shop.address || "Manzil ko'rsatilmagan")}
-                    </div>
-
-                    ${
-                        shop.description
-                        ? `
-                            <div style="color:var(--muted);font-size:13px;margin-top:10px;line-height:1.5">
-                                ${escapeHTML(shop.description)}
-                            </div>
-                        `
-                        : ""
-                    }
-
-                    ${
-                        shop.phone
-                        ? `
-                            <div style="margin-top:12px;font-size:13px">
-                                📞 ${escapeHTML(shop.phone)}
-                            </div>
-                        `
-                        : ""
-                    }
-
-                </div>
-            `;
-
-        }).join("");
-
-};
-
-
-/* ==========================================
-   SHOP REGISTER
-========================================== */
-
-window.openShopRegister = function(){
+async function toggleFavorite(productId){
 
     if(!currentUser){
 
-        toast(
-            "Shop qo'shish uchun avval ro'yxatdan o'ting",
-            "error"
-        );
+        toast("Sevimlilarga qo'shish uchun kiring.");
 
         openAuth();
 
         return;
-
     }
 
-    openModal("shopModal");
+    const {
+        data:existing
+    } = await supabaseClient
+        .from("favorites")
+        .select("id")
+        .eq("user_id",currentUser.id)
+        .eq("product_id",productId)
+        .maybeSingle();
 
-};
+    if(existing){
+
+        await supabaseClient
+            .from("favorites")
+            .delete()
+            .eq("id",existing.id);
+
+        toast("Sevimlilardan olib tashlandi.");
+
+    }else{
+
+        const {
+            error
+        } = await supabaseClient
+            .from("favorites")
+            .insert({
+                user_id:currentUser.id,
+                product_id:productId
+            });
+
+        if(error){
+            toast(error.message);
+            return;
+        }
+
+        toast("❤️ Sevimlilarga qo'shildi.");
+    }
+}
 
 
-window.registerShop = async function(){
+/* =========================================================
+   SHOP REGISTER
+========================================================= */
+
+function openShopRegister(){
 
     if(!currentUser){
 
-        toast(
-            "Avval login qiling",
-            "error"
-        );
+        toast("Shop ochish uchun avval login qiling.");
+
+        openAuth();
 
         return;
-
     }
+
+    showModal(`
+
+        <div class="modal">
+
+            <div class="modal-head">
+                <h2>🏪 Coffee Shop ochish</h2>
+
+                <button
+                    class="close"
+                    onclick="closeModal()">
+                    ×
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Shop nomi</label>
+                    <input
+                        id="shopName"
+                        class="input"
+                        placeholder="Masalan: COFFEE HOUSE"
+                    >
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Shahar</label>
+                        <input
+                            id="shopCity"
+                            class="input"
+                            placeholder="Samarqand"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input
+                            id="shopPhone"
+                            class="input"
+                            placeholder="+998..."
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Manzil</label>
+                    <input
+                        id="shopAddress"
+                        class="input"
+                        placeholder="Manzil"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Tavsif</label>
+                    <textarea
+                        id="shopDescription"
+                        class="textarea"
+                        rows="4"
+                        placeholder="Shop haqida..."
+                    ></textarea>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    style="width:100%"
+                    onclick="registerShop()">
+                    Shopni yuborish
+                </button>
+
+            </div>
+
+        </div>
+
+    `);
+
+}
+
+
+async function registerShop(){
 
     const name =
         document.getElementById("shopName")
@@ -3152,705 +2858,563 @@ window.registerShop = async function(){
         document.getElementById("shopCity")
             .value.trim();
 
-    const address =
-        document.getElementById("shopAddress")
-            .value.trim();
-
     const phone =
         document.getElementById("shopPhone")
+            .value.trim();
+
+    const address =
+        document.getElementById("shopAddress")
             .value.trim();
 
     const description =
         document.getElementById("shopDescription")
             .value.trim();
 
-
-    if(!name || !city || !address){
-
-        toast(
-            "Shop nomi, shahar va manzilni kiriting",
-            "error"
-        );
-
+    if(!name || !city || !phone){
+        toast("Shop nomi, shahar va telefon kerak.");
         return;
-
     }
-
 
     const {
         error
-    } = await supabase
+    } = await supabaseClient
         .from("shops")
         .insert({
             owner_id:currentUser.id,
             name,
             city,
-            address,
             phone,
+            address,
             description,
             status:"pending"
         });
 
-
     if(error){
 
-        toast(
-            error.message,
-            "error"
-        );
+        toast(error.message);
 
         return;
-
     }
 
-
-    /* CHANGE PROFILE ROLE TO SHOP */
-
-    const {
-        error:profileError
-    } = await supabase
+    await supabaseClient
         .from("profiles")
         .update({
             role:"shop"
         })
         .eq("id",currentUser.id);
 
+    await loadProfile();
 
-    if(!profileError){
+    updateAuthUI();
 
-        await loadProfile();
-
-        updateAuthButton();
-
-    }
-
-
-    closeModal("shopModal");
-
-    document.getElementById("shopName").value = "";
-    document.getElementById("shopCity").value = "";
-    document.getElementById("shopAddress").value = "";
-    document.getElementById("shopPhone").value = "";
-    document.getElementById("shopDescription").value = "";
-
+    closeModal();
 
     toast(
-        "Shop yuborildi! Admin tasdiqlashini kuting."
+        "Shop yuborildi! Admin tasdiqlashini kuting. ⏳"
     );
 
-};
+}
 
 
-/* ==========================================
+/* =========================================================
    SHOP DASHBOARD
-========================================== */
+========================================================= */
 
-window.openDashboard = async function(){
+async function openDashboard(){
 
     if(!currentUser){
-
-        toast(
-            "Dashboard uchun login qiling",
-            "error"
-        );
-
         openAuth();
-
         return;
-
     }
 
-    openModal("dashboardModal");
+    if(currentProfile?.role !== "shop" &&
+       currentProfile?.role !== "admin"){
 
-    document.getElementById("dashboardContent")
-        .innerHTML = `
-            <div class="loading">
-                Dashboard yuklanmoqda...
-            </div>
-        `;
+        toast("Shop dashboard mavjud emas.");
+
+        return;
+    }
+
+    document.getElementById("homePage")
+        .classList.add("hidden");
+
+    document.querySelector("footer")
+        .classList.add("hidden");
+
+    document.getElementById("dashboardPage")
+        .classList.remove("hidden");
+
+    document.getElementById("adminPage")
+        .classList.add("hidden");
 
     await loadDashboard();
 
-};
+}
+
+
+function closeDashboard(){
+
+    document.getElementById("dashboardPage")
+        .classList.add("hidden");
+
+    document.querySelector("footer")
+        .classList.remove("hidden");
+
+    document.getElementById("homePage")
+        .classList.remove("hidden");
+
+}
 
 
 async function loadDashboard(){
 
-    /* OWN SHOPS */
-
     const {
-        data:ownShops,
-        error:shopError
-    } = await supabase
+        data:shop
+    } = await supabaseClient
         .from("shops")
         .select("*")
         .eq("owner_id",currentUser.id)
-        .order("created_at",{ascending:false});
-
-
-    if(shopError){
-
-        document.getElementById("dashboardContent")
-            .innerHTML = `
-                <div class="empty">
-                    ${escapeHTML(shopError.message)}
-                </div>
-            `;
-
-        return;
-
-    }
-
-
-    if(!ownShops || !ownShops.length){
-
-        document.getElementById("dashboardContent")
-            .innerHTML = `
-                <div class="empty">
-
-                    <div style="font-size:45px">
-                        🏪
-                    </div>
-
-                    <h3 style="margin:10px 0">
-                        Sizda hali shop yo'q
-                    </h3>
-
-                    <p>
-                        Avval coffee shopingizni qo'shing.
-                    </p>
-
-                    <button
-                        class="btn btn-primary"
-                        style="margin-top:15px"
-                        onclick="closeModal('dashboardModal');openShopRegister()"
-                    >
-                        + Shop qo'shish
-                    </button>
-
-                </div>
-            `;
-
-        return;
-
-    }
-
-
-    /*
-       Agar bir nechta shop bo'lsa,
-       birinchi shop ishlatiladi.
-    */
-
-    dashboardShop = ownShops[0];
-
-    dashboardShopName.textContent =
-        dashboardShop.name +
-        " • " +
-        dashboardShop.city;
-
-
-    await loadDashboardProducts();
-
-    await loadDashboardOrders();
-
-    renderDashboard();
-
-}
-
-
-async function loadDashboardProducts(){
-
-    const {
-        data,
-        error
-    } = await supabase
-        .from("products")
-        .select("*")
-        .eq("shop_id",dashboardShop.id)
-        .order("created_at",{ascending:false});
-
-    if(error){
-
-        console.error(error);
-
-        dashboardProducts = [];
-
-        return;
-
-    }
-
-    dashboardProducts = data || [];
-
-}
-
-
-async function loadDashboardOrders(){
-
-    const {
-        data,
-        error
-    } = await supabase
-        .from("orders")
-        .select(`
-            *,
-            order_items (
-                id,
-                product_name,
-                price,
-                quantity
-            )
-        `)
-        .eq("shop_id",dashboardShop.id)
-        .order("created_at",{ascending:false});
-
-    if(error){
-
-        console.error(error);
-
-        dashboardOrders = [];
-
-        return;
-
-    }
-
-    dashboardOrders = data || [];
-
-}
-
-
-window.renderDashboard = function(){
+        .order("created_at",{ascending:false})
+        .limit(1)
+        .maybeSingle();
 
     const content =
         document.getElementById("dashboardContent");
 
+    if(!shop){
 
-    const totalSales =
-        dashboardOrders
-            .filter(o=>o.status !== "cancelled")
-            .reduce(
-                (sum,o)=>
-                    sum + Number(o.total_amount || 0),
-                0
-            );
+        content.innerHTML = `
+            <div class="empty">
+                Sizga tegishli shop topilmadi.
+                <br><br>
+                <button
+                    class="btn btn-primary"
+                    onclick="openShopRegister()">
+                    Shop ochish
+                </button>
+            </div>
+        `;
 
+        return;
+    }
 
-    const pending =
-        dashboardOrders.filter(
-            o=>o.status === "new"
-        ).length;
+    document.getElementById("dashboardShopName")
+        .textContent =
+        `${shop.name} • ${shop.status}`;
 
+    const {
+        data:shopProducts
+    } = await supabaseClient
+        .from("products")
+        .select("*")
+        .eq("shop_id",shop.id)
+        .order("created_at",{ascending:false});
 
-    const delivered =
-        dashboardOrders.filter(
-            o=>o.status === "delivered"
-        ).length;
+    const {
+        data:orders
+    } = await supabaseClient
+        .from("orders")
+        .select("*")
+        .eq("shop_id",shop.id)
+        .order("created_at",{ascending:false});
 
+    const sales =
+        (orders || []).reduce(
+            (sum,o)=>
+                sum + Number(o.total_amount || 0),
+            0
+        );
 
     content.innerHTML = `
 
-        <div class="dashboard-top">
-
-            <div>
-                <div style="color:var(--muted);font-size:13px">
-                    Shop holati
-                </div>
-
-                <div style="margin-top:5px">
-                    <span class="status ${
-                        dashboardShop.status === "approved"
-                        ? "status-ready"
-                        : "status-new"
-                    }">
-                        ${escapeHTML(dashboardShop.status)}
-                    </span>
-                </div>
-            </div>
-
-            <button
-                class="btn btn-dark"
-                onclick="loadDashboard()"
-            >
-                ↻ Yangilash
-            </button>
-
-        </div>
-
-
-        <div class="dashboard-grid">
+        <div class="stats">
 
             <div class="stat">
-                <div class="stat-label">
-                    Jami buyurtmalar
-                </div>
+                <div class="stat-icon">📦</div>
                 <div class="stat-value">
-                    ${dashboardOrders.length}
+                    ${(shopProducts || []).length}
+                </div>
+                <div class="stat-label">
+                    Mahsulotlar
                 </div>
             </div>
 
             <div class="stat">
-                <div class="stat-label">
-                    Yangi buyurtmalar
-                </div>
+                <div class="stat-icon">🛒</div>
                 <div class="stat-value">
-                    ${pending}
+                    ${(orders || []).length}
+                </div>
+                <div class="stat-label">
+                    Buyurtmalar
                 </div>
             </div>
 
             <div class="stat">
-                <div class="stat-label">
-                    Yetkazilgan
-                </div>
+                <div class="stat-icon">💰</div>
                 <div class="stat-value">
-                    ${delivered}
+                    ${money(sales)}
+                </div>
+                <div class="stat-label">
+                    Savdo
                 </div>
             </div>
 
             <div class="stat">
-                <div class="stat-label">
-                    Jami savdo
+                <div class="stat-icon">🏪</div>
+                <div class="stat-value">
+                    ${escapeHTML(shop.status)}
                 </div>
-                <div class="stat-value" style="font-size:19px">
-                    ${money(totalSales)}
+                <div class="stat-label">
+                    Shop statusi
                 </div>
             </div>
 
         </div>
 
 
-        <div class="dashboard-section">
+        <div class="panel">
 
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:15px">
+            <div class="panel-head">
 
-                <h3>
-                    📦 Buyurtmalar
-                </h3>
-
-                <span style="color:var(--muted);font-size:12px">
-                    ${dashboardOrders.length} ta
-                </span>
-
-            </div>
-
-            ${
-                dashboardOrders.length
-                ? dashboardOrders.map(renderOrder).join("")
-                : `
-                    <div class="empty">
-                        Hozircha buyurtmalar yo'q.
-                    </div>
-                `
-            }
-
-        </div>
-
-
-        <div class="dashboard-section">
-
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:15px">
-
-                <h3>
-                    ☕ Mahsulotlar
-                </h3>
+                <h2>📦 Mahsulotlar</h2>
 
                 <button
-                    class="btn btn-primary btn-small"
-                    onclick="openProductModal()"
-                >
+                    class="btn btn-primary"
+                    onclick="openProductModal('${shop.id}')">
                     + Mahsulot
                 </button>
 
             </div>
 
-            ${
-                dashboardProducts.length
-                ? dashboardProducts.map(
-                    renderAdminProduct
-                ).join("")
-                : `
-                    <div class="empty">
-                        Hali mahsulot qo'shilmagan.
-                    </div>
-                `
-            }
-
-        </div>
-
-    `;
-
-};
-
-
-function renderOrder(order){
-
-    const status =
-        order.status || "new";
-
-    const items =
-        order.order_items || [];
-
-    return `
-
-        <div class="order-card">
-
-            <div class="order-head">
-
-                <div>
-
-                    <strong>
-                        📦 Buyurtma #${escapeHTML(order.id.slice(0,8))}
-                    </strong>
-
-                    <div class="order-id">
-                        ${new Date(order.created_at)
-                            .toLocaleString("uz-UZ")}
-                    </div>
-
-                </div>
-
-                <span class="status status-${escapeHTML(status)}">
-                    ${statusText(status)}
-                </span>
-
-            </div>
-
-
-            <div class="order-items">
+            <div class="panel-body">
 
                 ${
-                    items.length
-                    ? items.map(item=>`
-                        <div>
-                            ${escapeHTML(item.product_name)}
-                            × ${item.quantity}
-                            — ${money(item.price * item.quantity)}
-                        </div>
-                    `).join("")
-                    : "Mahsulot ma'lumotlari yo'q"
+                    (shopProducts || []).length
+                    ?
+                    `
+                    <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Kategoriya</th>
+                                <th>Narx</th>
+                                <th>Holat</th>
+                                <th>Amal</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                        ${(shopProducts || []).map(p=>`
+
+                            <tr>
+
+                                <td>
+                                    ${escapeHTML(p.name)}
+                                </td>
+
+                                <td>
+                                    ${escapeHTML(p.category)}
+                                </td>
+
+                                <td>
+                                    ${money(p.price)}
+                                </td>
+
+                                <td>
+                                    ${p.is_available
+                                        ? "✅ Available"
+                                        : "❌ Hidden"}
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="small-btn"
+                                        onclick="deleteProduct('${p.id}')">
+                                        🗑
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        `).join("")}
+
+                        </tbody>
+
+                    </table>
+
+                    </div>
+                    `
+                    :
+                    `<div class="empty">
+                        Hali mahsulot yo'q.
+                    </div>`
                 }
 
             </div>
 
+        </div>
 
-            <div class="order-meta">
 
-                👤 ${escapeHTML(order.customer_name || "")}
-                <br>
+        <div class="panel">
 
-                📞 ${escapeHTML(order.customer_phone || "")}
-                <br>
+            <div class="panel-head">
+                <h2>🛒 Buyurtmalar</h2>
 
-                📍 ${escapeHTML(order.delivery_address || "")}
-                <br>
+                <button
+                    class="btn btn-secondary"
+                    onclick="loadDashboard()">
+                    ↻
+                </button>
+            </div>
 
-                💳 ${escapeHTML(order.payment_method || "cash")}
-                <br>
+            <div class="panel-body">
 
-                💰 <strong>
-                    ${money(order.total_amount)}
-                </strong>
+                ${
+                    (orders || []).length
+                    ?
+                    `
+                    <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Mijoz</th>
+                                <th>Telefon</th>
+                                <th>Summa</th>
+                                <th>Status</th>
+                                <th>Amal</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                        ${(orders || []).map(o=>`
+
+                            <tr>
+
+                                <td>
+                                    ${escapeHTML(o.customer_name)}
+                                </td>
+
+                                <td>
+                                    ${escapeHTML(o.customer_phone)}
+                                </td>
+
+                                <td>
+                                    ${money(o.total_amount)}
+                                </td>
+
+                                <td>
+                                    <span class="badge-status ${statusClass(o.status)}">
+                                        ${escapeHTML(o.status)}
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <select
+                                        class="select"
+                                        style="width:auto"
+                                        onchange="updateOrderStatus('${o.id}',this.value)">
+
+                                        ${[
+                                            "new",
+                                            "accepted",
+                                            "preparing",
+                                            "ready",
+                                            "delivering",
+                                            "delivered",
+                                            "cancelled"
+                                        ].map(s=>`
+                                            <option
+                                                value="${s}"
+                                                ${o.status===s?"selected":""}>
+                                                ${s}
+                                            </option>
+                                        `).join("")}
+
+                                    </select>
+
+                                </td>
+
+                            </tr>
+
+                        `).join("")}
+
+                        </tbody>
+
+                    </table>
+
+                    </div>
+                    `
+                    :
+                    `<div class="empty">
+                        Buyurtmalar yo'q.
+                    </div>`
+                }
 
             </div>
 
+        </div>
+    `;
 
-            <div class="status-buttons">
+}
+
+
+async function updateOrderStatus(orderId,newStatus){
+
+    const {
+        data:oldOrder
+    } = await supabaseClient
+        .from("orders")
+        .select("status")
+        .eq("id",orderId)
+        .single();
+
+    const {
+        error
+    } = await supabaseClient
+        .from("orders")
+        .update({
+            status:newStatus
+        })
+        .eq("id",orderId);
+
+    if(error){
+
+        toast(error.message);
+
+        return;
+    }
+
+    await supabaseClient
+        .from("order_status_history")
+        .insert({
+            order_id:orderId,
+            old_status:oldOrder?.status || null,
+            new_status:newStatus,
+            changed_by:currentUser.id
+        });
+
+    toast("Buyurtma statusi yangilandi.");
+
+    await loadDashboard();
+}
+
+
+function openProductModal(shopId){
+
+    showModal(`
+
+        <div class="modal">
+
+            <div class="modal-head">
+                <h2>📦 Mahsulot qo'shish</h2>
 
                 <button
-                    onclick="updateOrderStatus('${order.id}','accepted')"
-                >
-                    ✓ Qabul qilish
+                    class="close"
+                    onclick="closeModal()">
+                    ×
                 </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Mahsulot nomi</label>
+                    <input
+                        id="productName"
+                        class="input"
+                        placeholder="Cappuccino"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Tavsif</label>
+                    <textarea
+                        id="productDescription"
+                        class="textarea"
+                        rows="3"
+                    ></textarea>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Kategoriya</label>
+
+                        <select
+                            id="productCategory"
+                            class="select">
+
+                            <option value="coffee">
+                                Coffee
+                            </option>
+
+                            <option value="cold">
+                                Cold
+                            </option>
+
+                            <option value="dessert">
+                                Dessert
+                            </option>
+
+                            <option value="food">
+                                Food
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Narx</label>
+
+                        <input
+                            id="productPrice"
+                            class="input"
+                            type="number"
+                            placeholder="30000"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Rasm URL</label>
+
+                    <input
+                        id="productImage"
+                        class="input"
+                        placeholder="https://..."
+                    >
+                </div>
 
                 <button
-                    onclick="updateOrderStatus('${order.id}','preparing')"
-                >
-                    ☕ Tayyorlanmoqda
-                </button>
-
-                <button
-                    onclick="updateOrderStatus('${order.id}','ready')"
-                >
-                    📦 Tayyor
-                </button>
-
-                <button
-                    onclick="updateOrderStatus('${order.id}','delivering')"
-                >
-                    🚚 Yetkazilmoqda
-                </button>
-
-                <button
-                    onclick="updateOrderStatus('${order.id}','delivered')"
-                >
-                    ✅ Yetkazildi
-                </button>
-
-                <button
-                    onclick="updateOrderStatus('${order.id}','cancelled')"
-                    style="color:#ff9898"
-                >
-                    ✕ Bekor qilish
+                    class="btn btn-primary"
+                    style="width:100%"
+                    onclick="addProduct('${shopId}')">
+                    Mahsulot qo'shish
                 </button>
 
             </div>
 
         </div>
 
-    `;
+    `);
 
 }
 
 
-function statusText(status){
-
-    const map = {
-
-        new:"Yangi",
-
-        accepted:"Qabul qilindi",
-
-        preparing:"Tayyorlanmoqda",
-
-        ready:"Tayyor",
-
-        delivering:"Yetkazilmoqda",
-
-        delivered:"Yetkazildi",
-
-        cancelled:"Bekor qilindi"
-
-    };
-
-    return map[status] || status;
-
-}
-
-
-/* ==========================================
-   UPDATE ORDER STATUS
-========================================== */
-
-window.updateOrderStatus = async function(
-    orderId,
-    newStatus
-){
-
-    if(!currentUser || !dashboardShop){
-
-        return;
-
-    }
-
-
-    const order =
-        dashboardOrders.find(
-            o=>o.id === orderId
-        );
-
-    if(!order) return;
-
-
-    const oldStatus =
-        order.status;
-
-
-    const {
-        error
-    } = await supabase
-        .from("orders")
-        .update({
-            status:newStatus,
-            updated_at:new Date().toISOString()
-        })
-        .eq("id",orderId)
-        .eq("shop_id",dashboardShop.id);
-
-
-    if(error){
-
-        console.error(error);
-
-        toast(
-            "Statusni o'zgartirib bo'lmadi: " +
-            error.message,
-            "error"
-        );
-
-        return;
-
-    }
-
-
-    /* STATUS HISTORY */
-
-    await supabase
-        .from("order_status_history")
-        .insert({
-            order_id:orderId,
-            old_status:oldStatus,
-            new_status:newStatus,
-            changed_by:currentUser.id
-        });
-
-
-    toast(
-        "Buyurtma statusi yangilandi"
-    );
-
-
-    await loadDashboardOrders();
-
-    renderDashboard();
-
-};
-
-
-/* ==========================================
-   ADD PRODUCT
-========================================== */
-
-window.openProductModal = function(){
-
-    if(!dashboardShop){
-
-        toast(
-            "Avval shopni tanlang",
-            "error"
-        );
-
-        return;
-
-    }
-
-    document.getElementById("productName")
-        .value = "";
-
-    document.getElementById("productDescription")
-        .value = "";
-
-    document.getElementById("productPrice")
-        .value = "";
-
-    document.getElementById("productImage")
-        .value = "";
-
-    openModal("productModal");
-
-};
-
-
-window.addProduct = async function(){
-
-    if(!currentUser || !dashboardShop){
-
-        toast(
-            "Shop topilmadi",
-            "error"
-        );
-
-        return;
-
-    }
-
+async function addProduct(shopId){
 
     const name =
         document.getElementById("productName")
@@ -3870,213 +3434,1296 @@ window.addProduct = async function(){
                 .value
         );
 
-    const image =
+    const image_url =
         document.getElementById("productImage")
             .value.trim();
 
-
     if(!name || !price){
 
-        toast(
-            "Mahsulot nomi va narxini kiriting",
-            "error"
-        );
+        toast("Nom va narxni kiriting.");
 
         return;
-
     }
-
 
     const {
         error
-    } = await supabase
+    } = await supabaseClient
         .from("products")
         .insert({
-            shop_id:dashboardShop.id,
+            shop_id:shopId,
             name,
             description,
             category,
             price,
-            image_url:image || null,
+            image_url:image_url || null,
             is_available:true
         });
 
-
     if(error){
 
-        toast(
-            "Mahsulot qo'shilmadi: " +
-            error.message,
-            "error"
-        );
+        toast(error.message);
 
         return;
-
     }
 
+    closeModal();
 
-    closeModal("productModal");
+    toast("Mahsulot qo'shildi! 🎉");
 
-    toast(
-        "Mahsulot muvaffaqiyatli qo'shildi!"
-    );
+    await loadDashboard();
 
-
-    await loadDashboardProducts();
-
-    await loadProducts();
-
-    renderDashboard();
-
-};
+    await loadMarketplace();
+}
 
 
-/* ==========================================
-   DELETE PRODUCT
-========================================== */
-
-window.deleteProduct = async function(
-    productId
-){
+async function deleteProduct(productId){
 
     if(!confirm(
         "Bu mahsulotni o'chirishni xohlaysizmi?"
     )){
-
         return;
-
     }
-
 
     const {
         error
-    } = await supabase
+    } = await supabaseClient
         .from("products")
         .delete()
-        .eq("id",productId)
-        .eq("shop_id",dashboardShop.id);
-
+        .eq("id",productId);
 
     if(error){
 
-        toast(
-            "O'chirishda xatolik: " +
-            error.message,
-            "error"
-        );
+        toast(error.message);
 
         return;
-
     }
 
+    toast("Mahsulot o'chirildi.");
+
+    await loadDashboard();
+
+    await loadMarketplace();
+}
+
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+async function openAdmin(){
+
+    if(!currentUser ||
+       currentProfile?.role !== "admin"){
+
+        toast("Admin huquqi kerak.");
+
+        return;
+    }
+
+    document.getElementById("homePage")
+        .classList.add("hidden");
+
+    document.querySelector("footer")
+        .classList.add("hidden");
+
+    document.getElementById("dashboardPage")
+        .classList.add("hidden");
+
+    document.getElementById("adminPage")
+        .classList.remove("hidden");
+
+    await loadAdminData();
+
+}
+
+
+function closeAdmin(){
+
+    document.getElementById("adminPage")
+        .classList.add("hidden");
+
+    document.querySelector("footer")
+        .classList.remove("hidden");
+
+    document.getElementById("homePage")
+        .classList.remove("hidden");
+
+}
+
+
+function adminTab(tab,button){
+
+    document.querySelectorAll(".admin-tab")
+        .forEach(b=>b.classList.remove("active"));
+
+    button.classList.add("active");
+
+    document.querySelectorAll(".admin-section")
+        .forEach(s=>s.classList.remove("active"));
+
+    document
+        .getElementById("admin-"+tab)
+        .classList.add("active");
+
+    if(tab === "overview"){
+        loadAdminData();
+    }
+
+    if(tab === "shops"){
+        loadAdminShops();
+    }
+
+    if(tab === "products"){
+        loadAdminProducts();
+    }
+
+    if(tab === "orders"){
+        loadAdminOrders();
+    }
+
+    if(tab === "users"){
+        loadAdminUsers();
+    }
+
+    if(tab === "vip"){
+        loadAdminVip();
+    }
+
+    if(tab === "promo"){
+        loadAdminPromo();
+    }
+}
+
+
+async function loadAdminData(){
+
+    if(currentProfile?.role !== "admin"){
+        return;
+    }
+
+    const [
+        usersResult,
+        shopsResult,
+        productsResult,
+        ordersResult,
+        vipResult
+    ] = await Promise.all([
+
+        supabaseClient
+            .from("profiles")
+            .select("id",{count:"exact",head:true}),
+
+        supabaseClient
+            .from("shops")
+            .select("id,status"),
+
+        supabaseClient
+            .from("products")
+            .select("id",{count:"exact",head:true}),
+
+        supabaseClient
+            .from("orders")
+            .select("total_amount,status"),
+
+        supabaseClient
+            .from("vip_members")
+            .select("id",{count:"exact",head:true})
+
+    ]);
+
+    const usersCount =
+        usersResult.count || 0;
+
+    const shopList =
+        shopsResult.data || [];
+
+    const productCount =
+        productsResult.count || 0;
+
+    const orderList =
+        ordersResult.data || [];
+
+    const vipCount =
+        vipResult.count || 0;
+
+    const sales =
+        orderList.reduce(
+            (sum,o)=>
+                sum + Number(o.total_amount || 0),
+            0
+        );
+
+    /*
+       COFFEEGO platform commission:
+       Hozircha 10% hisoblanadi.
+       Keyinchalik settings jadvaliga
+       o'tkazish mumkin.
+    */
+
+    const commission =
+        Math.round(sales * 0.10);
+
+    document.getElementById("statUsers")
+        .textContent = usersCount;
+
+    document.getElementById("statShops")
+        .textContent = shopList.length;
+
+    document.getElementById("statProducts")
+        .textContent = productCount;
+
+    document.getElementById("statOrders")
+        .textContent = orderList.length;
+
+    document.getElementById("statSales")
+        .textContent = money(sales);
+
+    document.getElementById("statCommission")
+        .textContent = money(commission);
+
+    document.getElementById("statPendingShops")
+        .textContent =
+        shopList.filter(
+            s=>s.status === "pending"
+        ).length;
+
+    document.getElementById("statVip")
+        .textContent = vipCount;
+
+}
+
+
+/* =========================================================
+   ADMIN SHOPS
+========================================================= */
+
+async function loadAdminShops(){
+
+    const tbody =
+        document.getElementById("adminShopsTable");
+
+    tbody.innerHTML =
+        `<tr><td colspan="6">Yuklanmoqda...</td></tr>`;
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("shops")
+        .select("*")
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="6">
+                    ${escapeHTML(error.message)}
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    if(!data?.length){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="6">
+                    Shoplar yo'q.
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(shop=>`
+
+        <tr>
+
+            <td>
+                <strong>
+                    ${escapeHTML(shop.name)}
+                </strong>
+            </td>
+
+            <td>
+                ${escapeHTML(shop.city || "")}
+            </td>
+
+            <td>
+                ${escapeHTML(shop.phone || "")}
+            </td>
+
+            <td>
+
+                <span class="badge-status ${statusClass(shop.status)}">
+                    ${escapeHTML(shop.status)}
+                </span>
+
+            </td>
+
+            <td>
+                ${new Date(shop.created_at)
+                    .toLocaleDateString("uz-UZ")}
+            </td>
+
+            <td>
+
+                <div class="admin-actions">
+
+                    ${
+                        shop.status !== "approved"
+                        ?
+                        `<button
+                            class="btn btn-success"
+                            onclick="changeShopStatus('${shop.id}','approved')">
+                            ✓ Approve
+                        </button>`
+                        :
+                        ""
+                    }
+
+                    ${
+                        shop.status !== "blocked"
+                        ?
+                        `<button
+                            class="btn btn-danger"
+                            onclick="changeShopStatus('${shop.id}','blocked')">
+                            Block
+                        </button>`
+                        :
+                        ""
+                    }
+
+                    ${
+                        shop.status !== "pending"
+                        ?
+                        `<button
+                            class="btn btn-warning"
+                            onclick="changeShopStatus('${shop.id}','pending')">
+                            Pending
+                        </button>`
+                        :
+                        ""
+                    }
+
+                </div>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+async function changeShopStatus(shopId,status){
+
+    const {
+        error
+    } = await supabaseClient
+        .from("shops")
+        .update({
+            status
+        })
+        .eq("id",shopId);
+
+    if(error){
+
+        toast(error.message);
+
+        return;
+    }
 
     toast(
-        "Mahsulot o'chirildi"
+        `Shop statusi "${status}" bo'ldi.`
     );
 
+    await loadAdminShops();
 
-    await loadDashboardProducts();
+    await loadMarketplace();
 
-    await loadProducts();
-
-    renderDashboard();
-
-};
+    await loadAdminData();
+}
 
 
-function renderAdminProduct(product){
+/* =========================================================
+   ADMIN PRODUCTS
+========================================================= */
 
-    return `
+async function loadAdminProducts(){
 
-        <div class="product-admin">
+    const tbody =
+        document.getElementById("adminProductsTable");
 
-            <div class="product-admin-info">
+    tbody.innerHTML =
+        `<tr><td colspan="6">Yuklanmoqda...</td></tr>`;
 
-                <strong>
-                    ${escapeHTML(product.name)}
-                </strong>
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("products")
+        .select(`
+            *,
+            shops(
+                name
+            )
+        `)
+        .order("created_at",{ascending:false});
 
-                <span>
-                    ${escapeHTML(product.category)}
-                    •
-                    ${money(product.price)}
-                    •
-                    ${
-                        product.is_available
-                        ? "Mavjud"
-                        : "Mavjud emas"
-                    }
+    if(error){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="6">
+                    ${escapeHTML(error.message)}
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    if(!data?.length){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="6">
+                    Mahsulotlar yo'q.
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(p=>`
+
+        <tr>
+
+            <td>
+                ${escapeHTML(p.name)}
+            </td>
+
+            <td>
+                ${escapeHTML(
+                    p.shops?.name || "-"
+                )}
+            </td>
+
+            <td>
+                ${escapeHTML(p.category)}
+            </td>
+
+            <td>
+                ${money(p.price)}
+            </td>
+
+            <td>
+                ${
+                    p.is_available
+                    ?
+                    `<span class="badge-status status-approved">
+                        AVAILABLE
+                    </span>`
+                    :
+                    `<span class="badge-status status-blocked">
+                        HIDDEN
+                    </span>`
+                }
+            </td>
+
+            <td>
+
+                <div class="admin-actions">
+
+                    <button
+                        class="btn btn-warning"
+                        onclick="toggleProductAvailability('${p.id}',${p.is_available})">
+                        ${p.is_available
+                            ? "Hide"
+                            : "Show"}
+                    </button>
+
+                    <button
+                        class="btn btn-danger"
+                        onclick="adminDeleteProduct('${p.id}')">
+                        Delete
+                    </button>
+
+                </div>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+async function toggleProductAvailability(
+    productId,
+    current
+){
+
+    const {
+        error
+    } = await supabaseClient
+        .from("products")
+        .update({
+            is_available:!current
+        })
+        .eq("id",productId);
+
+    if(error){
+
+        toast(error.message);
+
+        return;
+    }
+
+    toast("Mahsulot holati yangilandi.");
+
+    await loadAdminProducts();
+
+    await loadMarketplace();
+}
+
+
+async function adminDeleteProduct(productId){
+
+    if(!confirm(
+        "Mahsulotni butunlay o'chirishni xohlaysizmi?"
+    )){
+        return;
+    }
+
+    const {
+        error
+    } = await supabaseClient
+        .from("products")
+        .delete()
+        .eq("id",productId);
+
+    if(error){
+
+        toast(error.message);
+
+        return;
+    }
+
+    toast("Mahsulot o'chirildi.");
+
+    await loadAdminProducts();
+
+    await loadMarketplace();
+}
+
+
+/* =========================================================
+   ADMIN ORDERS
+========================================================= */
+
+async function loadAdminOrders(){
+
+    const tbody =
+        document.getElementById("adminOrdersTable");
+
+    tbody.innerHTML =
+        `<tr><td colspan="8">Yuklanmoqda...</td></tr>`;
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("orders")
+        .select(`
+            *,
+            shops(
+                name
+            )
+        `)
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="8">
+                    ${escapeHTML(error.message)}
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    if(!data?.length){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="8">
+                    Buyurtmalar yo'q.
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(o=>`
+
+        <tr>
+
+            <td>
+                ${escapeHTML(
+                    o.id.slice(0,8)
+                )}...
+            </td>
+
+            <td>
+                ${escapeHTML(
+                    o.customer_name || "-"
+                )}
+            </td>
+
+            <td>
+                ${escapeHTML(
+                    o.shops?.name || "-"
+                )}
+            </td>
+
+            <td>
+                ${money(o.total_amount)}
+            </td>
+
+            <td>
+
+                <span class="badge-status ${statusClass(o.status)}">
+                    ${escapeHTML(o.status)}
                 </span>
+
+            </td>
+
+            <td>
+                ${escapeHTML(
+                    o.payment_status || "-"
+                )}
+            </td>
+
+            <td>
+                ${new Date(o.created_at)
+                    .toLocaleString("uz-UZ")}
+            </td>
+
+            <td>
+
+                <select
+                    class="select"
+                    style="width:auto"
+                    onchange="adminUpdateOrder('${o.id}',this.value)">
+
+                    ${[
+                        "new",
+                        "accepted",
+                        "preparing",
+                        "ready",
+                        "delivering",
+                        "delivered",
+                        "cancelled"
+                    ].map(s=>`
+
+                        <option
+                            value="${s}"
+                            ${o.status===s?"selected":""}>
+                            ${s}
+                        </option>
+
+                    `).join("")}
+
+                </select>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+async function adminUpdateOrder(
+    orderId,
+    status
+){
+
+    const {
+        data:old
+    } = await supabaseClient
+        .from("orders")
+        .select("status")
+        .eq("id",orderId)
+        .single();
+
+    const {
+        error
+    } = await supabaseClient
+        .from("orders")
+        .update({
+            status
+        })
+        .eq("id",orderId);
+
+    if(error){
+
+        toast(error.message);
+
+        return;
+    }
+
+    await supabaseClient
+        .from("order_status_history")
+        .insert({
+            order_id:orderId,
+            old_status:old?.status || null,
+            new_status:status,
+            changed_by:currentUser.id
+        });
+
+    toast("Buyurtma yangilandi.");
+
+    await loadAdminOrders();
+
+    await loadAdminData();
+}
+
+
+/* =========================================================
+   ADMIN USERS
+========================================================= */
+
+async function loadAdminUsers(){
+
+    const tbody =
+        document.getElementById("adminUsersTable");
+
+    tbody.innerHTML =
+        `<tr><td colspan="4">Yuklanmoqda...</td></tr>`;
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("profiles")
+        .select("*")
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="4">
+                    ${escapeHTML(error.message)}
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    if(!data?.length){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="4">
+                    Foydalanuvchilar yo'q.
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(u=>`
+
+        <tr>
+
+            <td>
+                ${escapeHTML(
+                    u.full_name || "-"
+                )}
+            </td>
+
+            <td>
+                ${escapeHTML(
+                    u.phone || "-"
+                )}
+            </td>
+
+            <td>
+                <span class="badge-status ${
+                    u.role==="admin"
+                    ? "status-approved"
+                    : "status-accepted"
+                }">
+                    ${escapeHTML(u.role)}
+                </span>
+            </td>
+
+            <td>
+                ${new Date(u.created_at)
+                    .toLocaleString("uz-UZ")}
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   ADMIN VIP
+========================================================= */
+
+async function loadAdminVip(){
+
+    const tbody =
+        document.getElementById("adminVipTable");
+
+    tbody.innerHTML =
+        `<tr><td colspan="4">Yuklanmoqda...</td></tr>`;
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("vip_members")
+        .select("*")
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="4">
+                    ${escapeHTML(error.message)}
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    if(!data?.length){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="4">
+                    VIP a'zolar yo'q.
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(v=>`
+
+        <tr>
+
+            <td>
+                ${escapeHTML(v.user_id)}
+            </td>
+
+            <td>
+                <strong>
+                    ${escapeHTML(v.plan || "-")}
+                </strong>
+            </td>
+
+            <td>
+                ${v.started_at
+                    ? new Date(v.started_at)
+                        .toLocaleDateString("uz-UZ")
+                    : "-"}
+            </td>
+
+            <td>
+                ${v.expires_at
+                    ? new Date(v.expires_at)
+                        .toLocaleDateString("uz-UZ")
+                    : "-"}
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   ADMIN PROMO
+========================================================= */
+
+async function loadAdminPromo(){
+
+    const tbody =
+        document.getElementById("adminPromoTable");
+
+    tbody.innerHTML =
+        `<tr><td colspan="6">Yuklanmoqda...</td></tr>`;
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("promo_codes")
+        .select("*")
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="6">
+                    ${escapeHTML(error.message)}
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    if(!data?.length){
+
+        tbody.innerHTML =
+            `<tr>
+                <td colspan="6">
+                    Promo kodlar yo'q.
+                </td>
+            </tr>`;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(p=>`
+
+        <tr>
+
+            <td>
+                <strong>
+                    ${escapeHTML(p.code)}
+                </strong>
+            </td>
+
+            <td>
+                ${p.discount_percent}%
+            </td>
+
+            <td>
+                ${p.used_count || 0}
+            </td>
+
+            <td>
+                ${p.max_uses || "∞"}
+            </td>
+
+            <td>
+                ${
+                    p.active
+                    ?
+                    `<span class="badge-status status-approved">
+                        ACTIVE
+                    </span>`
+                    :
+                    `<span class="badge-status status-blocked">
+                        OFF
+                    </span>`
+                }
+            </td>
+
+            <td>
+
+                <button
+                    class="btn ${
+                        p.active
+                        ? "btn-danger"
+                        : "btn-success"
+                    }"
+                    onclick="togglePromo('${p.id}',${p.active})">
+
+                    ${p.active ? "O'chirish" : "Yoqish"}
+
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function openPromoModal(){
+
+    showModal(`
+
+        <div class="modal">
+
+            <div class="modal-head">
+
+                <h2>🎟️ Promo yaratish</h2>
+
+                <button
+                    class="close"
+                    onclick="closeModal()">
+                    ×
+                </button>
 
             </div>
 
-            <button
-                class="btn btn-danger btn-small"
-                onclick="deleteProduct('${product.id}')"
-            >
-                🗑️
-            </button>
+            <div class="modal-body">
+
+                <div class="form-group">
+
+                    <label>Promo kod</label>
+
+                    <input
+                        id="promoCode"
+                        class="input"
+                        placeholder="COFFEE10"
+                    >
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Chegirma %</label>
+
+                        <input
+                            id="promoDiscount"
+                            class="input"
+                            type="number"
+                            min="1"
+                            max="100"
+                            value="10"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Max ishlatish</label>
+
+                        <input
+                            id="promoMaxUses"
+                            class="input"
+                            type="number"
+                            placeholder="100"
+                        >
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    style="width:100%"
+                    onclick="createPromo()">
+                    Promo yaratish
+                </button>
+
+            </div>
 
         </div>
 
-    `;
+    `);
 
 }
 
 
-/* ==========================================
-   FAQ
-========================================== */
+async function createPromo(){
 
-window.toggleFaq = function(el){
+    const code =
+        document.getElementById("promoCode")
+            .value
+            .trim()
+            .toUpperCase();
 
-    el.parentElement
-        .classList.toggle("open");
-
-};
-
-
-/* ==========================================
-   CLOSE MODALS BY BACKDROP
-========================================== */
-
-document.querySelectorAll(".modal")
-    .forEach(modal=>{
-
-        modal.addEventListener(
-            "click",
-            e=>{
-
-                if(e.target === modal){
-
-                    modal.classList.remove("show");
-
-                }
-
-            }
+    const discount =
+        Number(
+            document.getElementById("promoDiscount")
+                .value
         );
 
-    });
+    const maxUsesRaw =
+        document.getElementById("promoMaxUses")
+            .value;
+
+    const maxUses =
+        maxUsesRaw
+        ? Number(maxUsesRaw)
+        : null;
+
+    if(!code || !discount){
+
+        toast("Promo kod va chegirmani kiriting.");
+
+        return;
+    }
+
+    const {
+        error
+    } = await supabaseClient
+        .from("promo_codes")
+        .insert({
+            code,
+            discount_percent:discount,
+            max_uses:maxUses,
+            used_count:0,
+            active:true
+        });
+
+    if(error){
+
+        toast(error.message);
+
+        return;
+    }
+
+    closeModal();
+
+    toast("Promo yaratildi! 🎟️");
+
+    await loadAdminPromo();
+}
 
 
-/* ==========================================
-   INITIALIZATION
-========================================== */
+async function togglePromo(id,current){
 
-async function init(){
+    const {
+        error
+    } = await supabaseClient
+        .from("promo_codes")
+        .update({
+            active:!current
+        })
+        .eq("id",id);
 
-    updateCartCount();
+    if(error){
 
-    await loadSession();
+        toast(error.message);
 
-    await loadProducts();
+        return;
+    }
 
-    await loadShops();
+    toast("Promo holati yangilandi.");
+
+    await loadAdminPromo();
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+function showModal(html){
+
+    document.getElementById("modalRoot")
+        .innerHTML = `
+
+            <div class="overlay"
+                 onclick="overlayClose(event)">
+
+                ${html}
+
+            </div>
+
+        `;
+
+}
+
+function overlayClose(event){
+
+    if(event.target.classList.contains("overlay")){
+        closeModal();
+    }
+
+}
+
+function closeModal(){
+
+    document.getElementById("modalRoot")
+        .innerHTML = "";
 
 }
 
 
-init();
+/* =========================================================
+   THEME
+========================================================= */
+
+function toggleTheme(){
+
+    const root =
+        document.documentElement;
+
+    if(root.dataset.theme === "light"){
+
+        root.dataset.theme = "dark";
+
+        document.body.style.background =
+            "#080808";
+
+        document.body.style.color =
+            "#f5f5f5";
+
+    }else{
+
+        root.dataset.theme = "light";
+
+        document.body.style.background =
+            "#f5f5f5";
+
+        document.body.style.color =
+            "#111";
+
+        toast(
+            "Light mode demo yoqildi. 🌞"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   AUTH STATE LISTENER
+========================================================= */
+
+supabaseClient.auth.onAuthStateChange(
+    async (event,session)=>{
+
+        if(session){
+
+            currentUser =
+                session.user;
+
+            setTimeout(async ()=>{
+                await loadProfile();
+                updateAuthUI();
+            },0);
+
+        }else{
+
+            currentUser = null;
+            currentProfile = null;
+
+            updateAuthUI();
+        }
+
+    }
+);
 
 </script>
 
